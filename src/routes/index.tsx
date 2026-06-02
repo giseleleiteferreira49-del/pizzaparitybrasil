@@ -122,7 +122,7 @@ function Servico() {
             Um buffet que é <em className="serif gold-gradient-text text-5xl md:text-6xl italic">experiência</em>.
           </h2>
           <p className="text-cream/65 text-lg">
-            Não levamos pizza ao evento. Levamos a pizzaria inteira — forno, pizzaiolo, ritual e aroma.
+            Conduzimos você e seus convidados por uma aventura de aromas, paladares e sensações que nunca sentiram ao degustar uma pizza. Algo único, inovador e memorável.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-px bg-gold/15">
