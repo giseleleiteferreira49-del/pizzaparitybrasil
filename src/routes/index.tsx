@@ -67,7 +67,7 @@ function Nav() {
           </li>
         ))}
       </ul>
-      <a href="#contato" className="btn-gold btn-gold-hover text-[0.62rem] !py-2 !px-4">Orçamento</a>
+      <Link to="/orcamento" className="btn-gold btn-gold-hover text-[0.62rem] !py-2 !px-4">Orçamento</Link>
     </nav>
   );
 }
