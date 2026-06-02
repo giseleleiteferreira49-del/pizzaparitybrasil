@@ -321,9 +321,9 @@ function Upgrades() {
 
 function Inclusao() {
   const opts = [
-    { i: "🌱", n: "Cardápio Vegano", d: "Mussarela vegana em todas as pizzas. Sabores: Marguerita Vegan, Brócolis Vegan, Abobrinha Vegan e Doce de Leite com Coco Ralado." },
-    { i: "🌾", n: "Massa Sem Glúten", d: "Para convidados com intolerância ao glúten. Mesmos sabores do pacote escolhido, com massa especialmente preparada e segura." },
-    { i: "🥛", n: "Sem Lactose", d: "Mussarela sem lactose para convidados com intolerância. Sabor completo e textura idêntica, sem abrir mão da experiência." },
+    { icon: <Leaf className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, n: "Cardápio Vegano", d: "Mussarela vegana em todas as pizzas. Sabores: Marguerita Vegan, Brócolis Vegan, Abobrinha Vegan e Doce de Leite com Coco Ralado." },
+    { icon: <Sprout className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, n: "Massa Sem Glúten", d: "Para convidados com intolerância ao glúten. Mesmos sabores do pacote escolhido, com massa especialmente preparada e segura." },
+    { icon: <Droplets className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, n: "Sem Lactose", d: "Mussarela sem lactose para convidados com intolerância. Sabor completo e textura idêntica, sem abrir mão da experiência." },
   ];
   return (
     <section className="py-32 bg-black">
