@@ -3,7 +3,7 @@ import logoAsset from "@/assets/pizza-party-logo.asset.json";
 import heroPizza from "@/assets/hero-pizza.png.asset.json";
 import doughImg from "@/assets/dough.jpg";
 import ovenImg from "@/assets/oven.jpg";
-import eventImg from "@/assets/event.jpg";
+import eventImg from "@/assets/event.png.asset.json";
 import pizza16 from "@/assets/pizzas/pizza-16.jpeg.asset.json";
 import pizza17 from "@/assets/pizzas/pizza-17.jpeg.asset.json";
 import pizza18 from "@/assets/pizzas/pizza-18.jpeg.asset.json";
