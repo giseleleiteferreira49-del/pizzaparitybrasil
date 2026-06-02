@@ -56,7 +56,7 @@ function Hero() {
             <span className="italic text-gold">Napoletana</span>
           </h1>
           <p className="mt-10 max-w-md text-ink/60 text-sm leading-relaxed">
-            Uma imersão gastronômica artesanal para casamentos, eventos corporativos e celebrações exclusivas.
+            uma imersão gastronômica para os seus convidados
           </p>
           <div className="mt-12 flex flex-wrap gap-4">
             <Link to="/orcamento" className="btn-pill btn-tomato">Solicitar Orçamento</Link>
