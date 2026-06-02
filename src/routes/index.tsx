@@ -120,19 +120,26 @@ function Hero() {
           <div className="h-px w-10 bg-gold" />
         </div>
 
-        <div className="mb-12">
-          <span className="block text-[0.75rem] tracking-[0.35em] uppercase text-cream/50 mb-4">Uma</span>
-          <h1 className="serif text-6xl md:text-8xl lg:text-9xl text-cream-light leading-[0.9] font-light mb-4">
-            <em className="serif italic font-light">imersão</em>
+        <div className="mb-6 flex items-center justify-center gap-6">
+          <div className="h-px w-8 bg-gold/40" />
+          <span className="text-[0.65rem] tracking-[0.5em] uppercase text-cream/50">Uma</span>
+          <div className="h-px w-8 bg-gold/40" />
+        </div>
+
+        <div className="relative flex flex-col items-center mb-10">
+          <h1 className="serif italic font-light text-cream-light text-6xl md:text-8xl lg:text-[9rem] leading-[1]">
+            imersão
           </h1>
-          <h1 className="serif text-6xl md:text-8xl lg:text-9xl gold-gradient-text leading-[0.9] font-light italic mb-6">
+          <h2 className="serif italic font-light gold-gradient-text text-7xl md:text-9xl lg:text-[11rem] leading-[0.85] -mt-2 md:-mt-6 lg:-mt-10">
             gastronômica
-          </h1>
-          <div className="flex items-center justify-center gap-4 mt-6">
-            <div className="h-px w-12 bg-gold/40" />
-            <span className="serif text-xl md:text-2xl text-cream/70 italic font-light">para os seus convidados</span>
-            <div className="h-px w-12 bg-gold/40" />
-          </div>
+          </h2>
+        </div>
+
+        <div className="flex flex-col items-center mb-12">
+          <div className="h-px w-24 bg-gradient-to-r from-transparent via-gold/50 to-transparent mb-5" />
+          <p className="serif italic font-light text-cream/80 text-xl md:text-3xl tracking-wide">
+            para os seus convidados
+          </p>
         </div>
 
         <p className="max-w-xl mx-auto text-cream/60 text-lg leading-relaxed mb-12">
