@@ -183,7 +183,7 @@ function Cardapio() {
 
 function Eventos() {
   const tipos = [
-    { t: "Casamentos", d: "Pós-cerimônia ou jantar principal. Pizza napoletana servida em mesas redondas com cortes generosos." },
+    { t: "Noivados e Matrimônios", d: "Seja no jantar principal ou no evento pós-cerimônia, temos um cardápio ajustado para o seu melhor momento." },
     { t: "Corporativo", d: "Confraternizações, lançamentos e celebrações de equipe — de 30 a 500 convidados." },
     { t: "Aniversários", d: "Festas íntimas ou grandes celebrações com o ritual do pizzaiolo no centro da experiência." },
     { t: "Festivais & Marcas", d: "Ativações de marca, food trucks e pop-ups com nossa estrutura completa." },
@@ -201,7 +201,7 @@ function Eventos() {
         <div>
           <div className="eyebrow mb-4">Eventos</div>
           <h2 className="serif text-4xl md:text-5xl mb-8 leading-tight">
-            Cada celebração tem <em className="serif gold-gradient-text text-5xl md:text-6xl italic">sua</em> pizza.
+            Vivencie sua celebração com camadas <em className="serif gold-gradient-text text-5xl md:text-6xl italic">personalizadas</em> para encantar seus convidados.
           </h2>
           <div className="space-y-6">
             {tipos.map((t) => (
