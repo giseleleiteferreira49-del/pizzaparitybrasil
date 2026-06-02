@@ -83,7 +83,6 @@ function Hero() {
         <div className="flex justify-center mb-8">
           <Logo size={120} />
         </div>
-        <div className="eyebrow mb-6">Pizza Party Brasil</div>
         <h1 className="serif text-5xl md:text-7xl lg:text-8xl leading-[1.05] mb-6">
           Uma <span className="serif gold-gradient-text text-6xl md:text-8xl lg:text-9xl italic block mt-2">Imersão Gastronômica</span>
           <span className="block mt-2 text-cream-light">para os seus convidados.</span>
