@@ -278,7 +278,7 @@ function Contato() {
           </div>
           <div>
             <div className="eyebrow mb-2 !text-cream/40">E-mail</div>
-            <div className="serif text-gold-light text-lg">contato@pizzaparty.br</div>
+            <div className="serif text-gold-light text-lg">contato@pizzapartybrasil.com</div>
           </div>
           <div>
             <div className="eyebrow mb-2 !text-cream/40">Atendimento</div>
