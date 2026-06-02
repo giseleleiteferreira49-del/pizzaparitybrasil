@@ -213,6 +213,16 @@ function Cardapio() {
     { img: pizzaNova1.url, nome: "Especial da Casa", desc: "Nossa criação exclusiva do dia com ingredientes selecionados e técnica napoletana.", tipo: "Especial" },
     { img: pizzaNova2.url, nome: "Seleção Premium", desc: "Uma combinação especial de sabores em uma experiência visual e gastronômica única.", tipo: "Premium" },
     { img: pizzaNova3.url, nome: "Tradição Moderna", desc: "O encontro da tradição napoletana com a contemporaneidade em cada detalhe.", tipo: "Especial" },
+    { img: pizzaE1.url, nome: "Mediterrânea", desc: "Mussarela, tomate-cereja, abobrinha, palmito e rúcula fresca.", tipo: "Vegetariana" },
+    { img: pizzaE2.url, nome: "Atum Crocante", desc: "Mussarela, atum sólido, anéis crocantes de cebola e toque de sementes.", tipo: "Especial" },
+    { img: pizzaE3.url, nome: "Banana com Canela", desc: "Mussarela, banana em rodelas, canela e fio de leite condensado.", tipo: "Sobremesa" },
+    { img: pizzaE4.url, nome: "Brócolis com Bacon", desc: "Mussarela, brócolis, bacon em cubos e cream cheese gratinado.", tipo: "Brasileira" },
+    { img: pizzaE5.url, nome: "Brócolis ao Alho", desc: "Molho rústico, mussarela, brócolis e alho dourado crocante.", tipo: "Vegetariana" },
+    { img: pizzaE6.url, nome: "Ortolana", desc: "Pomodoro, mussarela, abobrinha, pimentões coloridos e rúcula fresca.", tipo: "Vegetariana" },
+    { img: pizzaE7.url, nome: "Calabresa Suprema", desc: "Mussarela, calabresa artesanal, cebola roxa e manjericão fresco.", tipo: "Brasileira" },
+    { img: pizzaE8.url, nome: "Calabresa Catupiry", desc: "Mussarela, calabresa fatiada, orégano e fios cremosos de catupiry.", tipo: "Brasileira" },
+    { img: pizzaE9.url, nome: "Frango ao Basilico", desc: "Mussarela, frango temperado, burrata cremosa e manjericão fresco.", tipo: "Especial" },
+    { img: pizzaE10.url, nome: "Doce de Leite & Coco", desc: "Doce de leite cremoso finalizado com coco ralado fresco.", tipo: "Sobremesa" },
   ];
   return (
     <section id="cardapio" className="py-32 bg-black">
