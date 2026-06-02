@@ -4,15 +4,15 @@ import heroPizza from "@/assets/hero-pizza.jpg";
 import doughImg from "@/assets/processo-massa.jpg.asset.json";
 import ovenImg from "@/assets/processo-forno.jpg.asset.json";
 import servicoImg from "@/assets/processo-servico.jpg.asset.json";
-import eventImg from "@/assets/event.jpg";
+import celebracaoImg from "@/assets/celebracao-pizza.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Pizza Party Brasil — Buffet de Pizza Napoletana" },
-      { name: "description", content: "Buffet de pizza napoletana artesanal para casamentos, eventos corporativos e celebrações exclusivas. Longa fermentação, forno a lenha." },
-      { property: "og:title", content: "Pizza Party Brasil — Buffet de Pizza Napoletana" },
-      { property: "og:description", content: "Buffet de pizza napoletana artesanal para eventos exclusivos." },
+      { title: "Pizza Party Brasil — Pizza Napoletana Artesanal" },
+      { name: "description", content: "Pizza napoletana artesanal para celebrações exclusivas. Longa fermentação, forno em alta temperatura e pizzaiolo no local." },
+      { property: "og:title", content: "Pizza Party Brasil — Pizza Napoletana Artesanal" },
+      { property: "og:description", content: "Pizza napoletana artesanal para celebrações exclusivas." },
       { property: "og:image", content: heroPizza },
     ],
   }),
@@ -36,7 +36,6 @@ function Nav() {
   const links = [
     { href: "#servico", label: "Serviço" },
     { href: "#cardapio", label: "Cardápio" },
-    { href: "#eventos", label: "Eventos" },
     { href: "#processo", label: "Processo" },
     { href: "#contato", label: "Contato" },
   ];
@@ -45,8 +44,8 @@ function Nav() {
       <a href="#top" className="flex items-center gap-3">
         <Logo size={36} />
         <div className="hidden sm:block leading-tight">
-          <div className="serif text-gold text-sm tracking-[0.18em] uppercase font-semibold">Pizza Party</div>
-          <div className="text-[0.55rem] tracking-[0.28em] uppercase text-cream/40">Brasil · Napoletana</div>
+          <div className="serif text-gold text-sm tracking-[0.18em] uppercase font-semibold">Pizza Party Brasil</div>
+          <div className="text-[0.55rem] tracking-[0.28em] uppercase text-cream/40">Napoletana</div>
         </div>
       </a>
       <ul className="hidden md:flex gap-8 list-none">
@@ -84,13 +83,13 @@ function Hero() {
         <div className="flex justify-center mb-8">
           <Logo size={120} />
         </div>
-        <div className="eyebrow mb-6">Buffet · Eventos · Casamentos</div>
+        <div className="eyebrow mb-6">Pizza Party Brasil</div>
         <h1 className="serif text-5xl md:text-7xl lg:text-8xl leading-[1.05] mb-6">
           Uma <span className="serif gold-gradient-text text-6xl md:text-8xl lg:text-9xl italic block mt-2">Imersão Gastronômica</span>
           <span className="block mt-2 text-cream-light">para os seus convidados.</span>
         </h1>
         <p className="max-w-2xl mx-auto text-cream/70 text-lg md:text-xl font-light mb-10">
-          Massa de longa fermentação, forno a lenha em alta temperatura e ingredientes selecionados — servidos diretamente para seus convidados.
+          Massa de longa fermentação, forno em alta temperatura e ingredientes selecionados, servidos diretamente para seus convidados.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a href="#contato" className="btn-gold btn-gold-hover">Solicitar Orçamento</a>
@@ -112,7 +111,7 @@ function Servico() {
   const pillars = [
     { n: "01", t: "Chef Pizzaiolo no Evento", d: "Garantimos a consistência e a qualidade das Pizzas em todo o processo. Uma atenção genuína elaborada com amor e respeito ao seu paladar." },
     { n: "02", t: "Tecnologia na Preparação", d: "Nossas Pizzas são assadas em temperatura controlada que atinge 450°C. Cada pizza assa em 90 segundos, com borda alveolada mantendo o Aroma Característico e Delicioso." },
-    { n: "03", t: "Massa Artesanal", d: "Fermentação natural de 72 horas com Blend de farinhas italianas selecionadas. Azeite de Oliva que proporciona Leveza, digestibilidade e sabor incomparáveis." },
+    { n: "03", t: "Massa Artesanal", d: "Fermentação natural de 72 horas com Blend de farinhas italianas selecionadas. Azeite de Oliva que proporciona leveza, digestibilidade e sabor incomparáveis." },
   ];
   return (
     <section id="servico" className="py-32 bg-black-warm relative">
@@ -120,7 +119,7 @@ function Servico() {
         <div className="max-w-2xl mb-20">
           <div className="eyebrow mb-4">O Serviço</div>
           <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
-            Um buffet que é <em className="serif gold-gradient-text text-5xl md:text-6xl italic">experiência</em>.
+            Mais que um buffet, uma <em className="serif gold-gradient-text text-5xl md:text-6xl italic">experiência gastronômica</em>.
           </h2>
           <p className="text-cream/65 text-lg">
             Conduzimos você e seus convidados por uma aventura de aromas, paladares e sensações que nunca sentiram ao degustar uma pizza. Algo único, inovador e memorável.
@@ -154,15 +153,16 @@ function Cardapio() {
   return (
     <section id="cardapio" className="py-32 bg-black">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <div className="eyebrow mb-4">Cardápio</div>
           <h2 className="serif text-4xl md:text-5xl mb-4">
             Sabores Inesquecíveis
           </h2>
-          <p className="text-cream/60 max-w-xl mx-auto">Selecione livremente os sabores harmonizando entre doces e salgados.</p>
+          <p className="text-cream/60 max-w-xl mx-auto mb-8">Selecione livremente os sabores harmonizando entre doces e salgados.</p>
+          <a href="#contato" className="btn-gold btn-gold-hover inline-block">Veja nosso cardápio completo</a>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-x-16 gap-y-10">
+        <div className="grid md:grid-cols-2 gap-x-16 gap-y-10 mt-16">
           {pizzas.map((p) => (
             <div key={p.nome} className="group">
               <div className="flex items-baseline justify-between gap-4 mb-2 pb-2 border-b border-gold/20 group-hover:border-gold/60 transition-colors">
@@ -175,43 +175,35 @@ function Cardapio() {
         </div>
 
         <p className="text-center text-cream/40 text-xs tracking-[0.2em] uppercase mt-16">
-          + Antepastos · Bruschetta · Mini saladas
+          + Antepastos, Bruschetta, Mini saladas
         </p>
       </div>
     </section>
   );
 }
 
-function Eventos() {
-  const tipos = [
-    { t: "Noivados e Matrimônios", d: "Seja no Jantar Principal ou no Evento Pós Cerimômia, temos um cardápio ajustado para seu melhor momento." },
-    { t: "Corporativo", d: "Confraternizações, lançamentos e celebrações de equipe — de 30 a 500 convidados." },
-    { t: "Aniversários", d: "Festas íntimas ou grandes celebrações com o ritual do pizzaiolo no centro da experiência." },
-    { t: "Festivais & Marcas", d: "Ativações de marca, food trucks e pop-ups com nossa estrutura completa." },
-  ];
+function Celebracao() {
   return (
-    <section id="eventos" className="py-32 relative bg-black-warm overflow-hidden">
+    <section className="py-32 relative bg-black-warm overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div className="relative">
-          <img src={eventImg} alt="Buffet de pizza em evento elegante" width={1536} height={1024} loading="lazy" className="w-full aspect-[4/3] object-cover" />
+          <img src={celebracaoImg.url} alt="Convidado celebrando com pizza" width={1463} height={974} loading="lazy" className="w-full aspect-[4/3] object-cover" />
           <div className="absolute -bottom-6 -right-6 hidden md:block bg-black-rich border border-gold/40 p-6 max-w-xs">
             <div className="serif gold-gradient-text text-5xl">500+</div>
-            <div className="text-xs text-cream/60 tracking-[0.15em] uppercase mt-1">eventos realizados</div>
+            <div className="text-xs text-cream/60 tracking-[0.15em] uppercase mt-1">celebrações realizadas</div>
           </div>
         </div>
         <div>
-          <div className="eyebrow mb-4">Eventos</div>
+          <div className="eyebrow mb-4">Celebrações</div>
           <h2 className="serif text-4xl md:text-5xl mb-8 leading-tight">
-            Vivencie sua celebração com camadas personalizadas para encantar seus convidados.
+            Momentos que ficam na <em className="serif gold-gradient-text text-5xl md:text-6xl italic">memória</em>.
           </h2>
-          <div className="space-y-6">
-            {tipos.map((t) => (
-              <div key={t.t} className="border-l border-gold/40 pl-5 hover:border-gold transition-colors">
-                <h3 className="serif text-xl text-gold-light mb-1">{t.t}</h3>
-                <p className="text-cream/60 text-sm">{t.d}</p>
-              </div>
-            ))}
-          </div>
+          <p className="text-cream/65 text-lg mb-6">
+            Cada celebração é única. Personalizamos o cardápio, o ritmo do serviço e a experiência para que seus convidados vivam algo verdadeiramente memorável.
+          </p>
+          <p className="text-cream/55">
+            Mais de 500 celebrações conduzidas pelo nosso Chef Pizzaiolo, com a qualidade artesanal da Pizza Party Brasil.
+          </p>
         </div>
       </div>
     </section>
@@ -220,9 +212,9 @@ function Eventos() {
 
 function Processo() {
   const steps = [
-    { img: doughImg.url, n: "01", t: "Massa", d: "Tudo começa pelas mãos. Fermentação lenta de 72h com Blend das melhores farinhas italianas tipo 00 — o tempo é o nosso ingrediente secreto." },
+    { img: doughImg.url, n: "01", t: "Massa", d: "Tudo começa pelas mãos. Fermentação lenta de 72h com Blend das melhores farinhas italianas tipo 00, o tempo é o nosso ingrediente secreto." },
     { img: ovenImg.url, n: "02", t: "Forno", d: "Assadas com perfeição a 450°C, liberando os sabores e aromas em segundos. O controle excelente entre agilidade e cozimento que só o forno napoletano entrega." },
-    { img: servicoImg.url, n: "03", t: "Serviço", d: "O Chef Pizzaiolo cria a obra e, com precisão, servimos seus convidados — para que absorvam, fatia a fatia, a melhor experiência da noite." },
+    { img: servicoImg.url, n: "03", t: "Serviço", d: "O Chef Pizzaiolo cria a obra e, com precisão, servimos seus convidados, para que absorvam, fatia a fatia, a melhor experiência da noite." },
   ];
   return (
     <section id="processo" className="py-32 bg-black">
@@ -265,7 +257,7 @@ function Contato() {
           Pronto para <em className="serif gold-gradient-text text-5xl md:text-7xl italic">surpreender</em> seus convidados?
         </h2>
         <p className="text-cream/65 text-lg mb-12 max-w-xl mx-auto">
-          Conte-nos sobre o seu evento. Respondemos em até 24 horas com uma proposta personalizada.
+          Conte-nos sobre a sua celebração. Respondemos em até 24 horas com uma proposta personalizada.
         </p>
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <a href="https://wa.me/5511974418038" className="btn-gold btn-gold-hover">WhatsApp</a>
@@ -314,7 +306,7 @@ function Index() {
       <Hero />
       <Servico />
       <Cardapio />
-      <Eventos />
+      <Celebracao />
       <Processo />
       <Contato />
       <Footer />
