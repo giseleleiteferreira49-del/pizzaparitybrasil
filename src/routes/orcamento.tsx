@@ -91,7 +91,7 @@ function OrcamentoPage() {
       <section className="px-6 pt-16">
         <div className="max-w-2xl mx-auto text-center">
           <div className="eyebrow mb-5">Orçamento na hora</div>
-          <h1 className="serif text-5xl md:text-6xl text-ink leading-[1.05]">
+          <h1 className="serif text-5xl md:text-6xl text-cream-light leading-[1.05]">
             Uma estimativa <em className="italic text-gold">imediata</em>
           </h1>
           <p className="mt-6 text-ink/60 max-w-md mx-auto text-sm">
