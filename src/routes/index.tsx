@@ -79,28 +79,31 @@ function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <div className="flex justify-center mb-8">
-          <Logo size={120} />
+          <Logo size={110} />
         </div>
-        <div className="eyebrow mb-6">Buffet · Eventos · Casamentos</div>
-        <h1 className="serif text-5xl md:text-7xl lg:text-8xl leading-[1.05] mb-6">
-          Uma <span className="serif gold-gradient-text text-6xl md:text-8xl lg:text-9xl italic block mt-2">imersão gastronômica</span>
-          <span className="block mt-2 text-cream-light">para os seus convidados.</span>
+        <div className="inline-flex items-center gap-4 mb-8">
+          <div className="h-px w-8 bg-gold" />
+          <span className="text-[0.7rem] tracking-[0.4em] uppercase text-gold">Buffet · Eventos · Casamentos</span>
+          <div className="h-px w-8 bg-gold" />
+        </div>
+        <h1 className="serif text-5xl md:text-7xl lg:text-8xl text-cream-light mb-8 leading-[1.05] font-light">
+          Uma <em className="italic font-light">imersão</em>
+          <span className="block gold-gradient-text italic">gastronômica</span>
+          <span className="block mt-2">para os seus convidados.</span>
         </h1>
-        <p className="max-w-2xl mx-auto text-cream/70 text-lg md:text-xl font-light mb-10">
+        <p className="max-w-xl mx-auto text-cream/60 text-lg leading-relaxed mb-12">
           Massa de longa fermentação, forno a lenha em alta temperatura e ingredientes selecionados — servidos diretamente para seus convidados.
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a href="#contato" className="btn-gold btn-gold-hover">Solicitar Orçamento</a>
-          <a href="#cardapio" className="btn-ghost-gold hover:bg-gold hover:text-black-rich">Ver Cardápio</a>
+          <a href="#cardapio" className="btn-ghost-gold hover:border-gold">Ver Cardápio</a>
         </div>
-        <div className="mt-16 flex flex-wrap justify-center gap-x-10 gap-y-4 text-[0.65rem] tracking-[0.25em] uppercase text-cream/40">
-          <span>72h de fermentação</span>
-          <span className="text-gold">·</span>
-          <span>Forno a 450°C</span>
-          <span className="text-gold">·</span>
-          <span>Pizzaiolo no local</span>
+        <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-6 text-[0.65rem] tracking-[0.3em] uppercase text-cream/40 border-t border-gold/15 pt-10">
+          <div>72h de Fermentação</div>
+          <div>Forno a 450°C</div>
+          <div>Pizzaiolo no Local</div>
         </div>
       </div>
     </section>
@@ -115,24 +118,26 @@ function Servico() {
   ];
   return (
     <section id="servico" className="py-32 bg-black-warm relative">
-      <div className="container max-w-6xl mx-auto px-6">
-        <div className="max-w-2xl mb-20">
-          <div className="eyebrow mb-4">O Serviço</div>
-          <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
-            Mais que um buffet, uma <em className="serif gold-gradient-text text-5xl md:text-6xl italic">experiência gastronômica</em>.
-          </h2>
-          <p className="text-cream/65 text-lg">
-            Não levamos pizza ao evento. Levamos a pizzaria inteira — forno, pizzaiolo, ritual e aroma.
-          </p>
-        </div>
-        <div className="grid md:grid-cols-3 gap-px bg-gold/15">
-          {pillars.map((p) => (
-            <div key={p.n} className="bg-black-warm p-10 hover:bg-black-card transition-colors group">
-              <div className="serif text-gold/50 text-5xl mb-6 group-hover:text-gold transition-colors">{p.n}</div>
-              <h3 className="serif text-2xl mb-4 text-cream-light">{p.t}</h3>
-              <p className="text-cream/55 text-sm leading-relaxed">{p.d}</p>
-            </div>
-          ))}
+      <div className="container max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-12 gap-16 items-start">
+          <div className="lg:col-span-5">
+            <div className="eyebrow mb-6">O Serviço</div>
+            <h2 className="serif text-4xl md:text-5xl text-cream-light leading-tight mb-8 font-light">
+              Mais que um buffet, uma <em className="serif gold-gradient-text italic block">experiência gastronômica</em>.
+            </h2>
+            <p className="text-cream/60 leading-relaxed">
+              Não levamos pizza ao evento. Levamos a pizzaria inteira — forno, pizzaiolo, ritual e aroma.
+            </p>
+          </div>
+          <div className="lg:col-span-7 grid md:grid-cols-3 gap-10">
+            {pillars.map((p) => (
+              <div key={p.n} className="space-y-4 group">
+                <span className="serif text-5xl italic text-gold/30 group-hover:text-gold/80 transition-colors block">{p.n}</span>
+                <h3 className="serif text-xl text-cream-light leading-tight">{p.t}</h3>
+                <p className="text-cream/50 text-sm leading-relaxed">{p.d}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
