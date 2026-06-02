@@ -25,7 +25,6 @@ import pizza13 from "@/assets/pizzas/pizza-13.jpeg.asset.json";
 import pizza14 from "@/assets/pizzas/pizza-14.jpeg.asset.json";
 import pizza15 from "@/assets/pizzas/pizza-15.jpeg.asset.json";
 import pizzaNova1 from "@/assets/pizzas/pizza-nova-1.jpeg.asset.json";
-import pizzaNova2 from "@/assets/pizzas/pizza-nova-2.png.asset.json";
 import pizzaE1 from "@/assets/pizzas/pizza-extra-06_3.jpeg.asset.json";
 import pizzaE2 from "@/assets/pizzas/pizza-extra-06_4.jpeg.asset.json";
 import pizzaE3 from "@/assets/pizzas/pizza-extra-06_5.jpeg.asset.json";
