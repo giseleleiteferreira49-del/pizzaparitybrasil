@@ -85,7 +85,7 @@ function Hero() {
         </div>
         <div className="eyebrow mb-6">Buffet · Eventos · Casamentos</div>
         <h1 className="serif text-5xl md:text-7xl lg:text-8xl leading-[1.05] mb-6">
-          A verdadeira <span className="script gold-gradient-text text-6xl md:text-8xl lg:text-9xl italic block mt-2">napoletana</span>
+          A verdadeira <span className="serif gold-gradient-text text-6xl md:text-8xl lg:text-9xl italic block mt-2">napoletana</span>
           <span className="block mt-2 text-cream-light">no seu evento.</span>
         </h1>
         <p className="max-w-2xl mx-auto text-cream/70 text-lg md:text-xl font-light mb-10">
@@ -119,7 +119,7 @@ function Servico() {
         <div className="max-w-2xl mb-20">
           <div className="eyebrow mb-4">O Serviço</div>
           <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
-            Um buffet que é <em className="script gold-gradient-text text-5xl md:text-6xl"> experiência</em>.
+            Um buffet que é <em className="serif gold-gradient-text text-5xl md:text-6xl italic">experiência</em>.
           </h2>
           <p className="text-cream/65 text-lg">
             Não levamos pizza ao evento. Levamos a pizzaria inteira — forno, pizzaiolo, ritual e aroma.
@@ -156,7 +156,7 @@ function Cardapio() {
         <div className="text-center mb-20">
           <div className="eyebrow mb-4">Cardápio</div>
           <h2 className="serif text-4xl md:text-5xl mb-4">
-            Sabores que viajam de <em className="script gold-gradient-text text-5xl md:text-6xl">Nápoles</em>
+            Sabores que viajam de <em className="serif gold-gradient-text text-5xl md:text-6xl italic">Nápoles</em>
           </h2>
           <p className="text-cream/60 max-w-xl mx-auto">Selecione livremente até 6 sabores salgados e 2 doces para o seu evento.</p>
         </div>
@@ -201,7 +201,7 @@ function Eventos() {
         <div>
           <div className="eyebrow mb-4">Eventos</div>
           <h2 className="serif text-4xl md:text-5xl mb-8 leading-tight">
-            Cada celebração tem <em className="script gold-gradient-text text-5xl md:text-6xl">sua</em> pizza.
+            Cada celebração tem <em className="serif gold-gradient-text text-5xl md:text-6xl italic">sua</em> pizza.
           </h2>
           <div className="space-y-6">
             {tipos.map((t) => (
@@ -228,7 +228,7 @@ function Processo() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <div className="eyebrow mb-4">Processo</div>
-          <h2 className="serif text-4xl md:text-5xl">Do <em className="script gold-gradient-text text-5xl md:text-6xl">fogo</em> à mesa</h2>
+          <h2 className="serif text-4xl md:text-5xl">Do <em className="serif gold-gradient-text text-5xl md:text-6xl italic">fogo</em> à mesa</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((s) => (
@@ -258,7 +258,7 @@ function Contato() {
       <div className="relative max-w-3xl mx-auto px-6 text-center">
         <div className="eyebrow mb-4">Vamos Conversar</div>
         <h2 className="serif text-4xl md:text-6xl mb-6 leading-tight">
-          Pronto para <em className="script gold-gradient-text text-5xl md:text-7xl">surpreender</em> seus convidados?
+          Pronto para <em className="serif gold-gradient-text text-5xl md:text-7xl italic">surpreender</em> seus convidados?
         </h2>
         <p className="text-cream/65 text-lg mb-12 max-w-xl mx-auto">
           Conte-nos sobre o seu evento. Respondemos em até 24 horas com uma proposta personalizada.
