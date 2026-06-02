@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AlertTriangle, AlertOctagon, HelpCircle, TrendingDown, UtensilsCrossed, Coffee, Wine, Leaf, Sprout, Droplets, Star, Check } from "lucide-react";
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/pizza-party-logo.asset.json";
 import heroPizza from "@/assets/hero-pizza.jpg";
@@ -108,10 +109,10 @@ function Hero() {
 
 function Hook() {
   const hooks = [
-    { i: "😬", t: "O buffet decepcionou seus convidados", d: "Pizza fria, massa borrachuda, sabores genéricos. A comida deveria ser o ponto alto, virou o ponto de conversa errado. Isso nunca mais vai acontecer no seu evento." },
-    { i: "😩", t: "O serviço foi desorganizado e estressante", d: "Equipe despreparada, atrasos, falta de atenção. Você deveria estar curtindo a festa, não resolvendo problema de fornecedor. Nossa equipe cuida de tudo para você." },
-    { i: "🤷", t: "A comida foi esquecível", d: "Semanas depois do evento, ninguém falava sobre a comida. A experiência não criou memória. Nossos clientes recebem mensagens dos convidados pedindo o contato da pizza." },
-    { i: "💸", t: "Pagou caro por algo ordinário", d: "Preço premium, entrega mediana. Qualidade inconsistente que não justificou o investimento. Com a Pizza Party Brasil, cada real investido se traduz em experiência visível e memorável." },
+    { icon: <AlertTriangle className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, t: "O buffet decepcionou seus convidados", d: "Pizza fria, massa borrachuda, sabores genéricos. A comida deveria ser o ponto alto, virou o ponto de conversa errado. Isso nunca mais vai acontecer no seu evento." },
+    { icon: <AlertOctagon className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, t: "O serviço foi desorganizado e estressante", d: "Equipe despreparada, atrasos, falta de atenção. Você deveria estar curtindo a festa, não resolvendo problema de fornecedor. Nossa equipe cuida de tudo para você." },
+    { icon: <HelpCircle className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, t: "A comida foi esquecível", d: "Semanas depois do evento, ninguém falava sobre a comida. A experiência não criou memória. Nossos clientes recebem mensagens dos convidados pedindo o contato da pizza." },
+    { icon: <TrendingDown className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, t: "Pagou caro por algo ordinário", d: "Preço premium, entrega mediana. Qualidade inconsistente que não justificou o investimento. Com a Pizza Party Brasil, cada real investido se traduz em experiência visível e memorável." },
   ];
   return (
     <section className="py-32 bg-black">
@@ -126,7 +127,7 @@ function Hook() {
         <div className="grid md:grid-cols-2 gap-px bg-gold/15">
           {hooks.map((h) => (
             <div key={h.t} className="bg-black p-10 hover:bg-black-card transition-colors">
-              <div className="text-4xl mb-5">{h.i}</div>
+              <div className="mb-5">{h.icon}</div>
               <h3 className="serif text-xl mb-3 text-cream-light">{h.t}</h3>
               <p className="text-cream/55 text-sm leading-relaxed">{h.d}</p>
             </div>
@@ -285,9 +286,9 @@ function Pacotes() {
 
 function Upgrades() {
   const ups = [
-    { i: "🧀", n: "Tábua de Frios", d: "Uma entrada que por si só já é um evento. Queijos finos, embutidos selecionados, frutas e acompanhamentos artesanais montados em tábua rústica.", items: ["4 tipos de queijos finos", "3 tipos de patês", "Salame e copa selecionados", "Frutas da estação", "Crostinis, castanhas e torradinhas premium", "Pão italiano artesanal e geleias"] },
-    { i: "☕", n: "Café Gourmet", d: "O encerramento perfeito. Na última hora do evento, nosso barista monta uma estação de café especial que se torna o assunto final da noite.", items: ["Café expresso artesanal", "Cappuccino tradicional", "Cappuccino Nutella", "Chocolate quente e cremoso", "Biscoitos finos"] },
-    { i: "🍷", n: "Locação de Utensílios", d: "Eleve a apresentação do serviço com utensílios de qualidade. Disponíveis para locação mediante contratação de garçom adicional.", items: ["Taças de vinho", "Taças de espumante", "Jogo de pratos e talheres", "Toalha cobre-mancha xadrez", "Copos de vidro", "Garçom adicional"] },
+    { icon: <UtensilsCrossed className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, n: "Tábua de Frios", d: "Uma entrada que por si só já é um evento. Queijos finos, embutidos selecionados, frutas e acompanhamentos artesanais montados em tábua rústica.", items: ["4 tipos de queijos finos", "3 tipos de patês", "Salame e copa selecionados", "Frutas da estação", "Crostinis, castanhas e torradinhas premium", "Pão italiano artesanal e geleias"] },
+    { icon: <Coffee className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, n: "Café Gourmet", d: "O encerramento perfeito. Na última hora do evento, nosso barista monta uma estação de café especial que se torna o assunto final da noite.", items: ["Café expresso artesanal", "Cappuccino tradicional", "Cappuccino Nutella", "Chocolate quente e cremoso", "Biscoitos finos"] },
+    { icon: <Wine className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, n: "Locação de Utensílios", d: "Eleve a apresentação do serviço com utensílios de qualidade. Disponíveis para locação mediante contratação de garçom adicional.", items: ["Taças de vinho", "Taças de espumante", "Jogo de pratos e talheres", "Toalha cobre-mancha xadrez", "Copos de vidro", "Garçom adicional"] },
   ];
   return (
     <section id="cardapio" className="py-32 bg-black-warm">
@@ -302,7 +303,7 @@ function Upgrades() {
         <div className="grid md:grid-cols-3 gap-px bg-gold/15">
           {ups.map((u) => (
             <div key={u.n} className="bg-black-warm p-10">
-              <div className="text-4xl mb-5">{u.i}</div>
+              <div className="mb-5">{u.icon}</div>
               <h3 className="serif text-2xl text-cream-light mb-3">{u.n}</h3>
               <p className="text-cream/60 text-sm mb-5 leading-relaxed">{u.d}</p>
               <ul className="space-y-1.5">
@@ -337,7 +338,7 @@ function Inclusao() {
         <div className="grid md:grid-cols-3 gap-px bg-gold/15">
           {opts.map((o) => (
             <div key={o.n} className="bg-black p-10">
-              <div className="text-4xl mb-5">{o.i}</div>
+              <div className="mb-5">{o.icon}</div>
               <h3 className="serif text-2xl text-cream-light mb-3">{o.n}</h3>
               <p className="text-cream/60 text-sm leading-relaxed">{o.d}</p>
             </div>
