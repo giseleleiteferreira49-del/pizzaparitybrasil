@@ -60,11 +60,11 @@
 }
 
 :root {
-  --paper:        #0A0A0A;
-  --cream:        #14110D;
-  --cream-light:  #F5EDD6;
-  --ink:          #F5EDD6;
-  --ink-soft:     rgba(245,237,214,0.65);
+  --paper:        #111008;
+  --cream:        #1a1810;
+  --cream-light:  #FAF8F3;
+  --ink:          #FAF8F3;
+  --ink-soft:     rgba(250,248,243,0.45);
 
   --gold:         #C9A84C;
   --gold-light:   #E8C97A;
