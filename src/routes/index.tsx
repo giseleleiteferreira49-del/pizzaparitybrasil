@@ -282,13 +282,10 @@ function Contato() {
           Preencha o formulário que entraremos em contato.
         </p>
         <ContatoForm />
-        <div className="flex flex-wrap justify-center gap-4 mt-10 mb-12">
-          <a href="https://wa.me/5511974418038" className="btn-gold btn-gold-hover">WhatsApp</a>
-        </div>
         <div className="grid sm:grid-cols-3 gap-8 text-center pt-12 border-t border-gold/15">
           <div>
             <div className="eyebrow mb-2 !text-cream/40">Telefone</div>
-            <div className="serif text-gold-light text-lg">+55 11 97441-8038</div>
+            <a href="https://wa.me/5511974418038" className="serif text-gold-light text-lg hover:text-gold transition-colors">+55 11 97441-8038</a>
           </div>
           <div>
             <div className="eyebrow mb-2 !text-cream/40">E-mail</div>
