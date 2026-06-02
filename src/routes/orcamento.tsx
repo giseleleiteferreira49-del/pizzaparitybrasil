@@ -76,147 +76,138 @@ function OrcamentoPage() {
   }
 
   const inputCls =
-    "w-full bg-cream-light/60 border border-ink/10 rounded-2xl px-5 py-3.5 text-ink placeholder:text-ink/40 focus:outline-none focus:border-tomato focus:bg-cream-light transition-colors";
+    "w-full bg-transparent border-0 border-b border-ink/15 rounded-none px-0 py-3 text-ink placeholder:text-ink/30 focus:outline-none focus:border-gold transition-colors";
 
   return (
-    <div className="bg-paper text-ink min-h-screen pb-12">
+    <div className="bg-paper text-ink min-h-screen pb-20">
       <header className="sticky top-0 z-50 px-4 pt-4">
-        <nav className="max-w-6xl mx-auto bg-cream-light/85 backdrop-blur-xl rounded-full shadow-[0_8px_30px_-15px_rgba(26,20,16,0.15)] flex items-center justify-between px-4 sm:px-6 py-2.5 border border-ink/5">
-          <Link to="/" className="text-xs font-semibold tracking-wide text-ink/70 hover:text-tomato transition-colors">← Voltar</Link>
-          <span className="serif italic text-tomato text-lg">Pizza Party</span>
-          <Link to="/cardapio" className="text-xs font-semibold tracking-wide text-ink/70 hover:text-tomato transition-colors">Cardápio</Link>
+        <nav className="max-w-6xl mx-auto flex items-center justify-between px-2 py-3">
+          <Link to="/" className="text-xs font-semibold tracking-wide text-ink/60 hover:text-gold transition-colors">← Voltar</Link>
+          <span className="serif italic text-gold text-lg">Pizza Party</span>
+          <Link to="/cardapio" className="text-xs font-semibold tracking-wide text-ink/60 hover:text-gold transition-colors">Cardápio</Link>
         </nav>
       </header>
 
-      <section className="px-4 pt-10">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="eyebrow mb-4 text-tomato">Orçamento na hora</div>
+      <section className="px-6 pt-16">
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="eyebrow mb-5">Orçamento na hora</div>
           <h1 className="serif text-5xl md:text-6xl text-ink leading-[1.05]">
-            Receba uma estimativa <em className="italic text-tomato">imediata</em>
+            Uma estimativa <em className="italic text-gold">imediata</em>
           </h1>
-          <p className="mt-5 text-ink/70 max-w-lg mx-auto">
-            Preencha os dados do seu evento e veja na hora o valor estimado. Mínimo de {MIN_CONVIDADOS} convidados.
+          <p className="mt-6 text-ink/60 max-w-md mx-auto text-sm">
+            Preencha os dados do seu evento. Mínimo de {MIN_CONVIDADOS} convidados.
           </p>
         </div>
       </section>
 
-      <section className="px-4 mt-10">
-        <div className="max-w-5xl mx-auto grid lg:grid-cols-[1.4fr_1fr] gap-6">
-          <form onSubmit={handleSubmit} className="panel-rounded bg-cream-light p-8 md:p-10 space-y-5">
-            <div className="grid md:grid-cols-2 gap-5">
-              <label className="block">
-                <span className="eyebrow !text-ink-soft mb-2 block">Convidados</span>
-                <input
-                  type="number"
-                  min={MIN_CONVIDADOS}
-                  inputMode="numeric"
-                  value={form.convidados}
-                  onChange={(e) => update("convidados", e.target.value)}
-                  placeholder="Ex: 80"
-                  className={inputCls}
-                  required
-                />
-              </label>
-              <label className="block">
-                <span className="eyebrow !text-ink-soft mb-2 block">Data do evento</span>
-                <input
-                  type="date"
-                  value={form.data}
-                  onChange={(e) => update("data", e.target.value)}
-                  className={inputCls}
-                  required
-                />
-              </label>
-            </div>
-
+      <section className="px-6 mt-16">
+        <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-8">
+          <div className="grid md:grid-cols-2 gap-6">
             <label className="block">
-              <span className="eyebrow !text-ink-soft mb-2 block">CEP da festa</span>
+              <span className="eyebrow !text-ink-soft mb-2 block">Convidados</span>
               <input
-                type="text"
+                type="number"
+                min={MIN_CONVIDADOS}
                 inputMode="numeric"
-                value={form.cep}
-                onChange={(e) => update("cep", maskCEP(e.target.value))}
-                placeholder="00000-000"
+                value={form.convidados}
+                onChange={(e) => update("convidados", e.target.value)}
+                placeholder="80"
                 className={inputCls}
                 required
               />
             </label>
-
-            <div className="h-px bg-ink/10 my-2" />
-
             <label className="block">
-              <span className="eyebrow !text-ink-soft mb-2 block">Nome completo</span>
+              <span className="eyebrow !text-ink-soft mb-2 block">Data do evento</span>
               <input
-                type="text"
-                value={form.nome}
-                onChange={(e) => update("nome", e.target.value)}
-                placeholder="Seu nome"
+                type="date"
+                value={form.data}
+                onChange={(e) => update("data", e.target.value)}
                 className={inputCls}
                 required
               />
             </label>
+          </div>
 
-            <div className="grid md:grid-cols-2 gap-5">
-              <label className="block">
-                <span className="eyebrow !text-ink-soft mb-2 block">E-mail</span>
-                <input
-                  type="email"
-                  value={form.email}
-                  onChange={(e) => update("email", e.target.value)}
-                  placeholder="voce@email.com"
-                  className={inputCls}
-                  required
-                />
-              </label>
-              <label className="block">
-                <span className="eyebrow !text-ink-soft mb-2 block">Telefone (DDD)</span>
-                <input
-                  type="tel"
-                  value={form.telefone}
-                  onChange={(e) => update("telefone", maskPhone(e.target.value))}
-                  placeholder="(11) 99999-9999"
-                  className={inputCls}
-                  required
-                />
-              </label>
-            </div>
+          <label className="block">
+            <span className="eyebrow !text-ink-soft mb-2 block">CEP da festa</span>
+            <input
+              type="text"
+              inputMode="numeric"
+              value={form.cep}
+              onChange={(e) => update("cep", maskCEP(e.target.value))}
+              placeholder="00000-000"
+              className={inputCls}
+              required
+            />
+          </label>
 
-            <button
-              type="submit"
-              disabled={!valido}
-              className="btn-pill btn-tomato w-full !py-4 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              Receber orçamento no WhatsApp
-            </button>
-          </form>
+          <label className="block">
+            <span className="eyebrow !text-ink-soft mb-2 block">Nome completo</span>
+            <input
+              type="text"
+              value={form.nome}
+              onChange={(e) => update("nome", e.target.value)}
+              placeholder="Seu nome"
+              className={inputCls}
+              required
+            />
+          </label>
 
-          <aside className="panel-rounded p-8 md:p-10 text-cream-light h-fit lg:sticky lg:top-28" style={{ background: "var(--gradient-warm)" }}>
-            <div className="eyebrow !text-cream-light/80 mb-4">Sua estimativa</div>
-            <div className="serif text-5xl md:text-6xl leading-none">
+          <div className="grid md:grid-cols-2 gap-6">
+            <label className="block">
+              <span className="eyebrow !text-ink-soft mb-2 block">E-mail</span>
+              <input
+                type="email"
+                value={form.email}
+                onChange={(e) => update("email", e.target.value)}
+                placeholder="voce@email.com"
+                className={inputCls}
+                required
+              />
+            </label>
+            <label className="block">
+              <span className="eyebrow !text-ink-soft mb-2 block">Telefone</span>
+              <input
+                type="tel"
+                value={form.telefone}
+                onChange={(e) => update("telefone", maskPhone(e.target.value))}
+                placeholder="(11) 99999-9999"
+                className={inputCls}
+                required
+              />
+            </label>
+          </div>
+
+          <div className="pt-8 flex flex-col items-center gap-2 border-t border-ink/10">
+            <div className="eyebrow !text-ink-soft">Estimativa</div>
+            <div className="serif text-5xl md:text-6xl text-gold leading-none">
               {estimativa > 0 ? formatBRL(estimativa) : "—"}
             </div>
-            <p className="mt-4 text-cream-light/85 text-sm">
+            <p className="text-ink/50 text-xs mt-1 text-center">
               {convidadosNum < MIN_CONVIDADOS
-                ? `Informe pelo menos ${MIN_CONVIDADOS} convidados para calcular.`
-                : `Baseado em ${convidadosNum} convidados a ${formatBRL(PRECO_POR_CONVIDADO)} por pessoa.`}
+                ? `Informe pelo menos ${MIN_CONVIDADOS} convidados.`
+                : `${convidadosNum} convidados · ${formatBRL(PRECO_POR_CONVIDADO)} por pessoa`}
             </p>
-            <div className="h-px bg-cream-light/20 my-6" />
-            <ul className="space-y-2 text-sm text-cream-light/90">
-              <li>✓ Pizzaiolo no evento</li>
-              <li>✓ Forno e brigada inclusos</li>
-              <li>✓ Rodízio contínuo de pizzas</li>
-              <li>✓ Massa de fermentação 72h</li>
-            </ul>
-            {submitted && (
-              <div className="mt-6 rounded-2xl bg-cream-light/15 px-4 py-3 text-sm">
-                Abrimos o WhatsApp com seus dados. Em breve retornamos!
-              </div>
-            )}
-            <p className="mt-6 text-[0.7rem] text-cream-light/70 leading-relaxed">
-              * Valor estimado. A proposta final pode variar conforme deslocamento, cardápio e estrutura do local.
+          </div>
+
+          <button
+            type="submit"
+            disabled={!valido}
+            className="btn-pill btn-tomato w-full !py-4 disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            Receber orçamento no WhatsApp
+          </button>
+
+          {submitted && (
+            <p className="text-center text-sm text-ink/60">
+              Abrimos o WhatsApp com seus dados. Em breve retornamos.
             </p>
-          </aside>
-        </div>
+          )}
+
+          <p className="text-center text-[0.7rem] text-ink/40 leading-relaxed pt-2">
+            * Valor estimado. A proposta final pode variar conforme deslocamento, cardápio e estrutura.
+          </p>
+        </form>
       </section>
     </div>
   );
