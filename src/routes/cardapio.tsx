@@ -100,9 +100,9 @@ function CardapioPage() {
           <h2 className="serif text-4xl md:text-5xl text-tomato-dark mb-6">
             Monte o cardápio do seu <em className="italic">evento</em>.
           </h2>
-          <a href="https://wa.me/5511974418038?text=Gostaria%20de%20mais%20informações" className="btn-pill btn-tomato">
+          <Link to="/orcamento" className="btn-pill btn-tomato">
             Solicitar Orçamento
-          </a>
+          </Link>
         </div>
       </section>
     </div>
