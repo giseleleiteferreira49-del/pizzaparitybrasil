@@ -219,16 +219,16 @@ function Eventos() {
 
 function Processo() {
   const steps = [
-    { img: doughImg, n: "01", t: "Massa", d: "Fermentação lenta de 72h com farinhas italianas tipo 00." },
-    { img: ovenImg, n: "02", t: "Forno", d: "Lenha de eucalipto a 450°C. 90 segundos para a perfeição." },
-    { img: heroPizza, n: "03", t: "Serviço", d: "Pizzaiolo molda e serve diante dos convidados, em fluxo contínuo." },
+    { img: doughImg, n: "01", t: "Massa", d: "Fermentação lenta de 72h com blend das melhores farinhas italianas tipo 00." },
+    { img: eventImg, n: "02", t: "Preparação", d: "Recheios selecionados, montagem cuidadosa e atenção a cada detalhe antes do forno." },
+    { img: heroPizza, n: "03", t: "Forno", d: "Assadas com perfeição a 450°C, liberando os sabores e aromas — um controle excelente entre agilidade e cozimento." },
   ];
   return (
     <section id="processo" className="py-32 bg-black">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <div className="eyebrow mb-4">Processo</div>
-          <h2 className="serif text-4xl md:text-5xl">Do <em className="serif gold-gradient-text text-5xl md:text-6xl italic">fogo</em> à mesa</h2>
+          <h2 className="serif text-4xl md:text-5xl">Do <em className="serif gold-gradient-text text-5xl md:text-6xl italic">calor</em> à mesa</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((s) => (
