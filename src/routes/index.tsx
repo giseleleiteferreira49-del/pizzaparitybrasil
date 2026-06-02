@@ -118,24 +118,26 @@ function Servico() {
   ];
   return (
     <section id="servico" className="py-32 bg-black-warm relative">
-      <div className="container max-w-6xl mx-auto px-6">
-        <div className="max-w-2xl mb-20">
-          <div className="eyebrow mb-4">O Serviço</div>
-          <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
-            Mais que um buffet, uma <em className="serif gold-gradient-text text-5xl md:text-6xl italic">experiência gastronômica</em>.
-          </h2>
-          <p className="text-cream/65 text-lg">
-            Não levamos pizza ao evento. Levamos a pizzaria inteira — forno, pizzaiolo, ritual e aroma.
-          </p>
-        </div>
-        <div className="grid md:grid-cols-3 gap-px bg-gold/15">
-          {pillars.map((p) => (
-            <div key={p.n} className="bg-black-warm p-10 hover:bg-black-card transition-colors group">
-              <div className="serif text-gold/50 text-5xl mb-6 group-hover:text-gold transition-colors">{p.n}</div>
-              <h3 className="serif text-2xl mb-4 text-cream-light">{p.t}</h3>
-              <p className="text-cream/55 text-sm leading-relaxed">{p.d}</p>
-            </div>
-          ))}
+      <div className="container max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-12 gap-16 items-start">
+          <div className="lg:col-span-5">
+            <div className="eyebrow mb-6">O Serviço</div>
+            <h2 className="serif text-4xl md:text-5xl text-cream-light leading-tight mb-8 font-light">
+              Mais que um buffet, uma <em className="serif gold-gradient-text italic block">experiência gastronômica</em>.
+            </h2>
+            <p className="text-cream/60 leading-relaxed">
+              Não levamos pizza ao evento. Levamos a pizzaria inteira — forno, pizzaiolo, ritual e aroma.
+            </p>
+          </div>
+          <div className="lg:col-span-7 grid md:grid-cols-3 gap-10">
+            {pillars.map((p) => (
+              <div key={p.n} className="space-y-4 group">
+                <span className="serif text-5xl italic text-gold/30 group-hover:text-gold/80 transition-colors block">{p.n}</span>
+                <h3 className="serif text-xl text-cream-light leading-tight">{p.t}</h3>
+                <p className="text-cream/50 text-sm leading-relaxed">{p.d}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
