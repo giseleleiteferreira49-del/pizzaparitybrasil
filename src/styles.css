@@ -118,12 +118,12 @@
   font-size: 0.68rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--tomato);
+  color: var(--gold);
   font-weight: 600;
 }
 
 @utility warm-gradient-text {
-  background: linear-gradient(135deg, var(--amber), var(--tomato-light), var(--tomato));
+  background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -150,20 +150,20 @@
 }
 @utility btn-tomato {
   background: var(--tomato);
-  color: var(--cream-light);
-  box-shadow: 0 10px 25px -10px rgba(200,53,30,0.55);
-  &:hover { transform: translateY(-2px); box-shadow: 0 16px 35px -10px rgba(200,53,30,0.65); }
+  color: #0A0A0A;
+  box-shadow: 0 10px 25px -10px rgba(245,166,35,0.55);
+  &:hover { transform: translateY(-2px); box-shadow: 0 16px 35px -10px rgba(245,166,35,0.7); }
 }
 @utility btn-cream {
   background: var(--cream-light);
-  color: var(--ink);
-  box-shadow: 0 10px 25px -10px rgba(26,20,16,0.2);
+  color: #0A0A0A;
+  box-shadow: 0 10px 25px -10px rgba(245,237,214,0.25);
   &:hover { transform: translateY(-2px); }
 }
 @utility btn-outline-ink {
-  border: 1.5px solid var(--ink);
-  color: var(--ink);
-  &:hover { background: var(--ink); color: var(--cream-light); }
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
+  &:hover { background: var(--gold); color: #0A0A0A; }
 }
 
 /* Soft cards */
