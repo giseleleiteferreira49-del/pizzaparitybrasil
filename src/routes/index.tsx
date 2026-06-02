@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/pizza-party-logo.asset.json";
 import heroPizza from "@/assets/hero-pizza.jpg";
-import doughImg from "@/assets/dough.jpg";
-import ovenImg from "@/assets/oven.jpg";
+import doughImg from "@/assets/processo-massa.jpg.asset.json";
+import ovenImg from "@/assets/processo-forno.jpg.asset.json";
+import servicoImg from "@/assets/processo-servico.jpg.asset.json";
 import eventImg from "@/assets/event.jpg";
 
 export const Route = createFileRoute("/")({
