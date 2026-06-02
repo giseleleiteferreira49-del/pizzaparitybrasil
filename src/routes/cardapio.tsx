@@ -10,6 +10,16 @@ import brasileira from "@/assets/menu/brasileira.jpeg.asset.json";
 import palmito from "@/assets/menu/palmito.jpeg.asset.json";
 import peitoPeru from "@/assets/menu/peito-peru.jpeg.asset.json";
 import chocolateCoco from "@/assets/menu/chocolate-coco.jpeg.asset.json";
+import margherita from "@/assets/menu/margherita.jpeg.asset.json";
+import napoletana from "@/assets/menu/napoletana.jpeg.asset.json";
+import margueritaParmesao from "@/assets/menu/marguerita-parmesao.jpeg.asset.json";
+import burrata from "@/assets/menu/burrata.jpeg.asset.json";
+import milho from "@/assets/menu/milho.jpeg.asset.json";
+import frangoCatupiry from "@/assets/menu/frango-catupiry.jpeg.asset.json";
+import frangoEspecial from "@/assets/menu/frango-especial.jpeg.asset.json";
+import chocolateMorango from "@/assets/menu/chocolate-morango.jpeg.asset.json";
+import chocolateBelga from "@/assets/menu/chocolate-belga.jpeg.asset.json";
+import oreo from "@/assets/menu/oreo.jpeg.asset.json";
 
 export const Route = createFileRoute("/cardapio")({
   head: () => ({
