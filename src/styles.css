@@ -8,174 +8,128 @@
   @font-face { font-family: placeholder; src: local('Arial'); }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Dancing+Script:wght@600;700&display=swap');
 
 @theme inline {
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 28px;
-  --radius-xl: 40px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
 
-  --color-background: var(--paper);
-  --color-foreground: var(--ink);
-  --color-card: var(--cream-light);
-  --color-card-foreground: var(--ink);
-  --color-popover: var(--cream-light);
-  --color-popover-foreground: var(--ink);
-  --color-primary: var(--tomato);
-  --color-primary-foreground: var(--cream-light);
-  --color-secondary: var(--cream);
-  --color-secondary-foreground: var(--ink);
-  --color-muted: var(--cream);
-  --color-muted-foreground: var(--ink-soft);
-  --color-accent: var(--gold);
-  --color-accent-foreground: var(--ink);
-  --color-destructive: var(--tomato);
-  --color-destructive-foreground: var(--cream-light);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--card);
+  --color-popover-foreground: var(--card-foreground);
+  --color-primary: var(--gold);
+  --color-primary-foreground: var(--black);
+  --color-secondary: var(--black-card);
+  --color-secondary-foreground: var(--cream);
+  --color-muted: var(--black-card);
+  --color-muted-foreground: var(--gray);
+  --color-accent: var(--gold-dark);
+  --color-accent-foreground: var(--cream);
+  --color-destructive: var(--burgundy);
+  --color-destructive-foreground: var(--cream);
   --color-border: var(--border);
   --color-input: var(--border);
-  --color-ring: var(--tomato);
+  --color-ring: var(--gold);
 
   --color-gold: var(--gold);
   --color-gold-light: var(--gold-light);
   --color-gold-dark: var(--gold-dark);
   --color-cream: var(--cream);
   --color-cream-light: var(--cream-light);
-  --color-paper: var(--paper);
-  --color-ink: var(--ink);
-  --color-ink-soft: var(--ink-soft);
-  --color-tomato: var(--tomato);
-  --color-tomato-light: var(--tomato-light);
-  --color-tomato-dark: var(--tomato-dark);
-  --color-amber: var(--amber);
-  --color-sage: var(--sage);
-  --color-sage-light: var(--sage-light);
-  --color-blush: var(--blush);
-  --color-blush-light: var(--blush-light);
-  --color-basil: var(--basil);
   --color-burgundy: var(--burgundy);
+  --color-black-rich: var(--black);
+  --color-black-warm: var(--black-warm);
+  --color-black-card: var(--black-card);
 
   --font-serif: 'Cormorant Garamond', serif;
   --font-sans: 'DM Sans', sans-serif;
+  --font-script: 'Dancing Script', cursive;
 }
 
 :root {
-  --paper:        #FBF6EE;
-  --cream:        #F3E9D2;
-  --cream-light:  #FAF6EC;
-  --ink:          #1A1410;
-  --ink-soft:     #5C5046;
-
+  --black:        #0A0A08;
+  --black-warm:   #111009;
+  --black-card:   #161410;
   --gold:         #C9A84C;
   --gold-light:   #E8C97A;
   --gold-dark:    #9A7A2E;
-
-  --tomato:       #C8351E;
-  --tomato-light: #E86A3E;
-  --tomato-dark:  #8B1F12;
   --amber:        #F5A623;
+  --cream:        #F5EDD6;
+  --cream-light:  #FAF6EC;
   --burgundy:     #7B1F2E;
+  --gray:         #8A8070;
 
-  --sage:         #A8C09A;
-  --sage-light:   #D5E3CC;
-  --blush:        #F4C6C2;
-  --blush-light:  #FBE6E2;
-  --basil:        #4F6B3D;
+  --background: var(--black);
+  --foreground: var(--cream-light);
+  --card: var(--black-card);
+  --card-foreground: var(--cream-light);
+  --border: rgba(201,168,76,0.18);
 
-  --background: var(--paper);
-  --foreground: var(--ink);
-  --card: var(--cream-light);
-  --card-foreground: var(--ink);
-  --border: rgba(26,20,16,0.08);
+  --radius: 4px;
 
-  --radius: 16px;
-
-  --gradient-warm: linear-gradient(135deg, #F4B26B 0%, #E86A3E 45%, #C8351E 100%);
-  --gradient-blush: linear-gradient(135deg, #FBE6E2 0%, #F4C6C2 100%);
-  --gradient-sage:  linear-gradient(135deg, #E8F0DE 0%, #C8D9B8 100%);
-  --shadow-soft:    0 20px 50px -20px rgba(200,53,30,0.25);
-  --shadow-card:    0 10px 40px -15px rgba(26,20,16,0.12);
-  --shadow-pop:     0 25px 60px -25px rgba(26,20,16,0.25);
+  --gradient-gold: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+  --shadow-gold: 0 20px 60px -20px rgba(201,168,76,0.35);
+  --shadow-deep: 0 30px 80px -30px rgba(0,0,0,0.9);
 }
 
 @layer base {
   * { border-color: var(--border); }
   html { scroll-behavior: smooth; }
   body {
-    background: var(--paper);
-    color: var(--ink);
+    background: var(--black);
+    color: var(--cream-light);
     font-family: var(--font-sans);
-    font-weight: 400;
-    line-height: 1.6;
+    font-weight: 300;
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 500; letter-spacing: -0.015em; color: var(--ink); }
+  h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 500; letter-spacing: -0.01em; }
 }
 
 @utility serif { font-family: var(--font-serif); }
-
+@utility script { font-family: var(--font-script); }
 @utility eyebrow {
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--tomato);
-  font-weight: 600;
+  color: var(--gold);
+  font-weight: 500;
 }
-
-@utility warm-gradient-text {
-  background: linear-gradient(135deg, var(--amber), var(--tomato-light), var(--tomato));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
 @utility gold-gradient-text {
   background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
-
-/* Pill buttons */
-@utility btn-pill {
+@utility btn-gold {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  border-radius: 999px;
-  padding: 14px 28px;
-  font-size: 0.78rem;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: var(--black);
+  padding: 14px 32px;
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
-  transition: transform 0.3s, box-shadow 0.3s;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+  box-shadow: 0 10px 30px -10px rgba(201,168,76,0.5);
 }
-@utility btn-tomato {
-  background: var(--tomato);
-  color: var(--cream-light);
-  box-shadow: 0 10px 25px -10px rgba(200,53,30,0.55);
-  &:hover { transform: translateY(-2px); box-shadow: 0 16px 35px -10px rgba(200,53,30,0.65); }
+@utility btn-gold-hover {
+  &:hover { transform: translateY(-2px); box-shadow: 0 16px 40px -10px rgba(201,168,76,0.6); }
 }
-@utility btn-cream {
-  background: var(--cream-light);
-  color: var(--ink);
-  box-shadow: 0 10px 25px -10px rgba(26,20,16,0.2);
-  &:hover { transform: translateY(-2px); }
-}
-@utility btn-outline-ink {
-  border: 1.5px solid var(--ink);
-  color: var(--ink);
-  &:hover { background: var(--ink); color: var(--cream-light); }
-}
-
-/* Soft cards */
-@utility card-soft {
-  background: var(--cream-light);
-  border-radius: 28px;
-  box-shadow: var(--shadow-card);
-}
-
-@utility panel-rounded {
-  border-radius: 40px;
-  overflow: hidden;
+@utility btn-ghost-gold {
+  display: inline-flex; align-items: center; gap: 10px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 13px 31px;
+  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
+  transition: all 0.3s;
 }
 
 /* Hide Lovable badge */

@@ -3,9 +3,6 @@ import logoAsset from "@/assets/pizza-party-logo.asset.json";
 import heroPizza from "@/assets/hero-pizza.jpg";
 import doughImg from "@/assets/dough.jpg";
 import eventImg from "@/assets/event.jpg";
-import pepperoni from "@/assets/menu/pepperoni.jpeg.asset.json";
-import pepperoniBurrata from "@/assets/menu/pepperoni-burrata.jpeg.asset.json";
-import quatroQueijos from "@/assets/menu/quatro-queijos.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -34,143 +31,73 @@ function Logo({ size = 44 }: { size?: number }) {
 
 function Nav() {
   return (
-    <header className="sticky top-0 z-50 px-4 pt-4">
-      <nav className="max-w-6xl mx-auto bg-cream-light/85 backdrop-blur-xl rounded-full shadow-[0_8px_30px_-15px_rgba(26,20,16,0.15)] flex items-center justify-between px-3 sm:px-6 py-2.5 border border-ink/5">
-        <div className="hidden md:flex items-center gap-7 flex-1">
-          <a href="#sobre" className="text-xs font-semibold tracking-wide text-ink/70 hover:text-tomato transition-colors">Sobre</a>
-          <Link to="/cardapio" className="text-xs font-semibold tracking-wide text-ink/70 hover:text-tomato transition-colors">Cardápio</Link>
-          <a href="#eventos" className="text-xs font-semibold tracking-wide text-ink/70 hover:text-tomato transition-colors">Eventos</a>
-        </div>
-        <a href="#top" className="flex items-center gap-2 mx-auto md:mx-0">
-          <Logo size={42} />
-          <span className="serif italic text-tomato text-lg leading-none hidden sm:block">Pizza Party</span>
-        </a>
-        <div className="hidden md:flex items-center gap-7 flex-1 justify-end">
-          <a href="#processo" className="text-xs font-semibold tracking-wide text-ink/70 hover:text-tomato transition-colors">Processo</a>
-          <a href="#contato" className="btn-pill btn-tomato !py-2.5 !px-5 !text-[0.7rem]">Orçamento</a>
-        </div>
-      </nav>
-    </header>
+    <nav className="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-6 md:px-12 backdrop-blur-xl bg-black-rich/90 border-b border-gold/15">
+      <a href="#top" className="flex items-center gap-3">
+        <Logo size={36} />
+        <div className="hidden sm:block serif text-gold text-sm tracking-[0.18em] uppercase font-semibold">Pizza Party</div>
+      </a>
+      <ul className="hidden md:flex gap-8 list-none items-center">
+        <li><a href="#servico" className="text-[0.7rem] tracking-[0.2em] uppercase text-cream/55 hover:text-gold transition-colors">Serviço</a></li>
+        <li><Link to="/cardapio" className="text-[0.7rem] tracking-[0.2em] uppercase text-cream/55 hover:text-gold transition-colors">Cardápio</Link></li>
+        <li><a href="#eventos" className="text-[0.7rem] tracking-[0.2em] uppercase text-cream/55 hover:text-gold transition-colors">Eventos</a></li>
+        <li><a href="#contato" className="text-[0.7rem] tracking-[0.2em] uppercase text-cream/55 hover:text-gold transition-colors">Contato</a></li>
+      </ul>
+      <a href="#contato" className="btn-gold btn-gold-hover text-[0.62rem] !py-2 !px-4">Orçamento</a>
+    </nav>
   );
 }
 
 function Hero() {
   return (
-    <section id="top" className="px-4 pt-6">
-      <div className="max-w-6xl mx-auto panel-rounded relative" style={{ background: "var(--gradient-warm)" }}>
-        <div className="absolute inset-0 opacity-30 pointer-events-none" style={{
-          backgroundImage: "radial-gradient(ellipse 60% 50% at 80% 20%, rgba(255,220,150,0.6), transparent 60%), radial-gradient(ellipse 50% 40% at 10% 90%, rgba(139,31,18,0.5), transparent 60%)"
-        }} />
-        <div className="relative grid lg:grid-cols-2 gap-6 items-center px-8 md:px-14 py-14 md:py-20 min-h-[560px]">
-          <div className="text-cream-light">
-            <div className="flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-cream-light/80 mb-6">
-              <span>05</span>
-              <span className="w-12 h-px bg-cream-light/50" />
-              <span>→</span>
-            </div>
-            <h1 className="serif text-6xl md:text-8xl lg:text-[7.5rem] leading-[0.95] tracking-tight">
-              Pizza
-              <span className="block italic text-cream-light/95">Napoletana</span>
-            </h1>
-            <p className="mt-8 max-w-sm text-cream-light/90 text-[0.95rem] leading-relaxed">
-              Imersão gastronômica artesanal para casamentos, eventos corporativos e celebrações exclusivas.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/cardapio" className="btn-pill btn-cream">Ver Cardápio</Link>
-              <a href="#contato" className="btn-pill btn-tomato !bg-ink !text-cream-light hover:!bg-tomato-dark">Solicitar Orçamento</a>
-            </div>
-          </div>
-          <div className="relative flex items-center justify-center min-h-[320px]">
-            <div className="absolute inset-0 rounded-full blur-3xl opacity-50" style={{ background: "radial-gradient(circle at center, #FFD79A 0%, transparent 60%)" }} />
-            <img src={heroPizza} alt="Pizza napoletana artesanal" className="relative w-full max-w-[420px] aspect-square object-cover rounded-full shadow-[0_40px_80px_-20px_rgba(0,0,0,0.4)] rotate-[-6deg]" />
-          </div>
+    <section id="top" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-black-warm">
+      <div
+        className="absolute inset-0 opacity-40"
+        style={{
+          backgroundImage: `radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201,168,76,0.18) 0%, transparent 60%), radial-gradient(ellipse 60% 40% at 50% 110%, rgba(123,31,46,0.20) 0%, transparent 60%)`,
+        }}
+      />
+      <img src={heroPizza} alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover opacity-20" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black" />
+
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <div className="flex justify-center mb-10">
+          <Logo size={110} />
+        </div>
+        <h1 className="serif text-5xl md:text-7xl lg:text-8xl leading-[1.05] mb-8">
+          Uma <em className="serif gold-gradient-text italic">imersão gastronômica</em>
+          <span className="block mt-2 text-cream-light">para os seus convidados.</span>
+        </h1>
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          <a href="#contato" className="btn-gold btn-gold-hover">Solicitar Orçamento</a>
+          <Link to="/cardapio" className="btn-ghost-gold hover:bg-gold hover:text-black-rich">Ver Cardápio</Link>
         </div>
       </div>
     </section>
   );
 }
 
-function Sobre() {
-  return (
-    <section id="sobre" className="px-4 py-24">
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <div>
-          <div className="eyebrow mb-5">Sobre Nós</div>
-          <h2 className="serif text-5xl md:text-6xl leading-[1.05] mb-6">
-            Mais que um buffet, uma <em className="italic warm-gradient-text">experiência</em>.
-          </h2>
-          <p className="text-ink-soft text-[0.95rem] leading-relaxed mb-4">
-            <strong className="text-ink font-semibold">Pizza Party Brasil</strong> — buffet napoletano artesanal para quem busca uma celebração com sabor, ritual e presença.
-          </p>
-          <p className="text-ink-soft text-[0.95rem] leading-relaxed">
-            Massa de longa fermentação, forno em alta temperatura e ingredientes selecionados — servidos diretamente para seus convidados.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-6 gap-3 md:gap-4">
-          <div className="col-span-3 rounded-3xl px-5 py-5 flex items-center justify-center text-center" style={{ background: "var(--sage-light)" }}>
-            <div>
-              <div className="serif text-3xl text-basil leading-none">72h</div>
-              <div className="text-[0.65rem] tracking-[0.2em] uppercase text-basil/80 mt-1">Fermentação</div>
-            </div>
-          </div>
-          <div className="col-span-3 rounded-3xl px-5 py-5 flex items-center justify-center text-center bg-amber/15">
-            <div>
-              <div className="serif text-3xl text-tomato leading-none">450°C</div>
-              <div className="text-[0.65rem] tracking-[0.2em] uppercase text-tomato/80 mt-1">Forno</div>
-            </div>
-          </div>
-          <div className="col-span-4 rounded-3xl p-6" style={{ background: "var(--gradient-sage)" }}>
-            <div className="serif text-xl text-basil mb-1">Chef Pizzaiolo</div>
-            <p className="text-[0.78rem] text-basil/80 leading-relaxed">No evento, garantindo consistência e qualidade.</p>
-          </div>
-          <div className="col-span-2 rounded-3xl p-5 flex items-center justify-center text-center bg-ink text-cream-light">
-            <div>
-              <div className="serif text-2xl leading-none">500+</div>
-              <div className="text-[0.6rem] tracking-[0.2em] uppercase text-cream-light/70 mt-1">Eventos</div>
-            </div>
-          </div>
-          <div className="col-span-2 rounded-3xl p-5 flex items-center justify-center text-center" style={{ background: "var(--blush)" }}>
-            <div className="serif italic text-xl text-tomato-dark leading-none">100%</div>
-          </div>
-          <div className="col-span-4 rounded-3xl p-6" style={{ background: "var(--gradient-blush)" }}>
-            <div className="serif text-xl text-tomato-dark mb-1">Massa Artesanal</div>
-            <p className="text-[0.78rem] text-tomato-dark/80 leading-relaxed">Blend de farinhas italianas com azeite de oliva.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function SaboresPreview() {
-  const featured = [
-    { img: pepperoni.url, nome: "Pepperoni", tint: "var(--blush)", accent: "text-tomato-dark" },
-    { img: pepperoniBurrata.url, nome: "Pepperoni & Burrata", tint: "var(--sage-light)", accent: "text-basil" },
-    { img: quatroQueijos.url, nome: "Quatro Queijos", tint: "#FFE4B5", accent: "text-tomato" },
+function Servico() {
+  const pillars = [
+    { n: "01", t: "Chef Pizzaiolo no Evento" },
+    { n: "02", t: "Tecnologia na Preparação" },
+    { n: "03", t: "Massa Artesanal" },
   ];
   return (
-    <section id="sabores" className="px-4 py-24 bg-cream/40">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <div className="eyebrow mb-4">Sabores</div>
-          <h2 className="serif text-5xl md:text-6xl">Cardápio</h2>
+    <section id="servico" className="py-32 bg-black-warm">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-2xl mb-20">
+          <div className="eyebrow mb-4">O Serviço</div>
+          <h2 className="serif text-4xl md:text-5xl leading-tight">
+            Mais que um buffet, uma <em className="serif gold-gradient-text italic">experiência gastronômica</em>.
+          </h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-10">
-          {featured.map((p) => (
-            <div key={p.nome} className="text-center group">
-              <div className="relative aspect-square mb-6">
-                <div className="absolute inset-4 rounded-full blur-2xl opacity-70" style={{ background: p.tint }} />
-                <img src={p.img} alt={p.nome} loading="lazy" className="relative w-full h-full object-cover rounded-full transition-transform duration-700 group-hover:scale-105 shadow-[0_20px_50px_-15px_rgba(26,20,16,0.25)]" />
-              </div>
-              <Link to="/cardapio" className={`btn-pill btn-cream ${p.accent}`}>
-                {p.nome} <span>↗</span>
-              </Link>
+        <div className="grid md:grid-cols-3 gap-px bg-gold/15">
+          {pillars.map((p) => (
+            <div key={p.n} className="bg-black-warm p-12 hover:bg-black-card transition-colors group">
+              <div className="serif text-gold/50 text-5xl mb-6 group-hover:text-gold transition-colors">{p.n}</div>
+              <h3 className="serif text-2xl text-cream-light">{p.t}</h3>
             </div>
           ))}
-        </div>
-        <div className="text-center mt-14">
-          <Link to="/cardapio" className="btn-pill btn-outline-ink">Ver cardápio completo</Link>
         </div>
       </div>
     </section>
@@ -179,26 +106,24 @@ function SaboresPreview() {
 
 function Eventos() {
   const tipos = [
-    { t: "Noivados & Matrimônios", bg: "var(--gradient-blush)", color: "text-tomato-dark" },
-    { t: "Corporativo", bg: "var(--gradient-sage)", color: "text-basil" },
-    { t: "Aniversários", bg: "var(--blush-light)", color: "text-tomato-dark" },
-    { t: "Festivais & Marcas", bg: "var(--cream)", color: "text-ink" },
+    { t: "Noivados & Matrimônios" },
+    { t: "Corporativo" },
+    { t: "Aniversários" },
+    { t: "Festivais & Marcas" },
   ];
   return (
-    <section id="eventos" className="px-4 py-24">
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-        <div className="panel-rounded relative">
-          <img src={eventImg} alt="Buffet de pizza em evento" className="w-full aspect-[4/5] object-cover" />
-        </div>
+    <section id="eventos" className="py-32 bg-black-warm overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+        <img src={eventImg} alt="Buffet de pizza em evento" loading="lazy" className="w-full aspect-[4/3] object-cover" />
         <div>
           <div className="eyebrow mb-4">Eventos</div>
-          <h2 className="serif text-5xl md:text-6xl leading-[1.05] mb-8">
-            Camadas <em className="italic warm-gradient-text">personalizadas</em> para cada celebração.
+          <h2 className="serif text-4xl md:text-5xl mb-10 leading-tight">
+            Camadas <em className="serif gold-gradient-text italic">personalizadas</em> para cada celebração.
           </h2>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="space-y-4">
             {tipos.map((t) => (
-              <div key={t.t} className={`rounded-3xl px-5 py-6 ${t.color}`} style={{ background: t.bg }}>
-                <div className="serif text-lg leading-tight">{t.t}</div>
+              <div key={t.t} className="border-l border-gold/40 pl-5 hover:border-gold transition-colors">
+                <h3 className="serif text-xl text-gold-light">{t.t}</h3>
               </div>
             ))}
           </div>
@@ -210,27 +135,27 @@ function Eventos() {
 
 function Processo() {
   const steps = [
-    { img: doughImg, n: "01", t: "Massa", d: "Fermentação lenta de 72h." },
-    { img: eventImg, n: "02", t: "Preparação", d: "Recheios selecionados e montagem cuidadosa." },
-    { img: heroPizza, n: "03", t: "Forno", d: "Assada a 450°C, em 90 segundos." },
+    { img: doughImg, n: "01", t: "Massa" },
+    { img: eventImg, n: "02", t: "Preparação" },
+    { img: heroPizza, n: "03", t: "Forno" },
   ];
   return (
-    <section id="processo" className="px-4 py-24 bg-cream/40">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-14">
+    <section id="processo" className="py-32 bg-black">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="text-center mb-16">
           <div className="eyebrow mb-4">Processo</div>
-          <h2 className="serif text-5xl md:text-6xl">Do <em className="italic warm-gradient-text">calor</em> à mesa</h2>
+          <h2 className="serif text-4xl md:text-5xl">Do <em className="serif gold-gradient-text italic">calor</em> à mesa</h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-8">
           {steps.map((s) => (
-            <div key={s.n} className="card-soft overflow-hidden group">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img src={s.img} alt={s.t} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              </div>
-              <div className="p-6">
-                <div className="text-xs tracking-[0.25em] uppercase text-tomato font-semibold mb-1">{s.n}</div>
-                <h3 className="serif text-2xl mb-1">{s.t}</h3>
-                <p className="text-sm text-ink-soft">{s.d}</p>
+            <div key={s.n} className="group">
+              <div className="relative overflow-hidden aspect-[4/5]">
+                <img src={s.img} alt={s.t} loading="lazy" className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+                <div className="absolute bottom-5 left-5">
+                  <div className="serif text-gold text-2xl">{s.n}</div>
+                  <h3 className="serif text-2xl text-cream-light">{s.t}</h3>
+                </div>
               </div>
             </div>
           ))}
@@ -242,30 +167,25 @@ function Processo() {
 
 function Contato() {
   return (
-    <section id="contato" className="px-4 py-12">
-      <div className="max-w-6xl mx-auto panel-rounded relative" style={{ background: "var(--gradient-blush)" }}>
-        <div className="grid lg:grid-cols-2 gap-8 items-center px-8 md:px-14 py-14 md:py-20">
+    <section id="contato" className="py-32 bg-black-warm relative overflow-hidden">
+      <div className="absolute inset-0 opacity-40" style={{ backgroundImage: `radial-gradient(ellipse 60% 40% at 50% 50%, rgba(201,168,76,0.2), transparent 70%)` }} />
+      <div className="relative max-w-3xl mx-auto px-6 text-center">
+        <div className="eyebrow mb-4">Vamos Conversar</div>
+        <h2 className="serif text-4xl md:text-6xl mb-12 leading-tight">
+          Pronto para <em className="serif gold-gradient-text italic">surpreender</em>?
+        </h2>
+        <div className="flex flex-wrap justify-center gap-4 mb-16">
+          <a href="https://wa.me/5511974418038?text=Gostaria%20de%20mais%20informações" className="btn-gold btn-gold-hover">WhatsApp</a>
+          <a href="https://pizzapartybrasil.com.br/#form" className="btn-ghost-gold hover:bg-gold hover:text-black-rich">Orçamento no Site</a>
+        </div>
+        <div className="grid sm:grid-cols-2 gap-8 text-center pt-12 border-t border-gold/15">
           <div>
-            <h2 className="serif text-5xl md:text-6xl leading-[1.05] mb-6 text-tomato-dark">
-              Vamos <em className="italic">conversar?</em>
-            </h2>
-            <p className="text-tomato-dark/80 text-[0.95rem] max-w-md mb-8">
-              Conte-nos sobre o seu evento. Respondemos em até 24 horas com uma proposta personalizada.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <a href="https://wa.me/5511974418038?text=Gostaria%20de%20mais%20informações" className="btn-pill btn-tomato">WhatsApp</a>
-              <a href="https://pizzapartybrasil.com.br/#form" className="btn-pill btn-cream">Orçamento no Site</a>
-            </div>
+            <div className="eyebrow mb-2 !text-cream/40">WhatsApp</div>
+            <div className="serif text-gold-light text-lg">+55 11 97441-8038</div>
           </div>
-          <div className="grid gap-4">
-            <div className="card-soft p-6">
-              <div className="eyebrow mb-2 !text-ink-soft">WhatsApp</div>
-              <div className="serif text-2xl text-ink">+55 11 97441-8038</div>
-            </div>
-            <div className="card-soft p-6">
-              <div className="eyebrow mb-2 !text-ink-soft">Atendimento</div>
-              <div className="serif text-2xl text-ink">São Paulo · SP</div>
-            </div>
+          <div>
+            <div className="eyebrow mb-2 !text-cream/40">Atendimento</div>
+            <div className="serif text-gold-light text-lg">São Paulo · SP</div>
           </div>
         </div>
       </div>
@@ -275,19 +195,13 @@ function Contato() {
 
 function Footer() {
   return (
-    <footer className="px-4 py-10">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <footer className="bg-black py-10 border-t border-gold/15">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <Logo size={36} />
-          <span className="serif italic text-tomato text-lg">Pizza Party Brasil</span>
+          <div className="serif text-gold text-sm tracking-[0.18em] uppercase">Pizza Party Brasil</div>
         </div>
-        <div className="flex items-center gap-6 text-xs text-ink/50">
-          <a href="#sobre" className="hover:text-tomato transition-colors">Sobre</a>
-          <Link to="/cardapio" className="hover:text-tomato transition-colors">Cardápio</Link>
-          <a href="#eventos" className="hover:text-tomato transition-colors">Eventos</a>
-          <a href="#contato" className="hover:text-tomato transition-colors">Contato</a>
-        </div>
-        <p className="text-xs text-ink/40">© 2026</p>
+        <p className="text-[0.6rem] tracking-[0.22em] uppercase text-cream/30">© 2026</p>
       </div>
     </footer>
   );
@@ -295,11 +209,10 @@ function Footer() {
 
 function Index() {
   return (
-    <div className="bg-paper text-ink min-h-screen pb-6">
+    <div className="bg-black text-cream-light">
       <Nav />
       <Hero />
-      <Sobre />
-      <SaboresPreview />
+      <Servico />
       <Eventos />
       <Processo />
       <Contato />
