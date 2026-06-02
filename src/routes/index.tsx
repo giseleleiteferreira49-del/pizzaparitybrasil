@@ -274,7 +274,7 @@ function Eventos() {
     <section id="eventos" className="py-32 relative bg-black-warm overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div className="relative">
-          <img src={eventImg} alt="Buffet de pizza em evento elegante" width={1536} height={1024} loading="lazy" className="w-full aspect-[4/3] object-cover" />
+          <img src={eventImg.url} alt="Buffet de pizza em evento elegante" width={1536} height={1024} loading="lazy" className="w-full aspect-[4/3] object-cover" />
           <div className="absolute -bottom-6 -right-6 hidden md:block bg-black-rich border border-gold/40 p-6 max-w-xs">
             <div className="serif gold-gradient-text text-5xl">500+</div>
             <div className="text-xs text-cream/60 tracking-[0.15em] uppercase mt-1">eventos realizados</div>
@@ -302,7 +302,7 @@ function Eventos() {
 function Processo() {
   const steps = [
     { img: doughImg, n: "01", t: "Massa", d: "Fermentação lenta de 72h com blend das melhores farinhas italianas tipo 00." },
-    { img: eventImg, n: "02", t: "Preparação", d: "Recheios selecionados, montagem cuidadosa e atenção a cada detalhe antes do forno." },
+    { img: eventImg.url, n: "02", t: "Preparação", d: "Recheios selecionados, montagem cuidadosa e atenção a cada detalhe antes do forno." },
     { img: heroPizza.url, n: "03", t: "Forno", d: "Assadas com perfeição a 450°C, liberando os sabores e aromas — um controle excelente entre agilidade e cozimento." },
   ];
   return (
