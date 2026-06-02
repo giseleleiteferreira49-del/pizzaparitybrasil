@@ -85,8 +85,8 @@ function Hero() {
         </div>
         <div className="eyebrow mb-6">Buffet · Eventos · Casamentos</div>
         <h1 className="serif text-5xl md:text-7xl lg:text-8xl leading-[1.05] mb-6">
-          A verdadeira <span className="serif gold-gradient-text text-6xl md:text-8xl lg:text-9xl italic block mt-2">napoletana</span>
-          <span className="block mt-2 text-cream-light">no seu evento.</span>
+          Uma <span className="serif gold-gradient-text text-6xl md:text-8xl lg:text-9xl italic block mt-2">imersão gastronômica</span>
+          <span className="block mt-2 text-cream-light">para os seus convidados.</span>
         </h1>
         <p className="max-w-2xl mx-auto text-cream/70 text-lg md:text-xl font-light mb-10">
           Massa de longa fermentação, forno a lenha em alta temperatura e ingredientes selecionados — servidos diretamente para seus convidados.
