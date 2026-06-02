@@ -88,7 +88,7 @@
   --card-foreground: var(--ink);
   --border: rgba(245,237,214,0.10);
 
-  --radius: 16px;
+  --radius: 0px;
 
   --gradient-warm: linear-gradient(135deg, #F5A623 0%, #C9A84C 50%, #7B1F2E 100%);
   --gradient-blush: linear-gradient(135deg, #1a1612 0%, #0A0A0A 100%);
