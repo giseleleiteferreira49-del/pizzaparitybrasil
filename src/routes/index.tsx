@@ -14,6 +14,16 @@ import pizza22 from "@/assets/pizzas/pizza-22.jpeg.asset.json";
 import pizza23 from "@/assets/pizzas/pizza-23.jpeg.asset.json";
 import pizza24 from "@/assets/pizzas/pizza-24.jpeg.asset.json";
 import pizza25 from "@/assets/pizzas/pizza-25.jpeg.asset.json";
+import pizza6 from "@/assets/pizzas/pizza-6.jpeg.asset.json";
+import pizza7 from "@/assets/pizzas/pizza-7.jpeg.asset.json";
+import pizza8 from "@/assets/pizzas/pizza-8.jpeg.asset.json";
+import pizza9 from "@/assets/pizzas/pizza-9.jpeg.asset.json";
+import pizza10 from "@/assets/pizzas/pizza-10.jpeg.asset.json";
+import pizza11 from "@/assets/pizzas/pizza-11.jpeg.asset.json";
+import pizza12 from "@/assets/pizzas/pizza-12.jpeg.asset.json";
+import pizza13 from "@/assets/pizzas/pizza-13.jpeg.asset.json";
+import pizza14 from "@/assets/pizzas/pizza-14.jpeg.asset.json";
+import pizza15 from "@/assets/pizzas/pizza-15.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
