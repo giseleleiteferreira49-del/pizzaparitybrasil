@@ -45,7 +45,7 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Buffet de pizza napoletana artesanal para casamentos, eventos corporativos e celebrações exclusivas. Longa fermentação, forno a lenha." },
       { property: "og:title", content: "Pizza Party Brasil — Buffet de Pizza Napoletana" },
       { property: "og:description", content: "Buffet de pizza napoletana artesanal para eventos exclusivos." },
-      { property: "og:image", content: heroPizza },
+      { property: "og:image", content: heroPizza.url },
     ],
   }),
   component: Index,
@@ -105,7 +105,7 @@ function Hero() {
         }}
       />
       <img
-        src={heroPizza}
+        src={heroPizza.url}
         alt=""
         aria-hidden
         className="absolute inset-0 w-full h-full object-cover opacity-25"
@@ -303,7 +303,7 @@ function Processo() {
   const steps = [
     { img: doughImg, n: "01", t: "Massa", d: "Fermentação lenta de 72h com blend das melhores farinhas italianas tipo 00." },
     { img: eventImg, n: "02", t: "Preparação", d: "Recheios selecionados, montagem cuidadosa e atenção a cada detalhe antes do forno." },
-    { img: heroPizza, n: "03", t: "Forno", d: "Assadas com perfeição a 450°C, liberando os sabores e aromas — um controle excelente entre agilidade e cozimento." },
+    { img: heroPizza.url, n: "03", t: "Forno", d: "Assadas com perfeição a 450°C, liberando os sabores e aromas — um controle excelente entre agilidade e cozimento." },
   ];
   return (
     <section id="processo" className="py-32 bg-black">
