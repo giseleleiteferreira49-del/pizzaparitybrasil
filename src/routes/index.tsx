@@ -268,13 +268,13 @@ function Contato() {
           Conte-nos sobre o seu evento. Respondemos em até 24 horas com uma proposta personalizada.
         </p>
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <a href="https://wa.me/5511999999999" className="btn-gold btn-gold-hover">WhatsApp</a>
+          <a href="https://wa.me/5511974418038" className="btn-gold btn-gold-hover">WhatsApp</a>
           <a href="mailto:contato@pizzapartybrasil.com" className="btn-ghost-gold hover:bg-gold hover:text-black-rich">E-mail</a>
         </div>
         <div className="grid sm:grid-cols-3 gap-8 text-center pt-12 border-t border-gold/15">
           <div>
             <div className="eyebrow mb-2 !text-cream/40">Telefone</div>
-            <div className="serif text-gold-light text-lg">+55 11 9 9999-9999</div>
+            <div className="serif text-gold-light text-lg">+55 11 97441-8038</div>
           </div>
           <div>
             <div className="eyebrow mb-2 !text-cream/40">E-mail</div>
