@@ -79,28 +79,31 @@ function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <div className="flex justify-center mb-8">
-          <Logo size={120} />
+          <Logo size={110} />
         </div>
-        <div className="eyebrow mb-6">Buffet · Eventos · Casamentos</div>
-        <h1 className="serif text-5xl md:text-7xl lg:text-8xl leading-[1.05] mb-6">
-          Uma <span className="serif gold-gradient-text text-6xl md:text-8xl lg:text-9xl italic block mt-2">imersão gastronômica</span>
-          <span className="block mt-2 text-cream-light">para os seus convidados.</span>
+        <div className="inline-flex items-center gap-4 mb-8">
+          <div className="h-px w-8 bg-gold" />
+          <span className="text-[0.7rem] tracking-[0.4em] uppercase text-gold">Buffet · Eventos · Casamentos</span>
+          <div className="h-px w-8 bg-gold" />
+        </div>
+        <h1 className="serif text-5xl md:text-7xl lg:text-8xl text-cream-light mb-8 leading-[1.05] font-light">
+          Uma <em className="italic font-light">imersão</em>
+          <span className="block gold-gradient-text italic">gastronômica</span>
+          <span className="block mt-2">para os seus convidados.</span>
         </h1>
-        <p className="max-w-2xl mx-auto text-cream/70 text-lg md:text-xl font-light mb-10">
+        <p className="max-w-xl mx-auto text-cream/60 text-lg leading-relaxed mb-12">
           Massa de longa fermentação, forno a lenha em alta temperatura e ingredientes selecionados — servidos diretamente para seus convidados.
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a href="#contato" className="btn-gold btn-gold-hover">Solicitar Orçamento</a>
-          <a href="#cardapio" className="btn-ghost-gold hover:bg-gold hover:text-black-rich">Ver Cardápio</a>
+          <a href="#cardapio" className="btn-ghost-gold hover:border-gold">Ver Cardápio</a>
         </div>
-        <div className="mt-16 flex flex-wrap justify-center gap-x-10 gap-y-4 text-[0.65rem] tracking-[0.25em] uppercase text-cream/40">
-          <span>72h de fermentação</span>
-          <span className="text-gold">·</span>
-          <span>Forno a 450°C</span>
-          <span className="text-gold">·</span>
-          <span>Pizzaiolo no local</span>
+        <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-6 text-[0.65rem] tracking-[0.3em] uppercase text-cream/40 border-t border-gold/15 pt-10">
+          <div>72h de Fermentação</div>
+          <div>Forno a 450°C</div>
+          <div>Pizzaiolo no Local</div>
         </div>
       </div>
     </section>
