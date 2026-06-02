@@ -156,9 +156,9 @@ function Cardapio() {
         <div className="text-center mb-20">
           <div className="eyebrow mb-4">Cardápio</div>
           <h2 className="serif text-4xl md:text-5xl mb-4">
-            Sabores que viajam de <em className="serif gold-gradient-text text-5xl md:text-6xl italic">Nápoles</em>
+            Sabores <em className="serif gold-gradient-text text-5xl md:text-6xl italic">inesquecíveis</em>
           </h2>
-          <p className="text-cream/60 max-w-xl mx-auto">Selecione livremente até 6 sabores salgados e 2 doces para o seu evento.</p>
+          <p className="text-cream/60 max-w-xl mx-auto">Selecione livremente os sabores, harmonizando entre doces e salgados.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-x-16 gap-y-10">
