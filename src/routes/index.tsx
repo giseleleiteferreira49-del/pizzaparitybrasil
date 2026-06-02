@@ -73,7 +73,7 @@ function Hero() {
               <span className="block italic text-cream-light/95">Napoletana</span>
             </h1>
             <p className="mt-8 max-w-sm text-cream-light/90 text-[0.95rem] leading-relaxed">
-              Imersão gastronômica artesanal para casamentos, eventos corporativos e celebrações exclusivas.
+              Uma experiência gastronômica artesanal para casamentos, eventos corporativos e celebrações exclusivas.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/cardapio" className="btn-pill btn-cream">Ver Cardápio</Link>
