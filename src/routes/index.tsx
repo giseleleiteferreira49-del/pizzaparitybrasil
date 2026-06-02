@@ -347,7 +347,6 @@ function Contato() {
         </p>
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <a href="https://wa.me/5511974418038?text=Gostaria%20de%20mais%20informações" className="btn-gold btn-gold-hover">WhatsApp</a>
-          <a href="https://pizzapartybrasil.com.br/#form" className="btn-ghost-gold hover:bg-gold hover:text-black-rich">Orçamento no Site</a>
         </div>
         <div className="grid sm:grid-cols-2 gap-8 text-center pt-12 border-t border-gold/15">
           <div>
