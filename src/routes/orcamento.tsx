@@ -76,22 +76,22 @@ function OrcamentoPage() {
   }
 
   const inputCls =
-    "w-full bg-transparent border-0 border-b border-ink/15 rounded-none px-0 py-3 text-ink placeholder:text-ink/30 focus:outline-none focus:border-gold transition-colors";
+    "w-full bg-transparent border-0 border-b border-ink/15 rounded-none px-0 py-3 text-cream-light placeholder:text-ink/30 focus:outline-none focus:border-gold transition-colors";
 
   return (
     <div className="bg-paper text-ink min-h-screen pb-20">
-      <header className="sticky top-0 z-50 px-4 pt-4">
-        <nav className="max-w-6xl mx-auto flex items-center justify-between px-2 py-3">
-          <Link to="/" className="text-xs font-semibold tracking-wide text-ink/60 hover:text-gold transition-colors">← Voltar</Link>
-          <span className="serif italic text-gold text-lg">Pizza Party</span>
-          <Link to="/cardapio" className="text-xs font-semibold tracking-wide text-ink/60 hover:text-gold transition-colors">Cardápio</Link>
+      <header className="sticky top-0 z-50 bg-paper/85 backdrop-blur-md border-b border-ink/10">
+        <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-10 h-16">
+          <Link to="/" className="text-[0.7rem] tracking-[0.22em] uppercase text-ink/70 hover:text-gold transition-colors">← Voltar</Link>
+          <span className="serif italic text-gold text-base">Pizza Party</span>
+          <Link to="/cardapio" className="text-[0.7rem] tracking-[0.22em] uppercase text-ink/70 hover:text-gold transition-colors">Cardápio</Link>
         </nav>
       </header>
 
       <section className="px-6 pt-16">
         <div className="max-w-2xl mx-auto text-center">
           <div className="eyebrow mb-5">Orçamento na hora</div>
-          <h1 className="serif text-5xl md:text-6xl text-ink leading-[1.05]">
+          <h1 className="serif text-5xl md:text-6xl text-cream-light leading-[1.05]">
             Uma estimativa <em className="italic text-gold">imediata</em>
           </h1>
           <p className="mt-6 text-ink/60 max-w-md mx-auto text-sm">
