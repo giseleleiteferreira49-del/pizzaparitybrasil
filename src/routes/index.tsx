@@ -200,6 +200,9 @@ function Cardapio() {
     { img: pizza8.url, nome: "Oreo & Crema", desc: "Creme branco de chocolate, lascas de biscoito Oreo e farofa cookie.", tipo: "Sobremesa" },
     { img: pizza9.url, nome: "Brigadeiro Belga", desc: "Chocolate belga, brigadeiros gourmet, granulado e raspas de chocolate.", tipo: "Sobremesa" },
     { img: pizza22.url, nome: "Brigadeiro com Coco", desc: "Creme de brigadeiro belga, coco em flocos e raspas finalizadas no forno.", tipo: "Sobremesa" },
+    { img: pizzaNova1.url, nome: "Especial da Casa", desc: "Nossa criação exclusiva do dia com ingredientes selecionados e técnica napoletana.", tipo: "Especial" },
+    { img: pizzaNova2.url, nome: "Seleção Premium", desc: "Uma combinação especial de sabores em uma experiência visual e gastronômica única.", tipo: "Premium" },
+    { img: pizzaNova3.url, nome: "Tradição Moderna", desc: "O encontro da tradição napoletana com a contemporaneidade em cada detalhe.", tipo: "Especial" },
   ];
   return (
     <section id="cardapio" className="py-32 bg-black">
