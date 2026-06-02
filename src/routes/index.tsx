@@ -1,9 +1,19 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import logoAsset from "@/assets/pizza-party-logo.asset.json";
 import heroPizza from "@/assets/hero-pizza.jpg";
 import doughImg from "@/assets/dough.jpg";
 import ovenImg from "@/assets/oven.jpg";
 import eventImg from "@/assets/event.jpg";
+import pizza16 from "@/assets/pizzas/pizza-16.jpeg.asset.json";
+import pizza17 from "@/assets/pizzas/pizza-17.jpeg.asset.json";
+import pizza18 from "@/assets/pizzas/pizza-18.jpeg.asset.json";
+import pizza19 from "@/assets/pizzas/pizza-19.jpeg.asset.json";
+import pizza20 from "@/assets/pizzas/pizza-20.jpeg.asset.json";
+import pizza21 from "@/assets/pizzas/pizza-21.jpeg.asset.json";
+import pizza22 from "@/assets/pizzas/pizza-22.jpeg.asset.json";
+import pizza23 from "@/assets/pizzas/pizza-23.jpeg.asset.json";
+import pizza24 from "@/assets/pizzas/pizza-24.jpeg.asset.json";
+import pizza25 from "@/assets/pizzas/pizza-25.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -57,7 +67,7 @@ function Nav() {
           </li>
         ))}
       </ul>
-      <a href="#contato" className="btn-gold btn-gold-hover text-[0.62rem] !py-2 !px-4">Orçamento</a>
+      <Link to="/orcamento" className="btn-gold btn-gold-hover text-[0.62rem] !py-2 !px-4">Orçamento</Link>
     </nav>
   );
 }
@@ -157,33 +167,43 @@ function Servico() {
 
 function Cardapio() {
   const pizzas = [
-    { nome: "Margherita D.O.P.", desc: "Molho de tomate San Marzano, mozzarella di bufala, manjericão fresco, azeite extra-virgem.", tipo: "Clássica" },
-    { nome: "Diavola", desc: "Tomate, fior di latte, salame piccante calabrês, mel de pimenta.", tipo: "Picante" },
-    { nome: "Quatro Formaggi", desc: "Mozzarella, gorgonzola, parmigiano reggiano 24 meses, taleggio.", tipo: "Branca" },
-    { nome: "Prosciutto e Rucola", desc: "Mozzarella, prosciutto di Parma, rúcula selvagem, lascas de parmesão.", tipo: "Especial" },
-    { nome: "Funghi Tartufati", desc: "Creme branco, mix de cogumelos, mozzarella, óleo de trufa negra.", tipo: "Premium" },
-    { nome: "Capricciosa", desc: "Tomate, mozzarella, presunto cozido, cogumelos, alcachofras, azeitonas.", tipo: "Clássica" },
-    { nome: "Doce: Nutella & Frutas", desc: "Massa fina assada, creme de avelã, morangos, framboesas, açúcar de confeiteiro.", tipo: "Sobremesa" },
-    { nome: "Doce: Banana com Canela", desc: "Doce de leite artesanal, banana caramelizada, canela em pó.", tipo: "Sobremesa" },
+    { img: pizza19.url, nome: "Pepperoni", desc: "Molho de tomate San Marzano, fior di latte e pepperoni italiano levemente picante.", tipo: "Clássica" },
+    { img: pizza24.url, nome: "Calabresa Artesanal", desc: "Calabresa defumada fatiada, mozzarella, cebola roxa e salsinha fresca.", tipo: "Tradicional" },
+    { img: pizza25.url, nome: "Carne com Cebola Crocante", desc: "Carne moída temperada, mozzarella, tomate San Marzano e cebola crispy dourada.", tipo: "Especial" },
+    { img: pizza20.url, nome: "Alcachofra & Tomate", desc: "Mozzarella di bufala, corações de alcachofra italianos e tomate em cubos.", tipo: "Vegetariana" },
+    { img: pizza21.url, nome: "Portuguesa Napoletana", desc: "Presunto cozido, milho doce, cebola roxa e palmito pupunha.", tipo: "Brasileira" },
+    { img: pizza16.url, nome: "Palmito & Parmigiano", desc: "Palmito pupunha em fatias, mozzarella, parmigiano reggiano 24 meses e manjericão.", tipo: "Vegetariana" },
+    { img: pizza23.url, nome: "Batata & Crema", desc: "Batata laminada, creme de mascarpone, mozzarella e finalização de parmesão.", tipo: "Branca" },
+    { img: pizza17.url, nome: "Peito de Peru com Catupiry", desc: "Peito de peru defumado, fior di latte e fios de catupiry original gratinado.", tipo: "Premium" },
+    { img: pizza18.url, nome: "Pepperoni Burrata", desc: "Pepperoni, burrata cremosa em quenelles, molho di pomodoro e manjericão fresco.", tipo: "Premium" },
+    { img: pizza22.url, nome: "Brigadeiro com Coco", desc: "Creme de brigadeiro belga, coco em flocos e raspas finalizadas no forno.", tipo: "Sobremesa" },
   ];
   return (
     <section id="cardapio" className="py-32 bg-black">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
-          <div className="eyebrow mb-4">Cardápio</div>
+          <div className="eyebrow mb-4 justify-center">Cardápio</div>
           <h2 className="serif text-4xl md:text-5xl mb-4">
             Sabores <em className="serif gold-gradient-text text-5xl md:text-6xl italic">inesquecíveis</em>
           </h2>
-          <p className="text-cream/60 max-w-xl mx-auto">Selecione livremente os sabores, harmonizando entre doces e salgados.</p>
+          <p className="text-cream/60 max-w-xl mx-auto">Selecione livremente os sabores, harmonizando entre clássicas, especiais e sobremesas.</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-x-16 gap-y-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {pizzas.map((p) => (
             <div key={p.nome} className="group">
-              <div className="flex items-baseline justify-between gap-4 mb-2 pb-2 border-b border-gold/20 group-hover:border-gold/60 transition-colors">
-                <h3 className="serif text-2xl text-cream-light">{p.nome}</h3>
-                <span className="text-[0.6rem] tracking-[0.22em] uppercase text-gold/70 whitespace-nowrap">{p.tipo}</span>
+              <div className="relative aspect-square overflow-hidden bg-black-warm border border-gold/15 group-hover:border-gold/50 transition-colors">
+                <img
+                  src={p.img}
+                  alt={p.nome}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
+                />
+                <span className="absolute top-3 right-3 text-[0.55rem] tracking-[0.22em] uppercase text-gold bg-black/70 backdrop-blur px-2 py-1 border border-gold/30">
+                  {p.tipo}
+                </span>
               </div>
+              <h3 className="serif text-xl text-cream-light mt-4 mb-1">{p.nome}</h3>
               <p className="text-cream/55 text-sm leading-relaxed italic">{p.desc}</p>
             </div>
           ))}
