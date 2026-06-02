@@ -109,7 +109,7 @@ function Hero() {
 
 function Servico() {
   const pillars = [
-    { n: "01", t: "Pizzaiolo no Evento", d: "Nossa brigada monta o ponto de pizza no local. Pizzas saem do forno e vão direto à mesa dos convidados, em rodízio contínuo." },
+    { n: "01", t: "Chef Pizzaiolo no Evento", d: "Garantimos a consistência e a qualidade das Pizzas em todo o processo. Uma atenção genuína elaborada com amor e respeito ao seu paladar." },
     { n: "02", t: "Forno a Lenha", d: "Trazemos nosso forno napolitano que atinge 450°C. Cada pizza assa em 90 segundos, com borda alveolada e leve carvão característico." },
     { n: "03", t: "Massa Artesanal", d: "Fermentação natural de 72 horas com farinhas italianas selecionadas. Leveza, digestibilidade e sabor incomparáveis." },
   ];
