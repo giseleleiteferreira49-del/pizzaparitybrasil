@@ -24,7 +24,7 @@ import pizza12 from "@/assets/pizzas/pizza-12.jpeg.asset.json";
 import pizza13 from "@/assets/pizzas/pizza-13.jpeg.asset.json";
 import pizza14 from "@/assets/pizzas/pizza-14.jpeg.asset.json";
 import pizza15 from "@/assets/pizzas/pizza-15.jpeg.asset.json";
-import pizzaNova1 from "@/assets/pizzas/pizza-nova-1.jpeg.asset.json";
+
 import pizzaE1 from "@/assets/pizzas/pizza-extra-06_3.jpeg.asset.json";
 import pizzaE2 from "@/assets/pizzas/pizza-extra-06_4.jpeg.asset.json";
 import pizzaE3 from "@/assets/pizzas/pizza-extra-06_5.jpeg.asset.json";
@@ -208,7 +208,7 @@ function Cardapio() {
     { img: pizza8.url, nome: "Oreo & Crema", desc: "Creme branco de chocolate, lascas de biscoito Oreo e farofa cookie.", tipo: "Sobremesa" },
     { img: pizza9.url, nome: "Brigadeiro Belga", desc: "Chocolate belga, brigadeiros gourmet, granulado e raspas de chocolate.", tipo: "Sobremesa" },
     { img: pizza22.url, nome: "Brigadeiro com Coco", desc: "Creme de brigadeiro belga, coco em flocos e raspas finalizadas no forno.", tipo: "Sobremesa" },
-    { img: pizzaNova1.url, nome: "Especial da Casa", desc: "Nossa criação exclusiva do dia com ingredientes selecionados e técnica napoletana.", tipo: "Especial" },
+    
     { img: pizzaE1.url, nome: "Mediterrânea", desc: "Mussarela, tomate-cereja, abobrinha, palmito e rúcula fresca.", tipo: "Vegetariana" },
     { img: pizzaE2.url, nome: "Atum Crocante", desc: "Mussarela, atum sólido, anéis crocantes de cebola e toque de sementes.", tipo: "Especial" },
     { img: pizzaE3.url, nome: "Banana com Canela", desc: "Mussarela, banana em rodelas, canela e fio de leite condensado.", tipo: "Sobremesa" },
