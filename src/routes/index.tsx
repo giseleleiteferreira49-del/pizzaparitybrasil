@@ -238,137 +238,6 @@ function Processo() {
   );
 }
 
-const cardapios = {
-  prata: [
-    { cat: "🌿 Despertar — Sabores Suaves", items: [
-      { n: "Mozzarela Clássica", d: "Mozzarela e orégano" },
-      { n: "Marguerita Tradicional", d: "Mozzarela, tomates, parmesão e manjericão" },
-      { n: "Abobrinha", d: "Mozzarela, Catupiry, abobrinha, alho frito e raspas de limão siciliano" },
-      { n: "Palmito", d: "Mozzarela e palmito" },
-    ]},
-    { cat: "🧀 Clássico — Conforto e Família", items: [
-      { n: "Quatro Queijos", d: "Mozzarela, Catupiry, parmesão e provolone" },
-      { n: "Frango com Catupiry", d: "Frango desfiado e Catupiry" },
-      { n: "Toscana", d: "Mozzarela, calabresa e cebola" },
-      { n: "Atum", d: "Mozzarela, atum e aros de cebola" },
-      { n: "Calabresa", d: "Calabresa em rodelas e cebola" },
-      { n: "Peito de Peru", d: "Peito de peru e gotas de Catupiry" },
-    ]},
-    { cat: "🔥 Ápice & 🍫 Celebração Doce", items: [
-      { n: "Pepperoni", d: "Mozzarela e rodelas de pepperoni" },
-      { n: "Calabresa Limonê", d: "Calabresa, gotas de Catupiry e raspas de limão siciliano" },
-      { n: "Nutella com Morango", d: "Chocolate Nutella e morangos frescos" },
-      { n: "Banana", d: "Banana com leite condensado e canela em pó" },
-      { n: "Brigadeiro", d: "Chocolate com granulado" },
-      { n: "Prestígio", d: "Chocolate e coco ralado" },
-    ]},
-  ],
-  ouro: [
-    { cat: "🌿 Despertar — Sabores Suaves", items: [
-      { n: "Mozzarela Clássica", d: "Mozzarela e orégano" },
-      { n: "Marguerita Tradicional", d: "Mozzarela, tomates, parmesão e manjericão" },
-      { n: "Abobrinha Laminada", d: "Mozzarela, Catupiry, abobrinha, alho frito e raspas de limão siciliano" },
-      { n: "Palmito", d: "Mozzarela e palmito" },
-      { n: "Vegetariana Premium", d: "Mozzarela, tomate seco, rúcula fresca e parmesão" },
-      { n: "Portuguesa", d: "Mozzarela, milho, palmito laminado, presunto e cebola" },
-    ]},
-    { cat: "🧀 Clássico & 🔥 Ápice", items: [
-      { n: "Quatro Queijos", d: "Mozzarela, Catupiry, parmesão e provolone" },
-      { n: "Frango com Catupiry", d: "Frango desfiado e Catupiry" },
-      { n: "Milho com Mussarela", d: "Mussarela e milho" },
-      { n: "Toscana", d: "Mozzarela, calabresa e cebola" },
-      { n: "Caipira", d: "Mozzarela, frango desfiado, Catupiry e milho" },
-      { n: "Cream Cheese Premium", d: "Mozzarela, peito de peru, manjericão e cream cheese" },
-      { n: "Pepperoni Especial", d: "Mozzarela, pepperoni com gotas de Catupiry e manjericão" },
-      { n: "Siciliana", d: "Mozzarela, calabresa, tomates picados, cebola e salsinha" },
-      { n: "Frango Especial", d: "Frango, milho, gotas de cream cheese e bacon" },
-    ]},
-    { cat: "🍫 Celebração Doce", items: [
-      { n: "Nutella com Morango", d: "Chocolate Nutella e morangos frescos" },
-      { n: "Galak Oreo", d: "Chocolate Galak Nestlé e biscoito Oreo" },
-      { n: "Banana", d: "Banana com leite condensado e canela em pó" },
-      { n: "Brigadeiro", d: "Chocolate com granulado" },
-      { n: "Prestígio", d: "Chocolate e coco ralado" },
-    ]},
-  ],
-  experience: [
-    { cat: "🌿 Despertar — Napolitana", items: [
-      { n: "Mozzarela Clássica", d: "Mozzarela e orégano" },
-      { n: "Napoletana", d: "Mozzarela, tomate cereja, parmesão maturado e manjericão" },
-      { n: "Abobrinha Laminada", d: "Mozzarela, Catupiry, abobrinha, alho frito e raspas de limão siciliano" },
-      { n: "Marguerita Búfala", d: "Mozzarela búfala, tomate cereja e pesto de manjericão" },
-      { n: "Vegetariana Premium", d: "Mozzarela, tomate seco, rúcula fresca e parmesão" },
-      { n: "Portuguesa", d: "Mozzarela, milho, palmito laminado, presunto e cebola" },
-      { n: "Bianca ao Limone", d: "Fio de azeite, mozzarela, provolone, parmesão fresco e raspas de limão" },
-    ]},
-    { cat: "🧀 Clássico & 🔥 Ápice Premium", items: [
-      { n: "Quattro Formaggi com Bacon", d: "Mozzarela, Catupiry, queijo Brie, gorgonzola e bacon" },
-      { n: "Frango com Catupiry", d: "Frango desfiado e Catupiry" },
-      { n: "Pesto Divino", d: "Mozzarela, calabresa e cebola" },
-      { n: "Calabria", d: "Mozzarela, calabresa, gorgonzola e manjericão" },
-      { n: "Di Parma", d: "Mozzarela de búfala, presunto Parma, parmesão maturado e cream cheese" },
-      { n: "Caprese", d: "Mozzarela búfala, tomate cereja, manjericão e pesto de azeitona preta" },
-      { n: "Calabresa Defumada e Cremosa", d: "Calabresa defumada, gotas de Catupiry e geleia de pimenta" },
-      { n: "Divine", d: "Queijo Brie e geleia de damasco" },
-    ]},
-    { cat: "🍫 Celebração Doce", items: [
-      { n: "Nutella com Morango", d: "Chocolate Nutella e morangos frescos" },
-      { n: "Galak Oreo", d: "Chocolate Galak Nestlé e biscoito Oreo" },
-      { n: "Banana", d: "Banana com leite condensado e canela em pó" },
-      { n: "Kinder Bueno", d: "Nutella com Kinder Bueno" },
-    ]},
-  ],
-} as const;
-
-type Tab = keyof typeof cardapios;
-
-function Cardapio() {
-  const [tab, setTab] = useState<Tab>("prata");
-  const tabs: { id: Tab; label: string }[] = [
-    { id: "prata", label: "Pacote Prata" },
-    { id: "ouro", label: "Pacote Ouro" },
-    { id: "experience", label: "Pacote Experience" },
-  ];
-  return (
-    <section id="cardapio" className="py-32 bg-black-warm">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-12 max-w-2xl mx-auto">
-          <div className="eyebrow mb-4 justify-center">Cardápios completos</div>
-          <h2 className="serif text-4xl md:text-5xl mb-6">Os sabores de cada <em className="serif gold-gradient-text italic">jornada</em></h2>
-          <p className="text-cream/65 text-lg">Cada pizza é preparada com ingredientes selecionados, molho Passata Rústica sem conservantes, queijos de origem e massa feita com técnica artesanal.</p>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {tabs.map((t) => (
-            <button
-              key={t.id}
-              onClick={() => setTab(t.id)}
-              className={`text-[0.65rem] tracking-[0.22em] uppercase px-5 py-3 border transition-colors ${tab === t.id ? "bg-gold text-black-rich border-gold" : "border-gold/30 text-cream/60 hover:border-gold hover:text-gold"}`}
-            >
-              {t.label}
-            </button>
-          ))}
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-10">
-          {cardapios[tab].map((cat) => (
-            <div key={cat.cat}>
-              <div className="serif text-gold text-sm tracking-[0.16em] uppercase mb-5 pb-3 border-b border-gold/25">{cat.cat}</div>
-              <div className="space-y-4">
-                {cat.items.map((it) => (
-                  <div key={it.n}>
-                    <div className="serif text-cream-light text-base">{it.n}</div>
-                    <div className="text-cream/50 text-sm italic leading-snug">{it.d}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Pacotes() {
   const pacotes = [
@@ -421,7 +290,7 @@ function Upgrades() {
     { i: "🍷", n: "Locação de Utensílios", d: "Eleve a apresentação do serviço com utensílios de qualidade. Disponíveis para locação mediante contratação de garçom adicional.", items: ["Taças de vinho", "Taças de espumante", "Jogo de pratos e talheres", "Toalha cobre-mancha xadrez", "Copos de vidro", "Garçom adicional"] },
   ];
   return (
-    <section className="py-32 bg-black-warm">
+    <section id="cardapio" className="py-32 bg-black-warm">
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-2xl mb-16">
           <div className="eyebrow mb-4">Eleve ainda mais</div>
@@ -700,7 +569,7 @@ function Index() {
       <Servico />
       <Diferencial />
       <Processo />
-      <Cardapio />
+      
       <Pacotes />
       <Upgrades />
       <Inclusao />
