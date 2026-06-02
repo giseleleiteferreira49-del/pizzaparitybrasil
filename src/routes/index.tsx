@@ -47,7 +47,7 @@ function Nav() {
         </a>
         <div className="hidden md:flex items-center gap-7 flex-1 justify-end">
           <a href="#processo" className="text-xs font-semibold tracking-wide text-ink/70 hover:text-tomato transition-colors">Processo</a>
-          <a href="#contato" className="btn-pill btn-tomato !py-2.5 !px-5 !text-[0.7rem]">Orçamento</a>
+          <Link to="/orcamento" className="btn-pill btn-tomato !py-2.5 !px-5 !text-[0.7rem]">Orçamento</Link>
         </div>
       </nav>
     </header>
@@ -77,7 +77,7 @@ function Hero() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/cardapio" className="btn-pill btn-cream">Ver Cardápio</Link>
-              <a href="#contato" className="btn-pill btn-tomato !bg-ink !text-cream-light hover:!bg-tomato-dark">Solicitar Orçamento</a>
+              <Link to="/orcamento" className="btn-pill btn-tomato !bg-ink !text-cream-light hover:!bg-tomato-dark">Solicitar Orçamento</Link>
             </div>
           </div>
           <div className="relative flex items-center justify-center min-h-[320px]">
@@ -253,8 +253,8 @@ function Contato() {
               Conte-nos sobre o seu evento. Respondemos em até 24 horas com uma proposta personalizada.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a href="https://wa.me/5511974418038?text=Gostaria%20de%20mais%20informações" className="btn-pill btn-tomato">WhatsApp</a>
-              <a href="https://pizzapartybrasil.com.br/#form" className="btn-pill btn-cream">Orçamento no Site</a>
+              <Link to="/orcamento" className="btn-pill btn-tomato">Solicitar Orçamento</Link>
+              <a href="https://wa.me/5511974418038?text=Gostaria%20de%20mais%20informações" className="btn-pill btn-cream">WhatsApp</a>
             </div>
           </div>
           <div className="grid gap-4">
