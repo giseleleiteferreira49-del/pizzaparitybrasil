@@ -243,6 +243,28 @@ function Processo() {
   );
 }
 
+function ContatoForm() {
+  const [form, setForm] = useState({ nome: "", telefone: "", email: "", convidados: "", data: "", cep: "" });
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => setForm({ ...form, [e.target.name]: e.target.value });
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const msg = `Olá! Gostaria de um orçamento.%0A%0ANome: ${form.nome}%0ATelefone: ${form.telefone}%0AE-mail: ${form.email}%0AConvidados: ${form.convidados}%0AData da festa: ${form.data}%0ACEP: ${form.cep}`;
+    window.open(`https://wa.me/5511974418038?text=${msg}`, "_blank");
+  };
+  const inputCls = "w-full bg-black-rich border border-gold/20 px-4 py-3 text-cream-light placeholder:text-cream/30 focus:outline-none focus:border-gold transition-colors text-sm";
+  return (
+    <form onSubmit={onSubmit} className="grid sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
+      <input required name="nome" value={form.nome} onChange={onChange} placeholder="Nome" className={`${inputCls} sm:col-span-2`} />
+      <input required name="telefone" value={form.telefone} onChange={onChange} placeholder="Telefone" className={inputCls} />
+      <input required type="email" name="email" value={form.email} onChange={onChange} placeholder="E-mail" className={inputCls} />
+      <input required type="number" min={1} name="convidados" value={form.convidados} onChange={onChange} placeholder="Número de convidados" className={inputCls} />
+      <input required type="date" name="data" value={form.data} onChange={onChange} placeholder="Data da festa" className={inputCls} />
+      <input required name="cep" value={form.cep} onChange={onChange} placeholder="CEP do local da festa" className={`${inputCls} sm:col-span-2`} />
+      <button type="submit" className="btn-gold btn-gold-hover sm:col-span-2 mt-2">Enviar</button>
+    </form>
+  );
+}
+
 function Contato() {
   return (
     <section id="contato" className="py-32 bg-black-warm relative overflow-hidden">
@@ -255,12 +277,12 @@ function Contato() {
         <h2 className="serif text-4xl md:text-6xl mb-6 leading-tight">
           Pronto para <em className="serif gold-gradient-text text-5xl md:text-7xl italic">surpreender</em> seus convidados?
         </h2>
-        <p className="text-cream/65 text-lg mb-12 max-w-xl mx-auto">
-          Conte-nos sobre a sua celebração. Respondemos em até 24 horas com uma proposta personalizada.
+        <p className="text-cream/65 text-lg mb-10 max-w-xl mx-auto">
+          Preencha o formulário que entraremos em contato.
         </p>
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <ContatoForm />
+        <div className="flex flex-wrap justify-center gap-4 mt-10 mb-12">
           <a href="https://wa.me/5511974418038" className="btn-gold btn-gold-hover">WhatsApp</a>
-          <a href="mailto:contato@pizzapartybrasil.com" className="btn-ghost-gold hover:bg-gold hover:text-black-rich">E-mail</a>
         </div>
         <div className="grid sm:grid-cols-3 gap-8 text-center pt-12 border-t border-gold/15">
           <div>
