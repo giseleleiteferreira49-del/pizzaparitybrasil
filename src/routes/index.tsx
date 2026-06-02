@@ -85,8 +85,8 @@ function Hero() {
         </div>
         <div className="eyebrow mb-6">Buffet · Eventos · Casamentos</div>
         <h1 className="serif text-5xl md:text-7xl lg:text-8xl leading-[1.05] mb-6">
-          A verdadeira <span className="serif gold-gradient-text text-6xl md:text-8xl lg:text-9xl italic block mt-2">napoletana</span>
-          <span className="block mt-2 text-cream-light">no seu evento.</span>
+          Uma <span className="serif gold-gradient-text text-6xl md:text-8xl lg:text-9xl italic block mt-2">imersão gastronômica</span>
+          <span className="block mt-2 text-cream-light">para os seus convidados.</span>
         </h1>
         <p className="max-w-2xl mx-auto text-cream/70 text-lg md:text-xl font-light mb-10">
           Massa de longa fermentação, forno a lenha em alta temperatura e ingredientes selecionados — servidos diretamente para seus convidados.
@@ -109,9 +109,9 @@ function Hero() {
 
 function Servico() {
   const pillars = [
-    { n: "01", t: "Pizzaiolo no Evento", d: "Nossa brigada monta o ponto de pizza no local. Pizzas saem do forno e vão direto à mesa dos convidados, em rodízio contínuo." },
-    { n: "02", t: "Forno a Lenha", d: "Trazemos nosso forno napolitano que atinge 450°C. Cada pizza assa em 90 segundos, com borda alveolada e leve carvão característico." },
-    { n: "03", t: "Massa Artesanal", d: "Fermentação natural de 72 horas com farinhas italianas selecionadas. Leveza, digestibilidade e sabor incomparáveis." },
+    { n: "01", t: "Chef Pizzaiolo no Evento", d: "Garantimos a consistência e a qualidade das pizzas em todo o processo. Uma atenção genuína elaborada com amor e respeito ao seu paladar." },
+    { n: "02", t: "Tecnologia na Preparação", d: "Nossas pizzas são assadas em temperatura controlada que atinge 450°C. Cada pizza assa em 90 segundos, com borda alveolada mantendo o aroma característico e delicioso." },
+    { n: "03", t: "Massa Artesanal", d: "Fermentação natural de 72 horas com blend de farinhas italianas selecionadas. Azeite de oliva que proporciona leveza, digestibilidade e sabor incomparáveis." },
   ];
   return (
     <section id="servico" className="py-32 bg-black-warm relative">
@@ -119,7 +119,7 @@ function Servico() {
         <div className="max-w-2xl mb-20">
           <div className="eyebrow mb-4">O Serviço</div>
           <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
-            Um buffet que é <em className="serif gold-gradient-text text-5xl md:text-6xl italic">experiência</em>.
+            Mais que um buffet, uma <em className="serif gold-gradient-text text-5xl md:text-6xl italic">experiência gastronômica</em>.
           </h2>
           <p className="text-cream/65 text-lg">
             Não levamos pizza ao evento. Levamos a pizzaria inteira — forno, pizzaiolo, ritual e aroma.
@@ -156,9 +156,9 @@ function Cardapio() {
         <div className="text-center mb-20">
           <div className="eyebrow mb-4">Cardápio</div>
           <h2 className="serif text-4xl md:text-5xl mb-4">
-            Sabores que viajam de <em className="serif gold-gradient-text text-5xl md:text-6xl italic">Nápoles</em>
+            Sabores <em className="serif gold-gradient-text text-5xl md:text-6xl italic">inesquecíveis</em>
           </h2>
-          <p className="text-cream/60 max-w-xl mx-auto">Selecione livremente até 6 sabores salgados e 2 doces para o seu evento.</p>
+          <p className="text-cream/60 max-w-xl mx-auto">Selecione livremente os sabores, harmonizando entre doces e salgados.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-x-16 gap-y-10">
@@ -183,7 +183,7 @@ function Cardapio() {
 
 function Eventos() {
   const tipos = [
-    { t: "Casamentos", d: "Pós-cerimônia ou jantar principal. Pizza napoletana servida em mesas redondas com cortes generosos." },
+    { t: "Noivados e Matrimônios", d: "Seja no jantar principal ou no evento pós-cerimônia, temos um cardápio ajustado para o seu melhor momento." },
     { t: "Corporativo", d: "Confraternizações, lançamentos e celebrações de equipe — de 30 a 500 convidados." },
     { t: "Aniversários", d: "Festas íntimas ou grandes celebrações com o ritual do pizzaiolo no centro da experiência." },
     { t: "Festivais & Marcas", d: "Ativações de marca, food trucks e pop-ups com nossa estrutura completa." },
@@ -201,7 +201,7 @@ function Eventos() {
         <div>
           <div className="eyebrow mb-4">Eventos</div>
           <h2 className="serif text-4xl md:text-5xl mb-8 leading-tight">
-            Cada celebração tem <em className="serif gold-gradient-text text-5xl md:text-6xl italic">sua</em> pizza.
+            Vivencie sua celebração com camadas <em className="serif gold-gradient-text text-5xl md:text-6xl italic">personalizadas</em> para encantar seus convidados.
           </h2>
           <div className="space-y-6">
             {tipos.map((t) => (
@@ -219,16 +219,16 @@ function Eventos() {
 
 function Processo() {
   const steps = [
-    { img: doughImg, n: "01", t: "Massa", d: "Fermentação lenta de 72h com farinhas italianas tipo 00." },
-    { img: ovenImg, n: "02", t: "Forno", d: "Lenha de eucalipto a 450°C. 90 segundos para a perfeição." },
-    { img: heroPizza, n: "03", t: "Serviço", d: "Pizzaiolo molda e serve diante dos convidados, em fluxo contínuo." },
+    { img: doughImg, n: "01", t: "Massa", d: "Fermentação lenta de 72h com blend das melhores farinhas italianas tipo 00." },
+    { img: eventImg, n: "02", t: "Preparação", d: "Recheios selecionados, montagem cuidadosa e atenção a cada detalhe antes do forno." },
+    { img: heroPizza, n: "03", t: "Forno", d: "Assadas com perfeição a 450°C, liberando os sabores e aromas — um controle excelente entre agilidade e cozimento." },
   ];
   return (
     <section id="processo" className="py-32 bg-black">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <div className="eyebrow mb-4">Processo</div>
-          <h2 className="serif text-4xl md:text-5xl">Do <em className="serif gold-gradient-text text-5xl md:text-6xl italic">fogo</em> à mesa</h2>
+          <h2 className="serif text-4xl md:text-5xl">Do <em className="serif gold-gradient-text text-5xl md:text-6xl italic">calor</em> à mesa</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((s) => (
