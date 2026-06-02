@@ -94,7 +94,7 @@ function Hero() {
           {[
             { n: "10+", l: "Anos de tradição" },
             { n: "8.000+", l: "Eventos realizados" },
-            { n: "5 ★", l: "Google Reviews" },
+            { n: <span className="inline-flex items-center gap-1">5 <Star className="w-5 h-5 fill-current" /></span>, l: "Google Reviews" },
           ].map((s) => (
             <div key={s.l} className="text-center">
               <div className="serif gold-gradient-text text-3xl md:text-4xl">{s.n}</div>
@@ -264,7 +264,7 @@ function Pacotes() {
           {pacotes.map((p) => (
             <div key={p.nome} className={`relative border p-8 flex flex-col ${p.featured ? "border-gold bg-black-card" : "border-gold/20 bg-black-warm"}`}>
               {p.featured && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-black-rich text-[0.6rem] tracking-[0.2em] uppercase px-4 py-1 font-semibold">★ Mais escolhido</div>
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-black-rich text-[0.6rem] tracking-[0.2em] uppercase px-4 py-1 font-semibold inline-flex items-center gap-1"><Star className="w-3 h-3 fill-current" /> Mais escolhido</div>
               )}
               <div className="text-[0.6rem] tracking-[0.25em] uppercase text-cream/40 mb-2">{p.tier}</div>
               <h3 className={`serif text-3xl mb-4 ${p.featured ? "text-gold" : "text-cream-light"}`}>{p.nome}</h3>
@@ -272,7 +272,7 @@ function Pacotes() {
               <div className="text-[0.6rem] tracking-[0.22em] uppercase text-gold/70 mb-3 mt-auto">O que está incluso</div>
               <ul className="space-y-2 mb-6">
                 {p.inc.map((i) => (
-                  <li key={i} className="text-cream/65 text-sm flex gap-2"><span className="text-gold">✦</span><span>{i}</span></li>
+                  <li key={i} className="text-cream/65 text-sm flex gap-2"><span className="text-gold mt-0.5"><Check className="w-3.5 h-3.5" /></span><span>{i}</span></li>
                 ))}
               </ul>
               <a href="#contato" className={p.featured ? "btn-gold btn-gold-hover text-center" : "btn-ghost-gold hover:bg-gold hover:text-black-rich text-center"}>Quero o {p.nome}</a>
@@ -367,7 +367,7 @@ function ProvaSocial() {
           <div className="inline-flex items-center gap-4 border border-gold/30 px-5 py-3">
             <div className="serif text-gold text-2xl">G</div>
             <div>
-              <div className="text-gold tracking-wider">★ ★ ★ ★ ★</div>
+              <div className="text-gold tracking-wider inline-flex gap-1"><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /></div>
               <div className="text-[0.65rem] tracking-[0.2em] uppercase text-cream/50">5.0 no Google · Centenas de reviews</div>
             </div>
           </div>
@@ -376,7 +376,7 @@ function ProvaSocial() {
           {reviews.map((r) => (
             <div key={r.a} className="border border-gold/15 bg-black p-8">
               <div className="serif text-gold text-6xl leading-none mb-2">"</div>
-              <div className="text-gold tracking-wider mb-3">★ ★ ★ ★ ★</div>
+              <div className="text-gold tracking-wider mb-3 inline-flex gap-1"><Star className="w-3.5 h-3.5 fill-current" /><Star className="w-3.5 h-3.5 fill-current" /><Star className="w-3.5 h-3.5 fill-current" /><Star className="w-3.5 h-3.5 fill-current" /><Star className="w-3.5 h-3.5 fill-current" /></div>
               <p className="text-cream/70 text-sm italic leading-relaxed mb-5">{r.t}</p>
               <div className="serif text-cream-light">{r.a}</div>
               <div className="text-[0.65rem] tracking-[0.18em] uppercase text-cream/40 mt-1">{r.e}</div>
