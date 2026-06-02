@@ -10,6 +10,16 @@ import brasileira from "@/assets/menu/brasileira.jpeg.asset.json";
 import palmito from "@/assets/menu/palmito.jpeg.asset.json";
 import peitoPeru from "@/assets/menu/peito-peru.jpeg.asset.json";
 import chocolateCoco from "@/assets/menu/chocolate-coco.jpeg.asset.json";
+import margherita from "@/assets/menu/margherita.jpeg.asset.json";
+import napoletana from "@/assets/menu/napoletana.jpeg.asset.json";
+import margueritaParmesao from "@/assets/menu/marguerita-parmesao.jpeg.asset.json";
+import burrata from "@/assets/menu/burrata.jpeg.asset.json";
+import milho from "@/assets/menu/milho.jpeg.asset.json";
+import frangoCatupiry from "@/assets/menu/frango-catupiry.jpeg.asset.json";
+import frangoEspecial from "@/assets/menu/frango-especial.jpeg.asset.json";
+import chocolateMorango from "@/assets/menu/chocolate-morango.jpeg.asset.json";
+import chocolateBelga from "@/assets/menu/chocolate-belga.jpeg.asset.json";
+import oreo from "@/assets/menu/oreo.jpeg.asset.json";
 
 export const Route = createFileRoute("/cardapio")({
   head: () => ({
@@ -31,16 +41,26 @@ const TINTS = [
 ];
 
 const pizzas = [
+  { img: margherita.url, nome: "Margherita", tipo: "Clássica" },
   { img: pepperoni.url, nome: "Pepperoni", tipo: "Clássica" },
   { img: pepperoniBurrata.url, nome: "Pepperoni & Burrata", tipo: "Especial" },
+  { img: burrata.url, nome: "Burrata", tipo: "Especial" },
+  { img: napoletana.url, nome: "Napoletana", tipo: "Tradicional" },
+  { img: margueritaParmesao.url, nome: "Marguerita & Parmesão", tipo: "Branca" },
   { img: calabresa.url, nome: "Calabresa", tipo: "Tradicional" },
   { img: picadinho.url, nome: "Picadinho", tipo: "Carne" },
   { img: quatroQueijos.url, nome: "Quatro Queijos", tipo: "Branca" },
   { img: carciofi.url, nome: "Carciofi", tipo: "Vegetariana" },
   { img: brasileira.url, nome: "Brasileira", tipo: "Tradicional" },
   { img: palmito.url, nome: "Palmito", tipo: "Vegetariana" },
+  { img: milho.url, nome: "Milho", tipo: "Vegetariana" },
   { img: peitoPeru.url, nome: "Peito de Peru & Catupiry", tipo: "Branca" },
+  { img: frangoCatupiry.url, nome: "Frango & Catupiry", tipo: "Tradicional" },
+  { img: frangoEspecial.url, nome: "Frango Especial", tipo: "Especial" },
   { img: chocolateCoco.url, nome: "Chocolate & Coco", tipo: "Sobremesa" },
+  { img: chocolateMorango.url, nome: "Chocolate & Morango", tipo: "Sobremesa" },
+  { img: chocolateBelga.url, nome: "Chocolate Belga", tipo: "Sobremesa" },
+  { img: oreo.url, nome: "Oreo", tipo: "Sobremesa" },
 ];
 
 function CardapioPage() {
