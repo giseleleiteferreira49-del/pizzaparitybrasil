@@ -131,16 +131,3 @@
   font-size: 0.72rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
   transition: all 0.3s;
 }
-
-/* Hide Lovable badge */
-a[href*="lovable.dev"],
-iframe[src*="lovable.dev"],
-div[style*="Edit with Lovable"],
-.lovable-badge {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-  position: absolute !important;
-  z-index: -9999 !important;
-}
