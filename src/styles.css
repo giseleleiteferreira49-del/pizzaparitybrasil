@@ -60,19 +60,19 @@
 }
 
 :root {
-  --paper:        #FBF6EE;
-  --cream:        #F3E9D2;
-  --cream-light:  #FAF6EC;
-  --ink:          #1A1410;
-  --ink-soft:     #5C5046;
+  --paper:        #0A0A0A;
+  --cream:        #14110D;
+  --cream-light:  #F5EDD6;
+  --ink:          #F5EDD6;
+  --ink-soft:     rgba(245,237,214,0.65);
 
   --gold:         #C9A84C;
   --gold-light:   #E8C97A;
   --gold-dark:    #9A7A2E;
 
-  --tomato:       #C8351E;
-  --tomato-light: #E86A3E;
-  --tomato-dark:  #8B1F12;
+  --tomato:       #F5A623;
+  --tomato-light: #F7B84A;
+  --tomato-dark:  #C4861C;
   --amber:        #F5A623;
   --burgundy:     #7B1F2E;
 
@@ -84,18 +84,18 @@
 
   --background: var(--paper);
   --foreground: var(--ink);
-  --card: var(--cream-light);
+  --card: var(--cream);
   --card-foreground: var(--ink);
-  --border: rgba(26,20,16,0.08);
+  --border: rgba(245,237,214,0.10);
 
   --radius: 16px;
 
-  --gradient-warm: linear-gradient(135deg, #F4B26B 0%, #E86A3E 45%, #C8351E 100%);
-  --gradient-blush: linear-gradient(135deg, #FBE6E2 0%, #F4C6C2 100%);
-  --gradient-sage:  linear-gradient(135deg, #E8F0DE 0%, #C8D9B8 100%);
-  --shadow-soft:    0 20px 50px -20px rgba(200,53,30,0.25);
-  --shadow-card:    0 10px 40px -15px rgba(26,20,16,0.12);
-  --shadow-pop:     0 25px 60px -25px rgba(26,20,16,0.25);
+  --gradient-warm: linear-gradient(135deg, #F5A623 0%, #C9A84C 50%, #7B1F2E 100%);
+  --gradient-blush: linear-gradient(135deg, #1a1612 0%, #0A0A0A 100%);
+  --gradient-sage:  linear-gradient(135deg, #14110D 0%, #0A0A0A 100%);
+  --shadow-soft:    0 20px 50px -20px rgba(201,168,76,0.25);
+  --shadow-card:    0 10px 40px -15px rgba(0,0,0,0.6);
+  --shadow-pop:     0 25px 60px -25px rgba(0,0,0,0.8);
 }
 
 @layer base {
