@@ -128,10 +128,10 @@ function Hero() {
 
         <div className="relative flex flex-col items-center mb-10">
           <h1 className="serif italic font-light text-cream-light text-6xl md:text-8xl lg:text-[9rem] leading-[1]">
-            imersão
+            Imersão
           </h1>
           <h2 className="serif italic font-light gold-gradient-text text-7xl md:text-9xl lg:text-[11rem] leading-[0.85] -mt-2 md:-mt-6 lg:-mt-10">
-            gastronômica
+            Gastronômica
           </h2>
         </div>
 
