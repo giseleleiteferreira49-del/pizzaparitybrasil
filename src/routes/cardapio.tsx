@@ -41,16 +41,26 @@ const TINTS = [
 ];
 
 const pizzas = [
+  { img: margherita.url, nome: "Margherita", tipo: "Clássica" },
   { img: pepperoni.url, nome: "Pepperoni", tipo: "Clássica" },
   { img: pepperoniBurrata.url, nome: "Pepperoni & Burrata", tipo: "Especial" },
+  { img: burrata.url, nome: "Burrata", tipo: "Especial" },
+  { img: napoletana.url, nome: "Napoletana", tipo: "Tradicional" },
+  { img: margueritaParmesao.url, nome: "Marguerita & Parmesão", tipo: "Branca" },
   { img: calabresa.url, nome: "Calabresa", tipo: "Tradicional" },
   { img: picadinho.url, nome: "Picadinho", tipo: "Carne" },
   { img: quatroQueijos.url, nome: "Quatro Queijos", tipo: "Branca" },
   { img: carciofi.url, nome: "Carciofi", tipo: "Vegetariana" },
   { img: brasileira.url, nome: "Brasileira", tipo: "Tradicional" },
   { img: palmito.url, nome: "Palmito", tipo: "Vegetariana" },
+  { img: milho.url, nome: "Milho", tipo: "Vegetariana" },
   { img: peitoPeru.url, nome: "Peito de Peru & Catupiry", tipo: "Branca" },
+  { img: frangoCatupiry.url, nome: "Frango & Catupiry", tipo: "Tradicional" },
+  { img: frangoEspecial.url, nome: "Frango Especial", tipo: "Especial" },
   { img: chocolateCoco.url, nome: "Chocolate & Coco", tipo: "Sobremesa" },
+  { img: chocolateMorango.url, nome: "Chocolate & Morango", tipo: "Sobremesa" },
+  { img: chocolateBelga.url, nome: "Chocolate Belga", tipo: "Sobremesa" },
+  { img: oreo.url, nome: "Oreo", tipo: "Sobremesa" },
 ];
 
 function CardapioPage() {
