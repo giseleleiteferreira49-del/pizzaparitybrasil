@@ -14,6 +14,16 @@ import pizza22 from "@/assets/pizzas/pizza-22.jpeg.asset.json";
 import pizza23 from "@/assets/pizzas/pizza-23.jpeg.asset.json";
 import pizza24 from "@/assets/pizzas/pizza-24.jpeg.asset.json";
 import pizza25 from "@/assets/pizzas/pizza-25.jpeg.asset.json";
+import pizza6 from "@/assets/pizzas/pizza-6.jpeg.asset.json";
+import pizza7 from "@/assets/pizzas/pizza-7.jpeg.asset.json";
+import pizza8 from "@/assets/pizzas/pizza-8.jpeg.asset.json";
+import pizza9 from "@/assets/pizzas/pizza-9.jpeg.asset.json";
+import pizza10 from "@/assets/pizzas/pizza-10.jpeg.asset.json";
+import pizza11 from "@/assets/pizzas/pizza-11.jpeg.asset.json";
+import pizza12 from "@/assets/pizzas/pizza-12.jpeg.asset.json";
+import pizza13 from "@/assets/pizzas/pizza-13.jpeg.asset.json";
+import pizza14 from "@/assets/pizzas/pizza-14.jpeg.asset.json";
+import pizza15 from "@/assets/pizzas/pizza-15.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -176,6 +186,16 @@ function Cardapio() {
     { img: pizza23.url, nome: "Batata & Crema", desc: "Batata laminada, creme de mascarpone, mozzarella e finalização de parmesão.", tipo: "Branca" },
     { img: pizza17.url, nome: "Peito de Peru com Catupiry", desc: "Peito de peru defumado, fior di latte e fios de catupiry original gratinado.", tipo: "Premium" },
     { img: pizza18.url, nome: "Pepperoni Burrata", desc: "Pepperoni, burrata cremosa em quenelles, molho di pomodoro e manjericão fresco.", tipo: "Premium" },
+    { img: pizza14.url, nome: "Mussarela ao Orégano", desc: "Molho di pomodoro, generosa camada de mozzarella fior di latte e orégano fresco.", tipo: "Clássica" },
+    { img: pizza11.url, nome: "Marguerita Parmesão", desc: "Tomate em rodelas, mozzarella, lascas de parmigiano e folhas de manjericão.", tipo: "Tradicional" },
+    { img: pizza12.url, nome: "Napoletana di Ciliegia", desc: "Tomate cereja confitado, mozzarella fior di latte e manjericão fresco.", tipo: "Clássica" },
+    { img: pizza10.url, nome: "Margherita di Bufala", desc: "Mozzarella di bufala, tomate cereja assado, manjericão e azeite extra-virgem.", tipo: "Premium" },
+    { img: pizza13.url, nome: "Milho Cremoso", desc: "Milho doce dourado no forno sobre mozzarella e molho de tomate San Marzano.", tipo: "Vegetariana" },
+    { img: pizza6.url, nome: "Frango com Catupiry", desc: "Frango desfiado temperado, catupiry original em fios e finalização de orégano.", tipo: "Brasileira" },
+    { img: pizza7.url, nome: "Frango, Bacon & Milho", desc: "Frango desfiado, bacon em cubos, milho dourado e catupiry em pingos.", tipo: "Brasileira" },
+    { img: pizza15.url, nome: "Nutella com Morango", desc: "Creme Nutella generoso sobre massa fina e morangos frescos fatiados.", tipo: "Sobremesa" },
+    { img: pizza8.url, nome: "Oreo & Crema", desc: "Creme branco de chocolate, lascas de biscoito Oreo e farofa cookie.", tipo: "Sobremesa" },
+    { img: pizza9.url, nome: "Brigadeiro Belga", desc: "Chocolate belga, brigadeiros gourmet, granulado e raspas de chocolate.", tipo: "Sobremesa" },
     { img: pizza22.url, nome: "Brigadeiro com Coco", desc: "Creme de brigadeiro belga, coco em flocos e raspas finalizadas no forno.", tipo: "Sobremesa" },
   ];
   return (
