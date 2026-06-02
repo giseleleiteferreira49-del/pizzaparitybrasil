@@ -55,8 +55,8 @@ function Hero() {
             Pizza<br/>
             <span className="italic text-gold">Napoletana</span>
           </h1>
-          <p className="mt-10 max-w-md text-ink/60 text-sm leading-relaxed">
-            uma imersão gastronômica para os seus convidados
+          <p className="mt-10 max-w-md text-cream-light/90 text-lg leading-relaxed">
+            <span className="text-white font-medium">Uma</span> introdução gastronômica para os seus convidados
           </p>
           <div className="mt-12 flex flex-wrap gap-4">
             <Link to="/orcamento" className="btn-pill btn-tomato">Solicitar Orçamento</Link>
