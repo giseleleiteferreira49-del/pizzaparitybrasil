@@ -109,9 +109,9 @@ function Hero() {
 
 function Servico() {
   const pillars = [
-    { n: "01", t: "Pizzaiolo no Evento", d: "Nossa brigada monta o ponto de pizza no local. Pizzas saem do forno e vão direto à mesa dos convidados, em rodízio contínuo." },
-    { n: "02", t: "Forno a Lenha", d: "Trazemos nosso forno napolitano que atinge 450°C. Cada pizza assa em 90 segundos, com borda alveolada e leve carvão característico." },
-    { n: "03", t: "Massa Artesanal", d: "Fermentação natural de 72 horas com farinhas italianas selecionadas. Leveza, digestibilidade e sabor incomparáveis." },
+    { n: "01", t: "Chef Pizzaiolo no Evento", d: "Garantimos a consistência e a qualidade das pizzas em todo o processo. Uma atenção genuína elaborada com amor e respeito ao seu paladar." },
+    { n: "02", t: "Tecnologia na Preparação", d: "Nossas pizzas são assadas em temperatura controlada que atinge 450°C. Cada pizza assa em 90 segundos, com borda alveolada mantendo o aroma característico e delicioso." },
+    { n: "03", t: "Massa Artesanal", d: "Fermentação natural de 72 horas com blend de farinhas italianas selecionadas. Azeite de oliva que proporciona leveza, digestibilidade e sabor incomparáveis." },
   ];
   return (
     <section id="servico" className="py-32 bg-black-warm relative">
@@ -119,7 +119,7 @@ function Servico() {
         <div className="max-w-2xl mb-20">
           <div className="eyebrow mb-4">O Serviço</div>
           <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
-            Um buffet que é <em className="serif gold-gradient-text text-5xl md:text-6xl italic">experiência</em>.
+            Mais que um buffet, uma <em className="serif gold-gradient-text text-5xl md:text-6xl italic">experiência gastronômica</em>.
           </h2>
           <p className="text-cream/65 text-lg">
             Não levamos pizza ao evento. Levamos a pizzaria inteira — forno, pizzaiolo, ritual e aroma.
