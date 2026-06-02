@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import logoAsset from "@/assets/pizza-party-logo.asset.json";
-import heroPizza from "@/assets/hero-pizza.jpg";
+import heroPizza from "@/assets/hero-pizza.png.asset.json";
 
 export const Route = createFileRoute("/orcamento")({
   head: () => ({
@@ -68,7 +68,7 @@ function Orcamento() {
 
       {/* Hero */}
       <section className="relative pt-32 pb-16 overflow-hidden bg-black-warm">
-        <img src={heroPizza} alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover opacity-15" />
+        <img src={heroPizza.url} alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover opacity-15" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black" />
         <div className="relative max-w-3xl mx-auto px-6 text-center">
           <div className="eyebrow mb-4 justify-center">Solicite seu orçamento</div>
