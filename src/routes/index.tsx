@@ -210,7 +210,6 @@ function Cardapio() {
     { img: pizza9.url, nome: "Brigadeiro Belga", desc: "Chocolate belga, brigadeiros gourmet, granulado e raspas de chocolate.", tipo: "Sobremesa" },
     { img: pizza22.url, nome: "Brigadeiro com Coco", desc: "Creme de brigadeiro belga, coco em flocos e raspas finalizadas no forno.", tipo: "Sobremesa" },
     { img: pizzaNova1.url, nome: "Especial da Casa", desc: "Nossa criação exclusiva do dia com ingredientes selecionados e técnica napoletana.", tipo: "Especial" },
-    { img: pizzaNova2.url, nome: "Seleção Premium", desc: "Uma combinação especial de sabores em uma experiência visual e gastronômica única.", tipo: "Premium" },
     { img: pizzaE1.url, nome: "Mediterrânea", desc: "Mussarela, tomate-cereja, abobrinha, palmito e rúcula fresca.", tipo: "Vegetariana" },
     { img: pizzaE2.url, nome: "Atum Crocante", desc: "Mussarela, atum sólido, anéis crocantes de cebola e toque de sementes.", tipo: "Especial" },
     { img: pizzaE3.url, nome: "Banana com Canela", desc: "Mussarela, banana em rodelas, canela e fio de leite condensado.", tipo: "Sobremesa" },
