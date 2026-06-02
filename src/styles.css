@@ -18,23 +18,23 @@
 
   --color-background: var(--paper);
   --color-foreground: var(--ink);
-  --color-card: var(--cream-light);
+  --color-card: var(--cream);
   --color-card-foreground: var(--ink);
-  --color-popover: var(--cream-light);
+  --color-popover: var(--cream);
   --color-popover-foreground: var(--ink);
   --color-primary: var(--tomato);
-  --color-primary-foreground: var(--cream-light);
+  --color-primary-foreground: #0A0A0A;
   --color-secondary: var(--cream);
   --color-secondary-foreground: var(--ink);
   --color-muted: var(--cream);
   --color-muted-foreground: var(--ink-soft);
   --color-accent: var(--gold);
-  --color-accent-foreground: var(--ink);
-  --color-destructive: var(--tomato);
+  --color-accent-foreground: #0A0A0A;
+  --color-destructive: var(--burgundy);
   --color-destructive-foreground: var(--cream-light);
   --color-border: var(--border);
   --color-input: var(--border);
-  --color-ring: var(--tomato);
+  --color-ring: var(--gold);
 
   --color-gold: var(--gold);
   --color-gold-light: var(--gold-light);
