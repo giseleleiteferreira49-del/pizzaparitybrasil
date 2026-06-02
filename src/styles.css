@@ -115,11 +115,11 @@
 @utility serif { font-family: var(--font-serif); }
 
 @utility eyebrow {
-  font-size: 0.68rem;
-  letter-spacing: 0.28em;
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--gold);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 @utility warm-gradient-text {
@@ -136,33 +136,33 @@
   color: transparent;
 }
 
-/* Minimalist buttons — sharp edges, no rounding */
+/* Minimalist buttons — sharp edges, brand-aligned spacing */
 @utility btn-pill {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   border-radius: 0;
-  padding: 16px 32px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
+  padding: 18px 36px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, background 0.3s, color 0.3s;
 }
 @utility btn-tomato {
-  background: var(--tomato);
-  color: #0A0A0A;
-  &:hover { opacity: 0.85; }
+  background: var(--gold);
+  color: #111008;
+  &:hover { background: var(--gold-light); }
 }
 @utility btn-cream {
   background: var(--cream-light);
-  color: #0A0A0A;
-  &:hover { opacity: 0.85; }
+  color: #111008;
+  &:hover { opacity: 0.88; }
 }
 @utility btn-outline-ink {
-  border: 1px solid var(--gold);
+  border: 1px solid rgba(201,168,76,0.4);
   color: var(--gold);
-  &:hover { background: var(--gold); color: #0A0A0A; }
+  &:hover { border-color: var(--gold); background: rgba(201,168,76,0.08); }
 }
 
 /* Flat cards */
