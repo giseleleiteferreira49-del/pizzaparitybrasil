@@ -1,9 +1,19 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import logoAsset from "@/assets/pizza-party-logo.asset.json";
 import heroPizza from "@/assets/hero-pizza.jpg";
 import doughImg from "@/assets/dough.jpg";
 import ovenImg from "@/assets/oven.jpg";
 import eventImg from "@/assets/event.jpg";
+import pizza16 from "@/assets/pizzas/pizza-16.jpeg.asset.json";
+import pizza17 from "@/assets/pizzas/pizza-17.jpeg.asset.json";
+import pizza18 from "@/assets/pizzas/pizza-18.jpeg.asset.json";
+import pizza19 from "@/assets/pizzas/pizza-19.jpeg.asset.json";
+import pizza20 from "@/assets/pizzas/pizza-20.jpeg.asset.json";
+import pizza21 from "@/assets/pizzas/pizza-21.jpeg.asset.json";
+import pizza22 from "@/assets/pizzas/pizza-22.jpeg.asset.json";
+import pizza23 from "@/assets/pizzas/pizza-23.jpeg.asset.json";
+import pizza24 from "@/assets/pizzas/pizza-24.jpeg.asset.json";
+import pizza25 from "@/assets/pizzas/pizza-25.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
