@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import logoAsset from "@/assets/pizza-party-logo.asset.json";
-import heroPizza from "@/assets/hero-pizza.jpg";
+import heroPizza from "@/assets/hero-pizza.png.asset.json";
 import doughImg from "@/assets/dough.jpg";
 import ovenImg from "@/assets/oven.jpg";
 import eventImg from "@/assets/event.jpg";
