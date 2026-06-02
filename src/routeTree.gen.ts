@@ -9,9 +9,15 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as OrcamentoRouteImport } from './routes/orcamento'
 import { Route as CardapioRouteImport } from './routes/cardapio'
 import { Route as IndexRouteImport } from './routes/index'
 
+const OrcamentoRoute = OrcamentoRouteImport.update({
+  id: '/orcamento',
+  path: '/orcamento',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CardapioRoute = CardapioRouteImport.update({
   id: '/cardapio',
   path: '/cardapio',
@@ -26,31 +32,42 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/cardapio': typeof CardapioRoute
+  '/orcamento': typeof OrcamentoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/cardapio': typeof CardapioRoute
+  '/orcamento': typeof OrcamentoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/cardapio': typeof CardapioRoute
+  '/orcamento': typeof OrcamentoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/cardapio'
+  fullPaths: '/' | '/cardapio' | '/orcamento'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/cardapio'
-  id: '__root__' | '/' | '/cardapio'
+  to: '/' | '/cardapio' | '/orcamento'
+  id: '__root__' | '/' | '/cardapio' | '/orcamento'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CardapioRoute: typeof CardapioRoute
+  OrcamentoRoute: typeof OrcamentoRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/orcamento': {
+      id: '/orcamento'
+      path: '/orcamento'
+      fullPath: '/orcamento'
+      preLoaderRoute: typeof OrcamentoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/cardapio': {
       id: '/cardapio'
       path: '/cardapio'
@@ -71,7 +88,18 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CardapioRoute: CardapioRoute,
+  OrcamentoRoute: OrcamentoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
