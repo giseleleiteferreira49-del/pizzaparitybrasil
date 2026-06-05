@@ -158,7 +158,7 @@ function Hook() {
         <div className="grid md:grid-cols-2 gap-px bg-gold/15">
           {hooks.map((h) => (
             <div key={h.t} className="bg-black p-10 hover:bg-black-card transition-colors flex gap-6 items-start">
-              <img src={h.img} alt={h.t} loading="lazy" className="w-32 h-32 md:w-36 md:h-36 object-contain shrink-0 -mt-2" />
+              <img src={h.img} alt={h.t} loading="lazy" className="w-20 h-20 md:w-24 md:h-24 object-contain shrink-0" />
               <div>
                 <h3 className="serif text-xl mb-3 text-cream-light">{h.t}</h3>
                 <p className="text-cream/55 text-sm leading-relaxed">{h.d}</p>
@@ -379,7 +379,7 @@ function Inclusao() {
         <div className="grid md:grid-cols-3 gap-px bg-gold/15">
           {opts.map((o) => (
             <div key={o.n} className="bg-black p-10 text-center">
-              <img src={o.img} alt={o.n} loading="lazy" className="w-56 h-56 object-contain mx-auto mb-4" />
+              <img src={o.img} alt={o.n} loading="lazy" className="w-32 h-32 object-contain mx-auto mb-4" />
               <h3 className="serif text-2xl text-cream-light mb-3">{o.n}</h3>
               <p className="text-cream/60 text-sm leading-relaxed">{o.d}</p>
             </div>
