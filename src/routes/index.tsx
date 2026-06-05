@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AlertTriangle, AlertOctagon, HelpCircle, TrendingDown, UtensilsCrossed, Coffee, Wine, Leaf, Sprout, Droplets, Star, Check } from "lucide-react";
+import { UtensilsCrossed, Coffee, Wine, Star, Check } from "lucide-react";
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/pizza-party-logo.asset.json";
 import heroPizza from "@/assets/hero-pizza.jpg";
@@ -7,14 +7,21 @@ import doughImg from "@/assets/processo-massa.jpg.asset.json";
 import ovenImg from "@/assets/processo-forno.jpg.asset.json";
 import servicoImg from "@/assets/processo-servico.jpg.asset.json";
 import celebracaoImg from "@/assets/celebracao-pizza.jpg.asset.json";
+import hookDecepcao from "@/assets/hook-decepcao.png.asset.json";
+import hookEstressado from "@/assets/hook-estressado.png.asset.json";
+import hookEsquecivel from "@/assets/hook-esquecivel.png.asset.json";
+import hookPagouCaro from "@/assets/hook-pagou-caro.png.asset.json";
+import incSemGluten from "@/assets/inc-sem-gluten.png.asset.json";
+import incVegana from "@/assets/inc-vegana.png.asset.json";
+import incSemLactose from "@/assets/inc-sem-lactose.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Pizza Party Brasil — Pizza Napoletana Artesanal" },
-      { name: "description", content: "Pizza napoletana artesanal para celebrações exclusivas. Jornada sensorial em 4 tempos com pizzaiolo no local." },
-      { property: "og:title", content: "Pizza Party Brasil — Pizza Napoletana Artesanal" },
-      { property: "og:description", content: "Pizza napoletana artesanal para celebrações exclusivas." },
+      { title: "Pizza Party Brasil — Buffet Premium de Pizzas para Eventos" },
+      { name: "description", content: "Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo. Mais de 8.000 eventos realizados desde 2013." },
+      { property: "og:title", content: "Pizza Party Brasil — Buffet Premium de Pizzas para Eventos" },
+      { property: "og:description", content: "Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo." },
       { property: "og:image", content: heroPizza },
     ],
   }),
@@ -47,7 +54,7 @@ function Nav() {
         <Logo size={36} />
         <div className="hidden sm:block leading-tight">
           <div className="serif text-gold text-sm tracking-[0.18em] uppercase font-semibold">Pizza Party Brasil</div>
-          <div className="text-[0.55rem] tracking-[0.28em] uppercase text-cream/40">Napoletana</div>
+          <div className="text-[0.55rem] tracking-[0.28em] uppercase text-cream/40">Buffet Premium de Pizzas</div>
         </div>
       </a>
       <ul className="hidden md:flex gap-8 list-none">
@@ -83,8 +90,11 @@ function Hero() {
           Seu evento merece mais que uma <em className="serif gold-gradient-text italic">pizza</em>.
           <span className="block mt-2 text-cream-light">Merece uma <em className="serif gold-gradient-text italic">memória</em>.</span>
         </h1>
-        <p className="max-w-2xl mx-auto text-cream/70 text-lg md:text-xl font-light mb-10">
-          Jornada gastronômica em 4 tempos · Ingredientes premium · Serviço impecável
+        <p className="max-w-2xl mx-auto text-cream/70 text-lg md:text-xl font-light mb-3">
+          Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo
+        </p>
+        <p className="max-w-2xl mx-auto text-cream/50 text-sm md:text-base font-light mb-10 tracking-wide">
+          Mais de 25 sabores · Sem limite de consumo · Jornada sensorial em 4 tempos
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a href="#contato" className="btn-gold btn-gold-hover">Solicitar Orçamento</a>
@@ -109,10 +119,10 @@ function Hero() {
 
 function Hook() {
   const hooks = [
-    { icon: <AlertTriangle className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, t: "O buffet decepcionou seus convidados", d: "Pizza fria, massa borrachuda, sabores genéricos. A comida deveria ser o ponto alto, virou o ponto de conversa errado. Isso nunca mais vai acontecer no seu evento." },
-    { icon: <AlertOctagon className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, t: "O serviço foi desorganizado e estressante", d: "Equipe despreparada, atrasos, falta de atenção. Você deveria estar curtindo a festa, não resolvendo problema de fornecedor. Nossa equipe cuida de tudo para você." },
-    { icon: <HelpCircle className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, t: "A comida foi esquecível", d: "Semanas depois do evento, ninguém falava sobre a comida. A experiência não criou memória. Nossos clientes recebem mensagens dos convidados pedindo o contato da pizza." },
-    { icon: <TrendingDown className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, t: "Pagou caro por algo ordinário", d: "Preço premium, entrega mediana. Qualidade inconsistente que não justificou o investimento. Com a Pizza Party Brasil, cada real investido se traduz em experiência visível e memorável." },
+    { img: hookDecepcao.url, t: "O buffet decepcionou seus convidados", d: "Pizza fria, massa borrachuda, sabores genéricos. A comida deveria ser o ponto alto, virou o ponto de conversa errado. Isso nunca mais vai acontecer no seu evento." },
+    { img: hookEstressado.url, t: "O serviço foi desorganizado e estressante", d: "Equipe despreparada, atrasos, falta de atenção. Você deveria estar curtindo a festa, não resolvendo problema de fornecedor. Nossa equipe cuida de tudo para você." },
+    { img: hookEsquecivel.url, t: "A comida foi esquecível", d: "Semanas depois do evento, ninguém falava sobre a comida. A experiência não criou memória. Nossos clientes recebem mensagens dos convidados pedindo o contato da pizza." },
+    { img: hookPagouCaro.url, t: "Pagou caro por algo ordinário", d: "Preço premium, entrega mediana. Qualidade inconsistente que não justificou o investimento. Com a Pizza Party Brasil, cada real investido se traduz em experiência visível e memorável." },
   ];
   return (
     <section className="py-32 bg-black">
@@ -126,10 +136,12 @@ function Hook() {
         </div>
         <div className="grid md:grid-cols-2 gap-px bg-gold/15">
           {hooks.map((h) => (
-            <div key={h.t} className="bg-black p-10 hover:bg-black-card transition-colors">
-              <div className="mb-5">{h.icon}</div>
-              <h3 className="serif text-xl mb-3 text-cream-light">{h.t}</h3>
-              <p className="text-cream/55 text-sm leading-relaxed">{h.d}</p>
+            <div key={h.t} className="bg-black p-10 hover:bg-black-card transition-colors flex gap-6 items-start">
+              <img src={h.img} alt={h.t} loading="lazy" className="w-24 h-24 md:w-28 md:h-28 object-contain shrink-0 -mt-2" />
+              <div>
+                <h3 className="serif text-xl mb-3 text-cream-light">{h.t}</h3>
+                <p className="text-cream/55 text-sm leading-relaxed">{h.d}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -185,7 +197,7 @@ function Diferencial() {
           <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
             Não é um rodízio. <br/>É uma <em className="serif gold-gradient-text italic">jornada sensorial</em>.
           </h2>
-          <p className="text-cream/65 text-lg">Cada evento é dividido em 4 momentos cuidadosamente orquestrados, uma progressão de sabores com base em neurociência do paladar.</p>
+          <p className="text-cream/65 text-lg">Cada evento é dividido em 4 momentos cuidadosamente orquestrados — uma sequência de sabores planejada para surpreender seus convidados do início ao fim.</p>
         </div>
         <div className="space-y-px bg-gold/15">
           {tempos.map((t) => (
@@ -321,9 +333,9 @@ function Upgrades() {
 
 function Inclusao() {
   const opts = [
-    { icon: <Leaf className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, n: "Cardápio Vegano", d: "Mussarela vegana em todas as pizzas. Sabores: Marguerita Vegan, Brócolis Vegan, Abobrinha Vegan e Doce de Leite com Coco Ralado." },
-    { icon: <Sprout className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, n: "Massa Sem Glúten", d: "Para convidados com intolerância ao glúten. Mesmos sabores do pacote escolhido, com massa especialmente preparada e segura." },
-    { icon: <Droplets className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, n: "Sem Lactose", d: "Mussarela sem lactose para convidados com intolerância. Sabor completo e textura idêntica, sem abrir mão da experiência." },
+    { img: incVegana.url, n: "Cardápio Vegano", d: "Mussarela vegana em todas as pizzas. Sabores: Marguerita Vegan, Brócolis Vegan, Abobrinha Vegan e Doce de Leite com Coco Ralado." },
+    { img: incSemGluten.url, n: "Massa Sem Glúten", d: "Para convidados com intolerância ao glúten. Mesmos sabores do pacote escolhido, com massa especialmente preparada e segura." },
+    { img: incSemLactose.url, n: "Sem Lactose", d: "Mussarela sem lactose para convidados com intolerância. Sabor completo e textura idêntica, sem abrir mão da experiência." },
   ];
   return (
     <section className="py-32 bg-black">
@@ -337,8 +349,8 @@ function Inclusao() {
         </div>
         <div className="grid md:grid-cols-3 gap-px bg-gold/15">
           {opts.map((o) => (
-            <div key={o.n} className="bg-black p-10">
-              <div className="mb-5">{o.icon}</div>
+            <div key={o.n} className="bg-black p-10 text-center">
+              <img src={o.img} alt={o.n} loading="lazy" className="w-40 h-40 object-contain mx-auto mb-4" />
               <h3 className="serif text-2xl text-cream-light mb-3">{o.n}</h3>
               <p className="text-cream/60 text-sm leading-relaxed">{o.d}</p>
             </div>
@@ -561,16 +573,106 @@ function Footer() {
   );
 }
 
+function Linhas() {
+  const linhas = [
+    {
+      tag: "Linha 01",
+      nome: "Experiência Clássica",
+      desc: "Nosso modelo consagrado em mais de 8.000 eventos. Variedade, agilidade e o sabor que conquistou São Paulo desde 2013.",
+      pontos: [
+        "Mais de 25 sabores",
+        "Servida sem limite de consumo",
+        "Alta produtividade no serviço",
+        "Ideal para eventos grandes (até 300 convidados)",
+      ],
+    },
+    {
+      tag: "Linha 02",
+      featured: true,
+      nome: "Experiência Napoletana",
+      desc: "A linha premium da casa. Massa de longa fermentação, assada na hora em forno napoletano para celebrações onde cada detalhe importa.",
+      pontos: [
+        "Massa de longa fermentação (72h)",
+        "Assada na hora a 450°C",
+        "Ingredientes premium selecionados",
+        "Ideal para eventos exclusivos e ticket premium",
+      ],
+    },
+  ];
+  return (
+    <section id="linhas" className="py-32 bg-black-warm">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-2xl mb-16">
+          <div className="eyebrow mb-4">Duas linhas de serviço</div>
+          <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
+            Escolha a experiência <em className="serif gold-gradient-text italic">certa</em> para o seu evento
+          </h2>
+          <p className="text-cream/65 text-lg">Duas formas de viver a Pizza Party Brasil — a tradição que escalamos em mais de uma década, e a sofisticação napoletana para quem busca o ápice gastronômico.</p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {linhas.map((l) => (
+            <div key={l.nome} className={`relative border p-10 ${l.featured ? "border-gold bg-black-card" : "border-gold/20 bg-black"}`}>
+              <div className="text-[0.6rem] tracking-[0.25em] uppercase text-cream/40 mb-2">{l.tag}</div>
+              <h3 className={`serif text-3xl mb-4 ${l.featured ? "text-gold" : "text-cream-light"}`}>{l.nome}</h3>
+              <p className="text-cream/60 text-sm leading-relaxed mb-6">{l.desc}</p>
+              <ul className="space-y-2">
+                {l.pontos.map((p) => (
+                  <li key={p} className="text-cream/70 text-sm flex gap-2"><span className="text-gold mt-0.5"><Check className="w-3.5 h-3.5" /></span><span>{p}</span></li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PorQue() {
+  const reasons = [
+    "Mais de 8.000 eventos realizados desde 2013",
+    "Especialistas em eventos com pizza",
+    "Mais de 25 sabores no cardápio",
+    "Pizzas servidas sem limite de consumo",
+    "Equipe treinada e atenciosa",
+    "Nota máxima nas avaliações do Google",
+    "Estrutura para 30 a 300 convidados",
+    "Chef Pizzaiolo finalizando ao vivo no seu evento",
+  ];
+  return (
+    <section className="py-32 bg-black">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-2xl mb-16">
+          <div className="eyebrow mb-4">Por que somos diferentes</div>
+          <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
+            Mais de uma década <em className="serif gold-gradient-text italic">construindo memórias</em>
+          </h2>
+          <p className="text-cream/65 text-lg">Não é promessa. É histórico. Cada item abaixo é uma decisão que tomamos todos os dias para entregar a melhor experiência de pizza para eventos em São Paulo.</p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-px bg-gold/15">
+          {reasons.map((r) => (
+            <div key={r} className="bg-black p-6 flex gap-4 items-start hover:bg-black-card transition-colors">
+              <span className="text-gold mt-1"><Check className="w-5 h-5" /></span>
+              <span className="text-cream-light text-base">{r}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Index() {
   return (
     <div className="bg-black text-cream-light">
       <Nav />
       <Hero />
       <Hook />
+      <PorQue />
+      <Linhas />
       <Servico />
       <Diferencial />
       <Processo />
-      
       <Pacotes />
       <Upgrades />
       <Inclusao />
