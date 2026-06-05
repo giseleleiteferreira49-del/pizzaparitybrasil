@@ -417,8 +417,8 @@ function ProvaSocial() {
           <div className="inline-flex items-center gap-4 border border-gold/30 px-5 py-3">
             <div className="serif text-gold text-2xl">G</div>
             <div>
-              <div className="text-gold tracking-wider inline-flex gap-1"><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /></div>
-              <div className="text-[0.65rem] tracking-[0.2em] uppercase text-cream/50">5.0 no Google · Centenas de reviews</div>
+              <div className="text-gold tracking-wider inline-flex gap-1"><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /><StarHalf className="w-4 h-4 fill-current" /></div>
+              <div className="text-[0.65rem] tracking-[0.2em] uppercase text-cream/50">4.9 no Google · Centenas de reviews</div>
             </div>
           </div>
         </div>
