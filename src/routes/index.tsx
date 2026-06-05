@@ -93,8 +93,8 @@ function Hero() {
           backgroundImage: `radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201,168,76,0.18) 0%, transparent 60%), radial-gradient(ellipse 60% 40% at 50% 110%, rgba(123,31,46,0.25) 0%, transparent 60%)`,
         }}
       />
-      <img src={heroPizza} alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover opacity-25" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black" />
+      <img src={heroPizza} alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover opacity-45" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/60" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <div className="flex justify-center mb-8"><Logo size={120} /></div>
