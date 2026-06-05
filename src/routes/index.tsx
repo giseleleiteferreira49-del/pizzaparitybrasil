@@ -99,7 +99,11 @@ function Hero() {
       <img
         src={chefThiago.url}
         alt="Chef Pizzaiolo Thiago Ferreira Lima"
-        className="hidden lg:block absolute bottom-0 right-0 h-[90%] w-auto object-contain object-bottom pointer-events-none select-none z-10 drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)]"
+        className="hidden lg:block absolute bottom-0 right-0 h-[88%] w-auto object-contain object-bottom pointer-events-none select-none z-10 drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)]"
+        style={{
+          WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 10%, #000 22%, #000 100%)',
+          maskImage: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 10%, #000 22%, #000 100%)',
+        }}
       />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
