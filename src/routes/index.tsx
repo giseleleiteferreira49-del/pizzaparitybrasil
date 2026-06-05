@@ -125,7 +125,7 @@ function Hero() {
           {[
             { n: "10+", l: "Anos de tradição" },
             { n: "8.000+", l: "Eventos realizados" },
-            { n: <span className="inline-flex items-center gap-1">5 <Star className="w-5 h-5 fill-current" /></span>, l: "Google Reviews" },
+            { n: <span className="inline-flex items-center gap-1">4.9 <Star className="w-5 h-5 fill-current" /></span>, l: "NO GOOGLE · CENTENAS DE REVIEWS" },
           ].map((s) => (
             <div key={s.l} className="text-center">
               <div className="serif gold-gradient-text text-3xl md:text-4xl">{s.n}</div>
@@ -290,7 +290,7 @@ function Pacotes() {
     { tier: "Pacote 02", nome: "Ouro", featured: true, img: pacoteOuro.url, tag: "A escolha mais popular, combina a jornada sensorial completa com entradinhas sofisticadas, bebidas e serviço de mesa elegante.", inc: [
       "25 sabores em 4 tempos sensoriais", "Corniccione com antepasto de entrada", "Garçom dedicado para servir", "Massa artesanal tradicional", "Copos de vidro, pratos com talheres", "Refrigerante, suco e água", "Guardanapos inclusos",
     ]},
-    { tier: "Pacote 03", nome: "Experience", img: pacoteExperience.url, tag: "A experiência gastronômica completa. Massa napolitana de longa fermentação, tábua de frios premium e encerramento com estação de café gourmet.", inc: [
+    { tier: "Pacote 03", nome: "Experience", img: pacoteExperience.url, tag: "A experiência gastronômica completa. Massa de longa fermentação\n, tábua de frios premium e encerramento com estação de café gourmet.", inc: [
       "27 sabores premium em 4 tempos", "Tábua de frios sofisticada de entrada", "Massa napolitana, longa fermentação", "Garçom dedicado para servir", "Copos de vidro, pratos com talheres", "Bebidas não alcoólicas inclusas", "Estação de café gourmet de encerramento",
     ]},
   ];
