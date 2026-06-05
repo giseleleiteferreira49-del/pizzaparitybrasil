@@ -67,7 +67,7 @@ function Nav() {
     <nav className="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-6 md:px-12 backdrop-blur-xl bg-black-rich/90 border-b border-gold/15">
       <a href="#top" className="flex items-center gap-3">
         <Logo size={36} />
-        <div className="hidden sm:block leading-tight">
+        <div className="block leading-tight">
           <div className="serif text-gold text-sm tracking-[0.18em] uppercase font-semibold">Pizza Party Brasil</div>
           <div className="text-[0.55rem] tracking-[0.28em] uppercase text-cream/40">Buffet Premium de Pizzas</div>
         </div>
