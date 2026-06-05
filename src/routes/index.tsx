@@ -105,8 +105,9 @@ function Hero() {
           maskImage: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 10%, #000 22%, #000 100%)',
         }}
       />
+      <div className="absolute bottom-0 left-0 right-0 h-[40%] z-20 pointer-events-none bg-gradient-to-t from-black via-black/85 to-transparent" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div className="relative z-30 max-w-5xl mx-auto px-6 text-center lg:max-w-3xl lg:mx-0 lg:ml-[5%] lg:pr-0">
         <div className="flex justify-center mb-8"><Logo size={120} /></div>
         <div className="eyebrow mb-6 justify-center">Uma experiência exclusiva para você</div>
         <h1 className="serif text-5xl md:text-7xl lg:text-8xl leading-[1.05] mb-6">
