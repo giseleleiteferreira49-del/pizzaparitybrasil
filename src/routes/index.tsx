@@ -27,6 +27,7 @@ import car7 from "@/assets/carrossel/c7.jpg.asset.json";
 import car8 from "@/assets/carrossel/c8.jpg.asset.json";
 import car9 from "@/assets/carrossel/c9.jpg.asset.json";
 import car10 from "@/assets/carrossel/c10.png.asset.json";
+import chefThiago from "@/assets/chef-thiago.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
