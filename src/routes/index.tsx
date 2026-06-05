@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AlertTriangle, AlertOctagon, HelpCircle, TrendingDown, UtensilsCrossed, Coffee, Wine, Leaf, Sprout, Droplets, Star, Check } from "lucide-react";
+import { UtensilsCrossed, Coffee, Wine, Star, Check } from "lucide-react";
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/pizza-party-logo.asset.json";
 import heroPizza from "@/assets/hero-pizza.jpg";
@@ -7,14 +7,21 @@ import doughImg from "@/assets/processo-massa.jpg.asset.json";
 import ovenImg from "@/assets/processo-forno.jpg.asset.json";
 import servicoImg from "@/assets/processo-servico.jpg.asset.json";
 import celebracaoImg from "@/assets/celebracao-pizza.jpg.asset.json";
+import hookDecepcao from "@/assets/hook-decepcao.png.asset.json";
+import hookEstressado from "@/assets/hook-estressado.png.asset.json";
+import hookEsquecivel from "@/assets/hook-esquecivel.png.asset.json";
+import hookPagouCaro from "@/assets/hook-pagou-caro.png.asset.json";
+import incSemGluten from "@/assets/inc-sem-gluten.png.asset.json";
+import incVegana from "@/assets/inc-vegana.png.asset.json";
+import incSemLactose from "@/assets/inc-sem-lactose.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Pizza Party Brasil — Pizza Napoletana Artesanal" },
-      { name: "description", content: "Pizza napoletana artesanal para celebrações exclusivas. Jornada sensorial em 4 tempos com pizzaiolo no local." },
-      { property: "og:title", content: "Pizza Party Brasil — Pizza Napoletana Artesanal" },
-      { property: "og:description", content: "Pizza napoletana artesanal para celebrações exclusivas." },
+      { title: "Pizza Party Brasil — Buffet Premium de Pizzas para Eventos" },
+      { name: "description", content: "Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo. Mais de 8.000 eventos realizados desde 2013." },
+      { property: "og:title", content: "Pizza Party Brasil — Buffet Premium de Pizzas para Eventos" },
+      { property: "og:description", content: "Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo." },
       { property: "og:image", content: heroPizza },
     ],
   }),
