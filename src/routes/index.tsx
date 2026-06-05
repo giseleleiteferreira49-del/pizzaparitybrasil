@@ -275,10 +275,10 @@ function Pacotes() {
           <h2 className="serif text-4xl md:text-5xl mb-6">Três experiências. <em className="serif gold-gradient-text italic">Um padrão de excelência.</em></h2>
           <p className="text-cream/65 text-lg">Todos os pacotes incluem a nossa assinatura: a jornada sensorial em 4 tempos, ingredientes premium e equipe treinada. O que varia é a profundidade da experiência.</p>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 items-stretch">
           {pacotes.map((p) => (
-            <div key={p.nome} className="flex flex-col">
-              <div className={`relative border p-8 flex flex-col ${p.featured ? "border-gold bg-black-card" : "border-gold/20 bg-black-warm"}`}>
+            <div key={p.nome} className="flex flex-col h-full">
+              <div className={`relative border p-8 flex flex-col flex-1 ${p.featured ? "border-gold bg-black-card" : "border-gold/20 bg-black-warm"}`}>
                 {p.featured && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-black-rich text-[0.6rem] tracking-[0.2em] uppercase px-4 py-1 font-semibold inline-flex items-center gap-1"><Star className="w-3 h-3 fill-current" /> Mais escolhido</div>
                 )}
@@ -293,7 +293,9 @@ function Pacotes() {
                 </ul>
                 <a href="#contato" className={p.featured ? "btn-gold btn-gold-hover text-center" : "btn-ghost-gold hover:bg-gold hover:text-black-rich text-center"}>Quero o {p.nome}</a>
               </div>
-              <img src={p.img} alt={`Pacote ${p.nome}`} loading="lazy" className="mt-6 mx-auto max-w-full h-56 object-contain" />
+              <div className="mt-8 flex items-center justify-center h-48">
+                <img src={p.img} alt={`Pacote ${p.nome}`} loading="lazy" className="max-h-full max-w-full object-contain" />
+              </div>
             </div>
           ))}
         </div>
