@@ -114,17 +114,17 @@ function Hero() {
           Seu evento merece mais que uma <em className="serif gold-gradient-text italic">pizza</em>.
           <span className="block mt-2 text-cream-light">Merece uma <em className="serif gold-gradient-text italic">memória</em>.</span>
         </h1>
-        <p className="max-w-2xl mx-auto text-cream/70 text-lg md:text-xl font-light mb-3">
+        <p className="max-w-2xl mx-auto lg:mx-0 text-cream/70 text-lg md:text-xl font-light mb-3">
           Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo
         </p>
-        <p className="max-w-2xl mx-auto text-cream/50 text-sm md:text-base font-light mb-10 tracking-wide">
+        <p className="max-w-2xl mx-auto lg:mx-0 text-cream/50 text-sm md:text-base font-light mb-10 tracking-wide">
           Mais de 25 sabores · Sem limite de consumo · Jornada sensorial em 4 tempos
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-4">
+        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
           <a href="#contato" className="btn-gold btn-gold-hover">Solicitar Orçamento</a>
           <a href="#diferencial" className="btn-ghost-gold hover:bg-gold hover:text-black-rich">Nossa experiência</a>
         </div>
-        <div className="mt-16 grid grid-cols-3 max-w-2xl mx-auto gap-4">
+        <div className="mt-16 grid grid-cols-3 max-w-2xl mx-auto lg:mx-0 gap-4">
           {[
             { n: "10+", l: "Anos de tradição" },
             { n: "8.000+", l: "Eventos realizados" },
