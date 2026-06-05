@@ -133,6 +133,15 @@ function Hero() {
             </div>
           ))}
         </div>
+
+        {/* Chef image — visible only on mobile, below text */}
+        <div className="lg:hidden mt-12 flex justify-center">
+          <img
+            src={chefThiago.url}
+            alt="Chef Pizzaiolo Thiago Ferreira Lima"
+            className="w-auto h-[360px] object-contain object-bottom pointer-events-none select-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.7)]"
+          />
+        </div>
       </div>
     </section>
   );
