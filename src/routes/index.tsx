@@ -14,6 +14,9 @@ import hookPagouCaro from "@/assets/hook-pagou-caro.png.asset.json";
 import incSemGluten from "@/assets/inc-sem-gluten.png.asset.json";
 import incVegana from "@/assets/inc-vegana.png.asset.json";
 import incSemLactose from "@/assets/inc-sem-lactose.png.asset.json";
+import pacotePrata from "@/assets/pacote-prata.png.asset.json";
+import pacoteOuro from "@/assets/pacote-ouro.png.asset.json";
+import pacoteExperience from "@/assets/pacote-experience.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -254,13 +257,13 @@ function Processo() {
 
 function Pacotes() {
   const pacotes = [
-    { tier: "Pacote 01", nome: "Prata", tag: "A experiência completa em 4 tempos com foco no essencial: pizza artesanal impecável, serviço profissional e sabores que surpreendem.", inc: [
+    { tier: "Pacote 01", nome: "Prata", img: pacotePrata.url, tag: "A experiência completa em 4 tempos com foco no essencial: pizza artesanal impecável, serviço profissional e sabores que surpreendem.", inc: [
       "16 sabores em 4 tempos sensoriais", "Garçom dedicado para servir", "Massa artesanal tradicional", "Suporte de apresentação", "Guardanapos inclusos",
     ]},
-    { tier: "Pacote 02", nome: "Ouro", featured: true, tag: "A escolha mais popular, combina a jornada sensorial completa com entradinhas sofisticadas, bebidas e serviço de mesa elegante.", inc: [
+    { tier: "Pacote 02", nome: "Ouro", featured: true, img: pacoteOuro.url, tag: "A escolha mais popular, combina a jornada sensorial completa com entradinhas sofisticadas, bebidas e serviço de mesa elegante.", inc: [
       "25 sabores em 4 tempos sensoriais", "Corniccione com antepasto de entrada", "Garçom dedicado para servir", "Massa artesanal tradicional", "Copos de vidro, pratos com talheres", "Refrigerante, suco e água", "Guardanapos inclusos",
     ]},
-    { tier: "Pacote 03", nome: "Experience", tag: "A experiência gastronômica completa. Massa napolitana de longa fermentação, tábua de frios premium e encerramento com estação de café gourmet.", inc: [
+    { tier: "Pacote 03", nome: "Experience", img: pacoteExperience.url, tag: "A experiência gastronômica completa. Massa napolitana de longa fermentação, tábua de frios premium e encerramento com estação de café gourmet.", inc: [
       "27 sabores premium em 4 tempos", "Tábua de frios sofisticada de entrada", "Massa napolitana, longa fermentação", "Garçom dedicado para servir", "Copos de vidro, pratos com talheres", "Bebidas não alcoólicas inclusas", "Estação de café gourmet de encerramento",
     ]},
   ];
@@ -288,6 +291,7 @@ function Pacotes() {
                 ))}
               </ul>
               <a href="#contato" className={p.featured ? "btn-gold btn-gold-hover text-center" : "btn-ghost-gold hover:bg-gold hover:text-black-rich text-center"}>Quero o {p.nome}</a>
+              <img src={p.img} alt={`Pacote ${p.nome}`} loading="lazy" className="mt-8 -mx-8 -mb-8 w-[calc(100%+4rem)] h-56 object-cover" />
             </div>
           ))}
         </div>
