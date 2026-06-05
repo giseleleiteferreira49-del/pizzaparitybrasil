@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { UtensilsCrossed, Coffee, Wine, Star, Check } from "lucide-react";
+import { UtensilsCrossed, Coffee, Wine, Star, StarHalf, Check } from "lucide-react";
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/pizza-party-logo.asset.json";
 import heroPizza from "@/assets/hero-pizza.jpg";
