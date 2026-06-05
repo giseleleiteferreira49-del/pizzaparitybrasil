@@ -107,10 +107,10 @@ function Hero() {
       />
       <div className="absolute bottom-0 left-0 right-0 h-[40%] z-20 pointer-events-none bg-gradient-to-t from-black via-black/85 to-transparent" />
 
-      <div className="relative z-30 max-w-5xl mx-auto px-6 text-center lg:max-w-3xl lg:mx-0 lg:ml-[5%] lg:pr-0">
-        <div className="flex justify-center mb-8"><Logo size={120} /></div>
-        <div className="eyebrow mb-6 justify-center">Uma experiência exclusiva para você</div>
-        <h1 className="serif text-5xl md:text-7xl lg:text-8xl leading-[1.05] mb-6">
+      <div className="relative z-30 max-w-5xl mx-auto px-6 text-center lg:max-w-[640px] lg:mx-0 lg:ml-[5%] lg:text-left">
+        <div className="flex justify-center lg:justify-start mb-8"><Logo size={120} /></div>
+        <div className="eyebrow mb-6 justify-center lg:justify-start">Uma experiência exclusiva para você</div>
+        <h1 className="serif text-5xl md:text-7xl lg:text-6xl xl:text-7xl leading-[1.05] mb-6">
           Seu evento merece mais que uma <em className="serif gold-gradient-text italic">pizza</em>.
           <span className="block mt-2 text-cream-light">Merece uma <em className="serif gold-gradient-text italic">memória</em>.</span>
         </h1>
