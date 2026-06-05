@@ -27,6 +27,7 @@ import car7 from "@/assets/carrossel/c7.jpg.asset.json";
 import car8 from "@/assets/carrossel/c8.jpg.asset.json";
 import car9 from "@/assets/carrossel/c9.jpg.asset.json";
 import car10 from "@/assets/carrossel/c10.png.asset.json";
+import chefThiago from "@/assets/chef-thiago.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -95,6 +96,11 @@ function Hero() {
       />
       <img src={heroPizza} alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover opacity-45" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/60" />
+      <img
+        src={chefThiago.url}
+        alt="Chef Pizzaiolo Thiago Ferreira Lima"
+        className="hidden lg:block absolute top-16 right-0 h-[85%] max-h-[680px] w-auto object-contain object-bottom pointer-events-none select-none z-10 drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)]"
+      />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <div className="flex justify-center mb-8"><Logo size={120} /></div>
