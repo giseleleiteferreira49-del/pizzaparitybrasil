@@ -17,6 +17,16 @@ import incSemLactose from "@/assets/inc-sem-lactose.png.asset.json";
 import pacotePrata from "@/assets/pacote-prata.png.asset.json";
 import pacoteOuro from "@/assets/pacote-ouro.png.asset.json";
 import pacoteExperience from "@/assets/pacote-experience.png.asset.json";
+import car1 from "@/assets/carrossel/c1.png.asset.json";
+import car2 from "@/assets/carrossel/c2.jpg.asset.json";
+import car3 from "@/assets/carrossel/c3.jpg.asset.json";
+import car4 from "@/assets/carrossel/c4.jpg.asset.json";
+import car5 from "@/assets/carrossel/c5.jpg.asset.json";
+import car6 from "@/assets/carrossel/c6.jpg.asset.json";
+import car7 from "@/assets/carrossel/c7.jpg.asset.json";
+import car8 from "@/assets/carrossel/c8.jpg.asset.json";
+import car9 from "@/assets/carrossel/c9.jpg.asset.json";
+import car10 from "@/assets/carrossel/c10.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -670,11 +680,39 @@ function PorQue() {
   );
 }
 
+function Carrossel() {
+  const imgs = [car1, car2, car3, car4, car5, car6, car7, car8, car9, car10];
+  const loop = [...imgs, ...imgs];
+  return (
+    <section className="py-24 bg-black overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 text-center mb-12">
+        <div className="eyebrow mb-4 justify-center">Momentos reais</div>
+        <h2 className="serif text-4xl md:text-5xl">A experiência <em className="serif gold-gradient-text italic">Pizza Party</em> em cada evento.</h2>
+      </div>
+      <div className="relative">
+        <div className="relative overflow-hidden">
+          <div className="flex gap-6 animate-carrossel w-max">
+            {loop.map((im, i) => (
+              <div key={i} className="relative w-[320px] md:w-[420px] h-[260px] md:h-[320px] flex-shrink-0 overflow-hidden border border-gold/15">
+                <img src={im.url} alt={`Evento Pizza Party ${(i % imgs.length) + 1}`} loading="lazy" className="w-full h-full object-cover" />
+              </div>
+            ))}
+          </div>
+          <div className="pointer-events-none absolute inset-0 bg-black/45" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent" />
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Index() {
   return (
     <div className="bg-black text-cream-light">
       <Nav />
       <Hero />
+      <Carrossel />
       <Hook />
       <PorQue />
       <Linhas />
