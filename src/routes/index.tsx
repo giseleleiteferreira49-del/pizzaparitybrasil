@@ -17,6 +17,16 @@ import incSemLactose from "@/assets/inc-sem-lactose.png.asset.json";
 import pacotePrata from "@/assets/pacote-prata.png.asset.json";
 import pacoteOuro from "@/assets/pacote-ouro.png.asset.json";
 import pacoteExperience from "@/assets/pacote-experience.png.asset.json";
+import car1 from "@/assets/carrossel/c1.png.asset.json";
+import car2 from "@/assets/carrossel/c2.jpg.asset.json";
+import car3 from "@/assets/carrossel/c3.jpg.asset.json";
+import car4 from "@/assets/carrossel/c4.jpg.asset.json";
+import car5 from "@/assets/carrossel/c5.jpg.asset.json";
+import car6 from "@/assets/carrossel/c6.jpg.asset.json";
+import car7 from "@/assets/carrossel/c7.jpg.asset.json";
+import car8 from "@/assets/carrossel/c8.jpg.asset.json";
+import car9 from "@/assets/carrossel/c9.jpg.asset.json";
+import car10 from "@/assets/carrossel/c10.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
