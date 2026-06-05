@@ -712,6 +712,7 @@ function Index() {
     <div className="bg-black text-cream-light">
       <Nav />
       <Hero />
+      <Carrossel />
       <Hook />
       <PorQue />
       <Linhas />
