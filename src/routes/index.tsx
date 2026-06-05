@@ -573,16 +573,106 @@ function Footer() {
   );
 }
 
+function Linhas() {
+  const linhas = [
+    {
+      tag: "Linha 01",
+      nome: "Experiência Clássica",
+      desc: "Nosso modelo consagrado em mais de 8.000 eventos. Variedade, agilidade e o sabor que conquistou São Paulo desde 2013.",
+      pontos: [
+        "Mais de 25 sabores",
+        "Servida sem limite de consumo",
+        "Alta produtividade no serviço",
+        "Ideal para eventos grandes (até 300 convidados)",
+      ],
+    },
+    {
+      tag: "Linha 02",
+      featured: true,
+      nome: "Experiência Napoletana",
+      desc: "A linha premium da casa. Massa de longa fermentação, assada na hora em forno napoletano para celebrações onde cada detalhe importa.",
+      pontos: [
+        "Massa de longa fermentação (72h)",
+        "Assada na hora a 450°C",
+        "Ingredientes premium selecionados",
+        "Ideal para eventos exclusivos e ticket premium",
+      ],
+    },
+  ];
+  return (
+    <section id="linhas" className="py-32 bg-black-warm">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-2xl mb-16">
+          <div className="eyebrow mb-4">Duas linhas de serviço</div>
+          <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
+            Escolha a experiência <em className="serif gold-gradient-text italic">certa</em> para o seu evento
+          </h2>
+          <p className="text-cream/65 text-lg">Duas formas de viver a Pizza Party Brasil — a tradição que escalamos em mais de uma década, e a sofisticação napoletana para quem busca o ápice gastronômico.</p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {linhas.map((l) => (
+            <div key={l.nome} className={`relative border p-10 ${l.featured ? "border-gold bg-black-card" : "border-gold/20 bg-black"}`}>
+              <div className="text-[0.6rem] tracking-[0.25em] uppercase text-cream/40 mb-2">{l.tag}</div>
+              <h3 className={`serif text-3xl mb-4 ${l.featured ? "text-gold" : "text-cream-light"}`}>{l.nome}</h3>
+              <p className="text-cream/60 text-sm leading-relaxed mb-6">{l.desc}</p>
+              <ul className="space-y-2">
+                {l.pontos.map((p) => (
+                  <li key={p} className="text-cream/70 text-sm flex gap-2"><span className="text-gold mt-0.5"><Check className="w-3.5 h-3.5" /></span><span>{p}</span></li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PorQue() {
+  const reasons = [
+    "Mais de 8.000 eventos realizados desde 2013",
+    "Especialistas em eventos com pizza",
+    "Mais de 25 sabores no cardápio",
+    "Pizzas servidas sem limite de consumo",
+    "Equipe treinada e atenciosa",
+    "Nota máxima nas avaliações do Google",
+    "Estrutura para 30 a 300 convidados",
+    "Chef Pizzaiolo finalizando ao vivo no seu evento",
+  ];
+  return (
+    <section className="py-32 bg-black">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-2xl mb-16">
+          <div className="eyebrow mb-4">Por que somos diferentes</div>
+          <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
+            Mais de uma década <em className="serif gold-gradient-text italic">construindo memórias</em>
+          </h2>
+          <p className="text-cream/65 text-lg">Não é promessa. É histórico. Cada item abaixo é uma decisão que tomamos todos os dias para entregar a melhor experiência de pizza para eventos em São Paulo.</p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-px bg-gold/15">
+          {reasons.map((r) => (
+            <div key={r} className="bg-black p-6 flex gap-4 items-start hover:bg-black-card transition-colors">
+              <span className="text-gold mt-1"><Check className="w-5 h-5" /></span>
+              <span className="text-cream-light text-base">{r}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Index() {
   return (
     <div className="bg-black text-cream-light">
       <Nav />
       <Hero />
       <Hook />
+      <PorQue />
+      <Linhas />
       <Servico />
       <Diferencial />
       <Processo />
-      
       <Pacotes />
       <Upgrades />
       <Inclusao />
