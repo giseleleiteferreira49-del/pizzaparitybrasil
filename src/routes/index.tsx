@@ -28,6 +28,7 @@ import car8 from "@/assets/carrossel/c8.jpg.asset.json";
 import car9 from "@/assets/carrossel/c9.jpg.asset.json";
 import car10 from "@/assets/carrossel/c10.png.asset.json";
 import chefThiago from "@/assets/chef-thiago.png.asset.json";
+import upgradesBanner from "@/assets/upgrades-banner.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -323,9 +324,9 @@ function Pacotes() {
 
 function Upgrades() {
   const ups = [
-    { icon: <UtensilsCrossed className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, n: "Tábua de Frios", d: "Uma entrada que por si só já é um evento. Queijos finos, embutidos selecionados, frutas e acompanhamentos artesanais montados em tábua rústica.", items: ["4 tipos de queijos finos", "3 tipos de patês", "Salame e copa selecionados", "Frutas da estação", "Crostinis, castanhas e torradinhas premium", "Pão italiano artesanal e geleias"] },
-    { icon: <Coffee className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, n: "Café Gourmet", d: "O encerramento perfeito. Na última hora do evento, nosso barista monta uma estação de café especial que se torna o assunto final da noite.", items: ["Café expresso artesanal", "Cappuccino tradicional", "Cappuccino Nutella", "Chocolate quente e cremoso", "Biscoitos finos"] },
-    { icon: <Wine className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, n: "Locação de Utensílios", d: "Eleve a apresentação do serviço com utensílios de qualidade. Disponíveis para locação mediante contratação de garçom adicional.", items: ["Taças de vinho", "Taças de espumante", "Jogo de pratos e talheres", "Toalha cobre-mancha xadrez", "Copos de vidro", "Garçom adicional"] },
+    { icon: <UtensilsCrossed className="w-16 h-16 text-gold/80" strokeWidth={1.5} />, n: "Tábua de Frios", d: "Uma entrada que por si só já é um evento. Queijos finos, embutidos selecionados, frutas e acompanhamentos artesanais montados em tábua rústica.", items: ["4 tipos de queijos finos", "3 tipos de patês", "Salame e copa selecionados", "Frutas da estação", "Crostinis, castanhas e torradinhas premium", "Pão italiano artesanal e geleias"] },
+    { icon: <Coffee className="w-16 h-16 text-gold/80" strokeWidth={1.5} />, n: "Café Gourmet", d: "O encerramento perfeito. Na última hora do evento, nosso barista monta uma estação de café especial que se torna o assunto final da noite.", items: ["Café expresso artesanal", "Cappuccino tradicional", "Cappuccino Nutella", "Chocolate quente e cremoso", "Biscoitos finos"] },
+    { icon: <Wine className="w-16 h-16 text-gold/80" strokeWidth={1.5} />, n: "Locação de Utensílios", d: "Eleve a apresentação do serviço com utensílios de qualidade. Disponíveis para locação mediante contratação de garçom adicional.", items: ["Taças de vinho", "Taças de espumante", "Jogo de pratos e talheres", "Toalha cobre-mancha xadrez", "Copos de vidro", "Garçom adicional"] },
   ];
   return (
     <section id="cardapio" className="py-32 bg-black-warm">
@@ -339,15 +340,18 @@ function Upgrades() {
         </div>
         <div className="grid md:grid-cols-3 gap-px bg-gold/15">
           {ups.map((u) => (
-            <div key={u.n} className="bg-black-warm p-10">
+            <div key={u.n} className="bg-black-warm p-10 flex flex-col">
               <div className="mb-5">{u.icon}</div>
               <h3 className="serif text-2xl text-cream-light mb-3">{u.n}</h3>
               <p className="text-cream/60 text-sm mb-5 leading-relaxed">{u.d}</p>
-              <ul className="space-y-1.5">
+              <ul className="space-y-1.5 mb-6">
                 {u.items.map((it) => (
                   <li key={it} className="text-cream/55 text-sm flex gap-2"><span className="text-gold/60">·</span><span>{it}</span></li>
                 ))}
               </ul>
+              <div className="mt-auto -mx-10 -mb-10 overflow-hidden">
+                <img src={upgradesBanner.url} alt={u.n} loading="lazy" className="w-full h-48 object-cover" />
+              </div>
             </div>
           ))}
         </div>
