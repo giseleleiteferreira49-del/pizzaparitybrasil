@@ -277,21 +277,23 @@ function Pacotes() {
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {pacotes.map((p) => (
-            <div key={p.nome} className={`relative border p-8 flex flex-col ${p.featured ? "border-gold bg-black-card" : "border-gold/20 bg-black-warm"}`}>
-              {p.featured && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-black-rich text-[0.6rem] tracking-[0.2em] uppercase px-4 py-1 font-semibold inline-flex items-center gap-1"><Star className="w-3 h-3 fill-current" /> Mais escolhido</div>
-              )}
-              <div className="text-[0.6rem] tracking-[0.25em] uppercase text-cream/40 mb-2">{p.tier}</div>
-              <h3 className={`serif text-3xl mb-4 ${p.featured ? "text-gold" : "text-cream-light"}`}>{p.nome}</h3>
-              <p className="text-cream/60 text-sm leading-relaxed mb-6">{p.tag}</p>
-              <div className="text-[0.6rem] tracking-[0.22em] uppercase text-gold/70 mb-3 mt-auto">O que está incluso</div>
-              <ul className="space-y-2 mb-6">
-                {p.inc.map((i) => (
-                  <li key={i} className="text-cream/65 text-sm flex gap-2"><span className="text-gold mt-0.5"><Check className="w-3.5 h-3.5" /></span><span>{i}</span></li>
-                ))}
-              </ul>
-              <a href="#contato" className={p.featured ? "btn-gold btn-gold-hover text-center" : "btn-ghost-gold hover:bg-gold hover:text-black-rich text-center"}>Quero o {p.nome}</a>
-              <img src={p.img} alt={`Pacote ${p.nome}`} loading="lazy" className="mt-8 -mx-8 -mb-8 w-[calc(100%+4rem)] h-56 object-cover" />
+            <div key={p.nome} className="flex flex-col">
+              <div className={`relative border p-8 flex flex-col ${p.featured ? "border-gold bg-black-card" : "border-gold/20 bg-black-warm"}`}>
+                {p.featured && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-black-rich text-[0.6rem] tracking-[0.2em] uppercase px-4 py-1 font-semibold inline-flex items-center gap-1"><Star className="w-3 h-3 fill-current" /> Mais escolhido</div>
+                )}
+                <div className="text-[0.6rem] tracking-[0.25em] uppercase text-cream/40 mb-2">{p.tier}</div>
+                <h3 className={`serif text-3xl mb-4 ${p.featured ? "text-gold" : "text-cream-light"}`}>{p.nome}</h3>
+                <p className="text-cream/60 text-sm leading-relaxed mb-6">{p.tag}</p>
+                <div className="text-[0.6rem] tracking-[0.22em] uppercase text-gold/70 mb-3 mt-auto">O que está incluso</div>
+                <ul className="space-y-2 mb-6">
+                  {p.inc.map((i) => (
+                    <li key={i} className="text-cream/65 text-sm flex gap-2"><span className="text-gold mt-0.5"><Check className="w-3.5 h-3.5" /></span><span>{i}</span></li>
+                  ))}
+                </ul>
+                <a href="#contato" className={p.featured ? "btn-gold btn-gold-hover text-center" : "btn-ghost-gold hover:bg-gold hover:text-black-rich text-center"}>Quero o {p.nome}</a>
+              </div>
+              <img src={p.img} alt={`Pacote ${p.nome}`} loading="lazy" className="mt-6 mx-auto max-w-full h-56 object-contain" />
             </div>
           ))}
         </div>
