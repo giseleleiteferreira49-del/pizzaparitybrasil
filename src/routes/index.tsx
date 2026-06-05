@@ -54,7 +54,7 @@ function Nav() {
         <Logo size={36} />
         <div className="hidden sm:block leading-tight">
           <div className="serif text-gold text-sm tracking-[0.18em] uppercase font-semibold">Pizza Party Brasil</div>
-          <div className="text-[0.55rem] tracking-[0.28em] uppercase text-cream/40">Napoletana</div>
+          <div className="text-[0.55rem] tracking-[0.28em] uppercase text-cream/40">Buffet Premium de Pizzas</div>
         </div>
       </a>
       <ul className="hidden md:flex gap-8 list-none">
@@ -90,8 +90,11 @@ function Hero() {
           Seu evento merece mais que uma <em className="serif gold-gradient-text italic">pizza</em>.
           <span className="block mt-2 text-cream-light">Merece uma <em className="serif gold-gradient-text italic">memória</em>.</span>
         </h1>
-        <p className="max-w-2xl mx-auto text-cream/70 text-lg md:text-xl font-light mb-10">
-          Jornada gastronômica em 4 tempos · Ingredientes premium · Serviço impecável
+        <p className="max-w-2xl mx-auto text-cream/70 text-lg md:text-xl font-light mb-3">
+          Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo
+        </p>
+        <p className="max-w-2xl mx-auto text-cream/50 text-sm md:text-base font-light mb-10 tracking-wide">
+          Mais de 25 sabores · Sem limite de consumo · Jornada sensorial em 4 tempos
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <a href="#contato" className="btn-gold btn-gold-hover">Solicitar Orçamento</a>
@@ -116,10 +119,10 @@ function Hero() {
 
 function Hook() {
   const hooks = [
-    { icon: <AlertTriangle className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, t: "O buffet decepcionou seus convidados", d: "Pizza fria, massa borrachuda, sabores genéricos. A comida deveria ser o ponto alto, virou o ponto de conversa errado. Isso nunca mais vai acontecer no seu evento." },
-    { icon: <AlertOctagon className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, t: "O serviço foi desorganizado e estressante", d: "Equipe despreparada, atrasos, falta de atenção. Você deveria estar curtindo a festa, não resolvendo problema de fornecedor. Nossa equipe cuida de tudo para você." },
-    { icon: <HelpCircle className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, t: "A comida foi esquecível", d: "Semanas depois do evento, ninguém falava sobre a comida. A experiência não criou memória. Nossos clientes recebem mensagens dos convidados pedindo o contato da pizza." },
-    { icon: <TrendingDown className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, t: "Pagou caro por algo ordinário", d: "Preço premium, entrega mediana. Qualidade inconsistente que não justificou o investimento. Com a Pizza Party Brasil, cada real investido se traduz em experiência visível e memorável." },
+    { img: hookDecepcao.url, t: "O buffet decepcionou seus convidados", d: "Pizza fria, massa borrachuda, sabores genéricos. A comida deveria ser o ponto alto, virou o ponto de conversa errado. Isso nunca mais vai acontecer no seu evento." },
+    { img: hookEstressado.url, t: "O serviço foi desorganizado e estressante", d: "Equipe despreparada, atrasos, falta de atenção. Você deveria estar curtindo a festa, não resolvendo problema de fornecedor. Nossa equipe cuida de tudo para você." },
+    { img: hookEsquecivel.url, t: "A comida foi esquecível", d: "Semanas depois do evento, ninguém falava sobre a comida. A experiência não criou memória. Nossos clientes recebem mensagens dos convidados pedindo o contato da pizza." },
+    { img: hookPagouCaro.url, t: "Pagou caro por algo ordinário", d: "Preço premium, entrega mediana. Qualidade inconsistente que não justificou o investimento. Com a Pizza Party Brasil, cada real investido se traduz em experiência visível e memorável." },
   ];
   return (
     <section className="py-32 bg-black">
@@ -133,10 +136,12 @@ function Hook() {
         </div>
         <div className="grid md:grid-cols-2 gap-px bg-gold/15">
           {hooks.map((h) => (
-            <div key={h.t} className="bg-black p-10 hover:bg-black-card transition-colors">
-              <div className="mb-5">{h.icon}</div>
-              <h3 className="serif text-xl mb-3 text-cream-light">{h.t}</h3>
-              <p className="text-cream/55 text-sm leading-relaxed">{h.d}</p>
+            <div key={h.t} className="bg-black p-10 hover:bg-black-card transition-colors flex gap-6 items-start">
+              <img src={h.img} alt={h.t} loading="lazy" className="w-24 h-24 md:w-28 md:h-28 object-contain shrink-0 -mt-2" />
+              <div>
+                <h3 className="serif text-xl mb-3 text-cream-light">{h.t}</h3>
+                <p className="text-cream/55 text-sm leading-relaxed">{h.d}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -192,7 +197,7 @@ function Diferencial() {
           <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
             Não é um rodízio. <br/>É uma <em className="serif gold-gradient-text italic">jornada sensorial</em>.
           </h2>
-          <p className="text-cream/65 text-lg">Cada evento é dividido em 4 momentos cuidadosamente orquestrados, uma progressão de sabores com base em neurociência do paladar.</p>
+          <p className="text-cream/65 text-lg">Cada evento é dividido em 4 momentos cuidadosamente orquestrados — uma sequência de sabores planejada para surpreender seus convidados do início ao fim.</p>
         </div>
         <div className="space-y-px bg-gold/15">
           {tempos.map((t) => (
@@ -328,9 +333,9 @@ function Upgrades() {
 
 function Inclusao() {
   const opts = [
-    { icon: <Leaf className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, n: "Cardápio Vegano", d: "Mussarela vegana em todas as pizzas. Sabores: Marguerita Vegan, Brócolis Vegan, Abobrinha Vegan e Doce de Leite com Coco Ralado." },
-    { icon: <Sprout className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, n: "Massa Sem Glúten", d: "Para convidados com intolerância ao glúten. Mesmos sabores do pacote escolhido, com massa especialmente preparada e segura." },
-    { icon: <Droplets className="w-10 h-10 text-gold/80" strokeWidth={1.5} />, n: "Sem Lactose", d: "Mussarela sem lactose para convidados com intolerância. Sabor completo e textura idêntica, sem abrir mão da experiência." },
+    { img: incVegana.url, n: "Cardápio Vegano", d: "Mussarela vegana em todas as pizzas. Sabores: Marguerita Vegan, Brócolis Vegan, Abobrinha Vegan e Doce de Leite com Coco Ralado." },
+    { img: incSemGluten.url, n: "Massa Sem Glúten", d: "Para convidados com intolerância ao glúten. Mesmos sabores do pacote escolhido, com massa especialmente preparada e segura." },
+    { img: incSemLactose.url, n: "Sem Lactose", d: "Mussarela sem lactose para convidados com intolerância. Sabor completo e textura idêntica, sem abrir mão da experiência." },
   ];
   return (
     <section className="py-32 bg-black">
@@ -344,8 +349,8 @@ function Inclusao() {
         </div>
         <div className="grid md:grid-cols-3 gap-px bg-gold/15">
           {opts.map((o) => (
-            <div key={o.n} className="bg-black p-10">
-              <div className="mb-5">{o.icon}</div>
+            <div key={o.n} className="bg-black p-10 text-center">
+              <img src={o.img} alt={o.n} loading="lazy" className="w-40 h-40 object-contain mx-auto mb-4" />
               <h3 className="serif text-2xl text-cream-light mb-3">{o.n}</h3>
               <p className="text-cream/60 text-sm leading-relaxed">{o.d}</p>
             </div>
