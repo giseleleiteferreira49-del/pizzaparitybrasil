@@ -340,20 +340,20 @@ function Upgrades() {
         </div>
         <div className="grid md:grid-cols-3 gap-px bg-gold/15">
           {ups.map((u) => (
-            <div key={u.n} className="bg-black-warm p-10 flex flex-col">
+            <div key={u.n} className="bg-black-warm p-10">
               <div className="mb-5">{u.icon}</div>
               <h3 className="serif text-2xl text-cream-light mb-3">{u.n}</h3>
               <p className="text-cream/60 text-sm mb-5 leading-relaxed">{u.d}</p>
-              <ul className="space-y-1.5 mb-6">
+              <ul className="space-y-1.5">
                 {u.items.map((it) => (
                   <li key={it} className="text-cream/55 text-sm flex gap-2"><span className="text-gold/60">·</span><span>{it}</span></li>
                 ))}
               </ul>
-              <div className="mt-auto -mx-10 -mb-10 overflow-hidden">
-                <img src={upgradesBanner.url} alt={u.n} loading="lazy" className="w-full h-48 object-cover" />
-              </div>
             </div>
           ))}
+        </div>
+        <div className="mt-16 overflow-hidden rounded-sm">
+          <img src={upgradesBanner.url} alt="Estação de café gourmet artesanal" loading="lazy" className="w-full h-auto object-cover" />
         </div>
       </div>
     </section>
