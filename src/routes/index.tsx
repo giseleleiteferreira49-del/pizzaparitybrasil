@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { UtensilsCrossed, Coffee, Wine, Star, StarHalf, Check, Menu, X } from "lucide-react";
+import { UtensilsCrossed, Coffee, Wine, Star, StarHalf, Check } from "lucide-react";
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/pizza-party-logo.asset.json";
 import heroPizza from "@/assets/hero-pizza.jpg";
@@ -57,7 +57,6 @@ function Logo({ size = 44 }: { size?: number }) {
 }
 
 function Nav() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const links = [
     { href: "#diferencial", label: "Experiência" },
     { href: "#cardapio", label: "Cardápio" },
@@ -65,78 +64,25 @@ function Nav() {
     { href: "#contato", label: "Contato" },
   ];
   return (
-    <>
-      <nav className="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-6 md:px-12 backdrop-blur-xl bg-black-rich/90 border-b border-gold/15">
-        <a href="#top" className="flex items-center gap-3">
-          <Logo size={36} />
-          <div className="flex flex-col justify-center leading-none">
-            <div className="serif text-gold text-sm tracking-[0.18em] uppercase font-semibold">Pizza Party Brasil</div>
-            <div className="text-[0.55rem] tracking-[0.28em] uppercase text-cream/40 mt-0.5">Buffet Premium de Pizzas</div>
-          </div>
-        </a>
-        <ul className="hidden md:flex gap-8 list-none">
-          {links.map((l) => (
-            <li key={l.href}>
-              <a href={l.href} className="text-[0.7rem] tracking-[0.2em] uppercase text-cream/55 hover:text-gold transition-colors">
-                {l.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-        <div className="flex items-center gap-3">
-          <a href="#contato" className="hidden sm:inline-flex btn-gold btn-gold-hover text-[0.62rem] !py-2 !px-4">Orçamento</a>
-          <button
-            className="md:hidden text-cream/70 hover:text-gold transition-colors"
-            onClick={() => setMenuOpen(true)}
-            aria-label="Abrir menu"
-          >
-            <Menu size={28} />
-          </button>
+    <nav className="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-6 md:px-12 backdrop-blur-xl bg-black-rich/90 border-b border-gold/15">
+      <a href="#top" className="flex items-center gap-3">
+        <Logo size={36} />
+        <div className="block leading-tight">
+          <div className="serif text-gold text-sm tracking-[0.18em] uppercase font-semibold">Pizza Party Brasil</div>
+          <div className="text-[0.55rem] tracking-[0.28em] uppercase text-cream/40">Buffet Premium de Pizzas</div>
         </div>
-      </nav>
-
-      {/* Mobile drawer */}
-      <div
-        className={`fixed inset-0 z-[60] bg-black-rich/95 backdrop-blur-xl transition-transform duration-300 ease-out ${
-          menuOpen ? "translate-x-0" : "translate-x-full"
-        } md:hidden flex flex-col`}
-      >
-        <div className="h-16 flex items-center justify-between px-6 border-b border-gold/15">
-          <a href="#top" onClick={() => setMenuOpen(false)} className="flex items-center gap-3">
-            <Logo size={36} />
-            <div className="flex flex-col justify-center leading-none">
-              <div className="serif text-gold text-sm tracking-[0.18em] uppercase font-semibold">Pizza Party Brasil</div>
-            </div>
-          </a>
-          <button
-            className="text-cream/70 hover:text-gold transition-colors"
-            onClick={() => setMenuOpen(false)}
-            aria-label="Fechar menu"
-          >
-            <X size={28} />
-          </button>
-        </div>
-        <div className="flex-1 flex flex-col items-center justify-center gap-8">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              onClick={() => setMenuOpen(false)}
-              className="text-lg tracking-[0.2em] uppercase text-cream/80 hover:text-gold transition-colors"
-            >
+      </a>
+      <ul className="hidden md:flex gap-8 list-none">
+        {links.map((l) => (
+          <li key={l.href}>
+            <a href={l.href} className="text-[0.7rem] tracking-[0.2em] uppercase text-cream/55 hover:text-gold transition-colors">
               {l.label}
             </a>
-          ))}
-          <a
-            href="#contato"
-            onClick={() => setMenuOpen(false)}
-            className="btn-gold btn-gold-hover mt-4"
-          >
-            Solicitar Orçamento
-          </a>
-        </div>
-      </div>
-    </>
+          </li>
+        ))}
+      </ul>
+      <a href="#contato" className="btn-gold btn-gold-hover text-[0.62rem] !py-2 !px-4">Orçamento</a>
+    </nav>
   );
 }
 
