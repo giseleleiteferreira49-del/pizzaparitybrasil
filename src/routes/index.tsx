@@ -425,9 +425,9 @@ function Inclusao() {
 
 function ProvaSocial() {
   const reviews = [
-    { t: "As pizzas eram incríveis, mas o que me surpreendeu foi o serviço. A equipe era extremamente atenciosa e profissional. Todos os meus convidados pediram o contato!", a: "Ana Paula M.", e: "Aniversário de 40 anos · 60 convidados" },
-    { t: "Já fizemos vários eventos corporativos, e a Pizza Party Brasil foi de longe a melhor escolha. A organização foi impecável do início ao fim. Recomendo sem hesitar.", a: "Ricardo F.", e: "Confraternização Corporativa · 90 convidados" },
-    { t: "A experiência dos 4 tempos fez toda a diferença. Os convidados ficaram encantados, disseram que foi a melhor festa que já foram. Fizemos o Pacote Experience e valeu cada centavo.", a: "Mariana C.", e: "Casamento intimista · 45 convidados" },
+    { t: "Experiência maravilhosa, eles são perfeitos em todos os sentidos tanto de atendimento de venda como durante a festa , meus convidados amaram ; indico de olhos fechados", a: "Simone T.", e: "\n" },
+    { t: "Excelente! simplesmente a melhor, amei demais essa pizza, trabalho impecável. indico super pra quem tá com aquela vontade de um doce maravilhoso!!", a: "\n\nIsabelly P.", e: "\n" },
+    { t: "A equipe da Pizza Party Brazil superou todas as nossas expectativas. As pizzas fizeram o maior sucesso, e as pizzas sem glúten estavam deliciosas! O serviço foi excelente e nossos convidados ficaram muito satisfeitos. Recomendo-os sinceramente.", a: "Gemma C.", e: "\n" },
   ];
   return (
     <section className="py-32 bg-black-warm">
