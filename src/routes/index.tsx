@@ -132,6 +132,7 @@ function Hero() {
 
       <div className="relative z-30 max-w-6xl mx-auto px-6 md:px-12 text-center lg:text-left">
         <div className="flex justify-center lg:justify-start mb-8"><Logo size={120} /></div>
+        <div className="eyebrow mb-6 justify-center lg:justify-start">O Melhor buffet de Pizzas em domicílio de SP</div>
         <div className="eyebrow mb-6 justify-center lg:justify-start">Uma experiência exclusiva para você</div>
         <h1 className="serif text-5xl md:text-7xl lg:text-6xl xl:text-7xl leading-[1.05] mb-6">
           Seu evento merece mais que uma <em className="serif gold-gradient-text italic">pizza</em>.
