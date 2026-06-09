@@ -563,13 +563,28 @@ function Condicoes() {
 
 function ContatoForm() {
   const [form, setForm] = useState({ nome: "", telefone: "", email: "", convidados: "", data: "", cep: "" });
+  const [sent, setSent] = useState(false);
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => setForm({ ...form, [e.target.name]: e.target.value });
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const msg = `Olá! Gostaria de um orçamento.%0A%0ANome: ${form.nome}%0ATelefone: ${form.telefone}%0AE-mail: ${form.email}%0AConvidados: ${form.convidados}%0AData da festa: ${form.data}%0ACEP: ${form.cep}`;
     window.open(`https://wa.me/5511974418038?text=${msg}`, "_blank");
+    setSent(true);
   };
   const inputCls = "w-full bg-black-rich border border-gold/20 px-4 py-3 text-cream-light placeholder:text-cream/30 focus:outline-none focus:border-gold transition-colors text-sm";
+  if (sent) {
+    return (
+      <div className="max-w-2xl mx-auto border border-gold/40 bg-black-rich p-10 text-center">
+        <div className="inline-flex items-center justify-center w-14 h-14 rounded-full border border-gold/50 mb-5">
+          <Check className="w-7 h-7 text-gold" />
+        </div>
+        <h3 className="serif text-2xl text-cream-light mb-3">Mensagem enviada!</h3>
+        <p className="text-cream/65 text-sm mb-6">Abrimos o WhatsApp em uma nova janela com seus dados. Caso não tenha aberto, clique abaixo para falar conosco diretamente.</p>
+        <a href="https://wa.me/5511974418038" target="_blank" rel="noreferrer" className="btn-gold btn-gold-hover inline-block">Abrir WhatsApp</a>
+        <button type="button" onClick={() => setSent(false)} className="block mx-auto mt-5 text-[0.65rem] tracking-[0.2em] uppercase text-cream/40 hover:text-gold transition-colors">Enviar outra solicitação</button>
+      </div>
+    );
+  }
   return (
     <form onSubmit={onSubmit} className="grid sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
       <input required name="nome" value={form.nome} onChange={onChange} placeholder="Nome" className={`${inputCls} sm:col-span-2`} />
@@ -582,6 +597,7 @@ function ContatoForm() {
     </form>
   );
 }
+
 
 function Contato() {
   return (
