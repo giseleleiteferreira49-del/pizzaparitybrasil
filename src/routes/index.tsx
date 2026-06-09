@@ -38,8 +38,32 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Pizza Party Brasil — Buffet Premium de Pizzas para Eventos" },
       { property: "og:description", content: "Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo." },
       { property: "og:image", content: heroPizza },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: heroPizza },
+    ],
+
+    links: [{ rel: "canonical", href: "https://pizzapartybrasil.lovable.app/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FoodEstablishment",
+          name: "Pizza Party Brasil",
+          description: "Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo.",
+          url: "https://pizzapartybrasil.lovable.app/",
+          telephone: "+55 11 97441-8038",
+          email: "contato@pizzapartybrasil.com",
+          servesCuisine: ["Pizza", "Italiana", "Napoletana"],
+          areaServed: { "@type": "City", name: "São Paulo" },
+          address: { "@type": "PostalAddress", addressLocality: "São Paulo", addressRegion: "SP", addressCountry: "BR" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "500" },
+          foundingDate: "2013",
+        }),
+      },
     ],
   }),
+
   component: Index,
 });
 
@@ -81,7 +105,7 @@ function Nav() {
           </li>
         ))}
       </ul>
-      <a href="#contato" className="btn-gold btn-gold-hover text-[0.62rem] !py-2 !px-4">Orçamento</a>
+      <a href="#contato" className="btn-gold btn-gold-hover text-[0.7rem] !py-3 !px-6">Orçamento</a>
     </nav>
   );
 }
@@ -125,7 +149,7 @@ function Hero() {
           {[
             { n: "10+", l: "Anos de tradição" },
             { n: "8.000+", l: "Eventos realizados" },
-            { n: <span className="inline-flex items-center gap-1">4.9 <StarHalf className="w-5 h-5 fill-current" /></span>, l: "4.9 NO GOOGLE · CENTENAS DE REVIEWS" },
+            { n: <span className="inline-flex items-center gap-1">4.9 <StarHalf className="w-5 h-5 fill-current" /></span>, l: "No Google · Centenas de reviews" },
           ].map((s) => (
             <div key={s.l} className="text-center">
               <div className="serif gold-gradient-text text-3xl md:text-4xl">{s.n}</div>
@@ -290,7 +314,7 @@ function Pacotes() {
     { tier: "Pacote 02", nome: "Ouro", featured: true, img: pacoteOuro.url, tag: "A escolha mais popular, combina a jornada sensorial completa com entradinhas sofisticadas, bebidas e serviço de mesa elegante.", inc: [
       "25 sabores em 4 tempos sensoriais", "Corniccione com antepasto de entrada", "Garçom dedicado para servir", "Massa artesanal tradicional", "Copos de vidro, pratos com talheres", "Refrigerante, suco e água", "Guardanapos inclusos",
     ]},
-    { tier: "Pacote 03", nome: "Experience", img: pacoteExperience.url, tag: "A experiência gastronômica completa. Massa de longa fermentação\n, tábua de frios premium e encerramento com estação de café gourmet.", inc: [
+    { tier: "Pacote 03", nome: "Experience", img: pacoteExperience.url, tag: "A experiência gastronômica completa. Massa de longa fermentação, tábua de frios premium e encerramento com estação de café gourmet.", inc: [
       "27 sabores premium em 4 tempos", "Tábua de frios sofisticada de entrada", "Massa napolitana, longa fermentação", "Garçom dedicado para servir", "Copos de vidro, pratos com talheres", "Bebidas não alcoólicas inclusas", "Estação de café gourmet de encerramento",
     ]},
   ];
@@ -539,13 +563,28 @@ function Condicoes() {
 
 function ContatoForm() {
   const [form, setForm] = useState({ nome: "", telefone: "", email: "", convidados: "", data: "", cep: "" });
+  const [sent, setSent] = useState(false);
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => setForm({ ...form, [e.target.name]: e.target.value });
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const msg = `Olá! Gostaria de um orçamento.%0A%0ANome: ${form.nome}%0ATelefone: ${form.telefone}%0AE-mail: ${form.email}%0AConvidados: ${form.convidados}%0AData da festa: ${form.data}%0ACEP: ${form.cep}`;
     window.open(`https://wa.me/5511974418038?text=${msg}`, "_blank");
+    setSent(true);
   };
   const inputCls = "w-full bg-black-rich border border-gold/20 px-4 py-3 text-cream-light placeholder:text-cream/30 focus:outline-none focus:border-gold transition-colors text-sm";
+  if (sent) {
+    return (
+      <div className="max-w-2xl mx-auto border border-gold/40 bg-black-rich p-10 text-center">
+        <div className="inline-flex items-center justify-center w-14 h-14 rounded-full border border-gold/50 mb-5">
+          <Check className="w-7 h-7 text-gold" />
+        </div>
+        <h3 className="serif text-2xl text-cream-light mb-3">Mensagem enviada!</h3>
+        <p className="text-cream/65 text-sm mb-6">Abrimos o WhatsApp em uma nova janela com seus dados. Caso não tenha aberto, clique abaixo para falar conosco diretamente.</p>
+        <a href="https://wa.me/5511974418038" target="_blank" rel="noreferrer" className="btn-gold btn-gold-hover inline-block">Abrir WhatsApp</a>
+        <button type="button" onClick={() => setSent(false)} className="block mx-auto mt-5 text-[0.65rem] tracking-[0.2em] uppercase text-cream/40 hover:text-gold transition-colors">Enviar outra solicitação</button>
+      </div>
+    );
+  }
   return (
     <form onSubmit={onSubmit} className="grid sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
       <input required name="nome" value={form.nome} onChange={onChange} placeholder="Nome" className={`${inputCls} sm:col-span-2`} />
@@ -558,6 +597,7 @@ function ContatoForm() {
     </form>
   );
 }
+
 
 function Contato() {
   return (
@@ -732,10 +772,11 @@ function Index() {
     <div className="bg-black text-cream-light">
       <Nav />
       <Hero />
+      <PorQue />
       <Carrossel />
       <Hook />
-      <PorQue />
       <Linhas />
+
       <Servico />
       <Diferencial />
       <Processo />
