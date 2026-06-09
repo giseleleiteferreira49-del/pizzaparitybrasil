@@ -320,6 +320,9 @@ function Pacotes() {
     { tier: "Pacote 03", nome: "Experience", img: pacoteExperience.url, tag: "A experiência gastronômica completa. Massa de longa fermentação, tábua de frios premium e encerramento com estação de café gourmet.", inc: [
       "Sabores premium em 4 tempos", "Bruschettas sofisticadas de entrada", "Massa napolitana, longa fermentação", "Garçom dedicado para servir", "Copos de vidro, pratos com talheres", "Bebidas não alcoólicas inclusas", "Estação de café gourmet de encerramento",
     ]},
+    { tier: "Pacote 04", nome: "Tábua de Frios", img: pacoteTabua.url, tag: "Uma seleção sofisticada de frios, queijos especiais, pães artesanais e acompanhamentos para complementar qualquer evento com elegância.", inc: [
+      "Seleção de frios premium", "Queijos especiais importados", "Pães artesanais e torradas", "Antepastos e conservas", "Frutas frescas e secas", "Mel, geleias e castanhas", "Apresentação em tábua rústica",
+    ]},
   ];
   return (
     <section id="pacotes" className="py-32 bg-black">
