@@ -7,6 +7,7 @@ import doughImg from "@/assets/processo-massa.jpg.asset.json";
 import ovenImg from "@/assets/processo-forno.jpg.asset.json";
 import servicoImg from "@/assets/processo-servico.jpg.asset.json";
 import celebracaoImg from "@/assets/celebracao-pizza.jpg.asset.json";
+import baristaCelebracao from "@/assets/barista-celebracao.png.asset.json";
 import hookDecepcao from "@/assets/hook-decepcao.png.asset.json";
 import hookEstressado from "@/assets/hook-estressado.png.asset.json";
 import hookEsquecivel from "@/assets/hook-esquecivel.png.asset.json";
@@ -504,7 +505,7 @@ function Celebracao() {
     <section className="py-32 relative bg-black-warm overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div className="relative">
-          <img src={celebracaoImg.url} alt="Convidado celebrando com pizza" width={1463} height={974} loading="lazy" className="w-full aspect-[4/3] object-cover" />
+          <img src={baristaCelebracao.url} alt="Barista preparando café gourmet" width={1024} height={1536} loading="lazy" className="w-full aspect-[4/3] object-cover" />
           <div className="absolute -bottom-6 -right-6 hidden md:block bg-black-rich border border-gold/40 p-6 max-w-xs">
             <div className="serif gold-gradient-text text-5xl">8.000+</div>
             <div className="text-xs text-cream/60 tracking-[0.15em] uppercase mt-1">celebrações realizadas</div>
