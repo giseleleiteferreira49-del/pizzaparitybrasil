@@ -149,7 +149,7 @@ function Hero() {
           {[
             { n: "10+", l: "Anos de tradição" },
             { n: "8.000+", l: "Eventos realizados" },
-            { n: <span className="inline-flex items-center gap-1">4.9 <StarHalf className="w-5 h-5 fill-current" /></span>, l: "4.9 NO GOOGLE · CENTENAS DE REVIEWS" },
+            { n: <span className="inline-flex items-center gap-1">4.9 <StarHalf className="w-5 h-5 fill-current" /></span>, l: "No Google · Centenas de reviews" },
           ].map((s) => (
             <div key={s.l} className="text-center">
               <div className="serif gold-gradient-text text-3xl md:text-4xl">{s.n}</div>
