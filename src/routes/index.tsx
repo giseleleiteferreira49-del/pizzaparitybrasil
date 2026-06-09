@@ -38,8 +38,32 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Pizza Party Brasil — Buffet Premium de Pizzas para Eventos" },
       { property: "og:description", content: "Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo." },
       { property: "og:image", content: heroPizza },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: heroPizza },
+      { rel: "canonical", href: "https://pizzapartybrasil.lovable.app/" } as unknown as { name: string; content: string },
+    ],
+    links: [{ rel: "canonical", href: "https://pizzapartybrasil.lovable.app/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FoodEstablishment",
+          name: "Pizza Party Brasil",
+          description: "Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo.",
+          url: "https://pizzapartybrasil.lovable.app/",
+          telephone: "+55 11 97441-8038",
+          email: "contato@pizzapartybrasil.com",
+          servesCuisine: ["Pizza", "Italiana", "Napoletana"],
+          areaServed: { "@type": "City", name: "São Paulo" },
+          address: { "@type": "PostalAddress", addressLocality: "São Paulo", addressRegion: "SP", addressCountry: "BR" },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "500" },
+          foundingDate: "2013",
+        }),
+      },
     ],
   }),
+
   component: Index,
 });
 
