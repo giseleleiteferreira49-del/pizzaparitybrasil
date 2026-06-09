@@ -17,6 +17,7 @@ import incSemLactose from "@/assets/inc-sem-lactose.png.asset.json";
 import pacotePrata from "@/assets/pacote-prata.png.asset.json";
 import pacoteOuro from "@/assets/pacote-ouro.png.asset.json";
 import pacoteExperience from "@/assets/pacote-experience.png.asset.json";
+import pacoteTabua from "@/assets/pacote-tabua-frios.png.asset.json";
 import car1 from "@/assets/carrossel/c1.png.asset.json";
 import car2 from "@/assets/carrossel/c2.jpg.asset.json";
 import car3 from "@/assets/carrossel/c3.jpg.asset.json";
@@ -318,6 +319,9 @@ function Pacotes() {
     ]},
     { tier: "Pacote 03", nome: "Experience", img: pacoteExperience.url, tag: "A experiência gastronômica completa. Massa de longa fermentação, tábua de frios premium e encerramento com estação de café gourmet.", inc: [
       "Sabores premium em 4 tempos", "Bruschettas sofisticadas de entrada", "Massa napolitana, longa fermentação", "Garçom dedicado para servir", "Copos de vidro, pratos com talheres", "Bebidas não alcoólicas inclusas", "Estação de café gourmet de encerramento",
+    ]},
+    { tier: "Pacote 04", nome: "Tábua de Frios", img: pacoteTabua.url, tag: "Uma seleção sofisticada de frios, queijos especiais, pães artesanais e acompanhamentos para complementar qualquer evento com elegância.", inc: [
+      "Seleção de frios premium", "Queijos especiais importados", "Pães artesanais e torradas", "Antepastos e conservas", "Frutas frescas e secas", "Mel, geleias e castanhas", "Apresentação em tábua rústica",
     ]},
   ];
   return (
