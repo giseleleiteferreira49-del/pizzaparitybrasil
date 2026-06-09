@@ -17,6 +17,7 @@ import incSemLactose from "@/assets/inc-sem-lactose.png.asset.json";
 import pacotePrata from "@/assets/pacote-prata.png.asset.json";
 import pacoteOuro from "@/assets/pacote-ouro.png.asset.json";
 import pacoteExperience from "@/assets/pacote-experience.png.asset.json";
+import pacoteTabua from "@/assets/pacote-tabua-frios.png.asset.json";
 
 import car1 from "@/assets/carrossel/c1.png.asset.json";
 import car2 from "@/assets/carrossel/c2.jpg.asset.json";
@@ -350,6 +351,13 @@ function Pacotes() {
               <div className="mt-8 flex items-center justify-center h-48">
                 <img src={p.img} alt={`Pacote ${p.nome}`} loading="lazy" className="max-h-full max-w-full object-contain" />
               </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
+          {[pacotePrata, pacoteOuro, pacoteExperience, pacoteTabua].map((img, i) => (
+            <div key={i} className="flex items-center justify-center h-40">
+              <img src={img.url} alt="" loading="lazy" className="max-h-full max-w-full object-contain" />
             </div>
           ))}
         </div>
