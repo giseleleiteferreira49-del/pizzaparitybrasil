@@ -17,6 +17,7 @@ import incSemLactose from "@/assets/inc-sem-lactose.png.asset.json";
 import pacotePrata from "@/assets/pacote-prata.png.asset.json";
 import pacoteOuro from "@/assets/pacote-ouro.png.asset.json";
 import pacoteExperience from "@/assets/pacote-experience.png.asset.json";
+import pacoteTabua from "@/assets/pacote-tabua-frios.png.asset.json";
 import car1 from "@/assets/carrossel/c1.png.asset.json";
 import car2 from "@/assets/carrossel/c2.jpg.asset.json";
 import car3 from "@/assets/carrossel/c3.jpg.asset.json";
