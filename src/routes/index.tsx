@@ -7,6 +7,7 @@ import doughImg from "@/assets/processo-massa.jpg.asset.json";
 import ovenImg from "@/assets/processo-forno.jpg.asset.json";
 import servicoImg from "@/assets/processo-servico.jpg.asset.json";
 import celebracaoImg from "@/assets/celebracao-pizza.jpg.asset.json";
+import baristaCelebracao from "@/assets/barista-celebracao.png.asset.json";
 import hookDecepcao from "@/assets/hook-decepcao.png.asset.json";
 import hookEstressado from "@/assets/hook-estressado.png.asset.json";
 import hookEsquecivel from "@/assets/hook-esquecivel.png.asset.json";
