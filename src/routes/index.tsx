@@ -2,7 +2,7 @@ import { useState } from "react";
 import { UtensilsCrossed, Coffee, Wine, Star, StarHalf, Check } from "lucide-react";
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/pizza-party-logo.asset.json";
-import heroPizza from "@/assets/hero-pizza.jpg";
+import heroPizza from "@/assets/hero-bg.jpg.asset.json";
 import doughImg from "@/assets/processo-massa.jpg.asset.json";
 import ovenImg from "@/assets/processo-forno.jpg.asset.json";
 import servicoImg from "@/assets/processo-servico.jpg.asset.json";
@@ -37,9 +37,9 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo. Mais de 8.000 eventos realizados desde 2013." },
       { property: "og:title", content: "Pizza Party Brasil — Buffet Premium de Pizzas para Eventos" },
       { property: "og:description", content: "Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo." },
-      { property: "og:image", content: heroPizza },
+      { property: "og:image", content: heroPizza.url },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: heroPizza },
+      { name: "twitter:image", content: heroPizza.url },
     ],
 
     links: [{ rel: "canonical", href: "https://pizzapartybrasil.lovable.app/" }],
@@ -119,7 +119,7 @@ function Hero() {
           backgroundImage: `radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201,168,76,0.18) 0%, transparent 60%), radial-gradient(ellipse 60% 40% at 50% 110%, rgba(123,31,46,0.25) 0%, transparent 60%)`,
         }}
       />
-      <img src={heroPizza} alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover opacity-45" />
+      <img src={heroPizza.url} alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover opacity-45" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/60" />
       <img
         src={chefThiago.url}
