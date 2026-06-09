@@ -105,7 +105,7 @@ function Nav() {
           </li>
         ))}
       </ul>
-      <a href="#contato" className="btn-gold btn-gold-hover text-[0.62rem] !py-2 !px-4">Orçamento</a>
+      <a href="#contato" className="btn-gold btn-gold-hover text-[0.7rem] !py-3 !px-6">Orçamento</a>
     </nav>
   );
 }
