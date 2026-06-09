@@ -136,8 +136,8 @@ function Hero() {
         <div className="eyebrow mb-6 justify-center lg:justify-start">Uma experiência exclusiva para você</div>
         <h1 className="serif text-5xl md:text-7xl lg:text-6xl xl:text-7xl leading-[1.05] mb-6">
           Seu evento merece<br />
-          mais que uma <em className="serif gold-gradient-text italic">pizza</em>.<br />
-          <span className="text-cream-light">Merece uma <em className="serif gold-gradient-text italic">memória</em>.</span>
+          mais que uma <em className="serif gold-gradient-text italic">pizza</em>.
+          <span className="block mt-2 text-cream-light">Merece uma <em className="serif gold-gradient-text italic">memória</em>.</span>
         </h1>
         <p className="max-w-2xl mx-auto lg:mx-0 text-cream/70 text-lg md:text-xl font-light mb-3">
           Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo
