@@ -128,7 +128,7 @@ function Hero() {
       />
       <div className="absolute bottom-0 left-0 right-0 h-[40%] z-20 pointer-events-none bg-gradient-to-t from-black via-black/85 to-transparent" />
 
-      <div className="relative z-30 max-w-5xl mx-auto px-6 text-center lg:max-w-[640px] lg:mx-0 lg:ml-[5%] lg:text-left">
+      <div className="relative z-30 max-w-5xl mx-auto px-6 md:px-12 text-center lg:max-w-[640px] lg:mx-0 lg:text-left">
         <div className="flex justify-center lg:justify-start mb-8"><Logo size={120} /></div>
         <div className="eyebrow mb-6 justify-center lg:justify-start">Uma experiência exclusiva para você</div>
         <h1 className="serif text-5xl md:text-7xl lg:text-6xl xl:text-7xl leading-[1.05] mb-6">
