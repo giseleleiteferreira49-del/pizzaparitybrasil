@@ -772,10 +772,11 @@ function Index() {
     <div className="bg-black text-cream-light">
       <Nav />
       <Hero />
+      <PorQue />
       <Carrossel />
       <Hook />
-      <PorQue />
       <Linhas />
+
       <Servico />
       <Diferencial />
       <Processo />
