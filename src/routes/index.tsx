@@ -159,11 +159,11 @@ function Hero() {
           </div>
         </div>
 
-        <div className="flex justify-center lg:justify-end items-end">
+        <div className="flex justify-center lg:justify-end items-end lg:-mr-12 xl:-mr-20 lg:-mb-8">
           <img
             src={chefThiago.url}
             alt="Chef Pizzaiolo Thiago Ferreira Lima"
-            className="w-auto h-[360px] lg:h-[78vh] max-h-[780px] object-contain object-bottom pointer-events-none select-none drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)]"
+            className="w-auto h-[420px] lg:h-[105vh] max-h-[1100px] object-contain object-bottom pointer-events-none select-none drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)] scale-110 lg:scale-125 origin-bottom"
           />
         </div>
       </div>
