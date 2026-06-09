@@ -670,7 +670,7 @@ function Linhas() {
       nome: "Experiência Napoletana",
       desc: "A linha premium da casa. Massa de longa fermentação, assada na hora em forno napoletano para celebrações onde cada detalhe importa.",
       pontos: [
-        "Massa de longa fermentação (72h)",
+        "Massa de longa fermentação",
         "Assada na hora a 450°C",
         "Ingredientes premium selecionados",
         "Ideal para eventos exclusivos e ticket premium",
