@@ -123,51 +123,47 @@ function Hero() {
       />
       <img src={heroPizza} alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover opacity-45" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/60" />
-      <img
-        src={chefThiago.url}
-        alt="Chef Pizzaiolo Thiago Ferreira Lima"
-        className="hidden lg:block absolute bottom-0 right-0 h-[88%] w-auto object-contain object-bottom pointer-events-none select-none z-10 drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)]"
-      />
       <div className="absolute bottom-0 left-0 right-0 h-[40%] z-20 pointer-events-none bg-gradient-to-t from-black via-black/85 to-transparent" />
 
-      <div className="relative z-30 max-w-6xl mx-auto px-6 md:px-12 text-center lg:text-left">
-        <div className="flex justify-center lg:justify-start mb-8"><Logo size={120} /></div>
-        <div className="eyebrow mb-6 justify-center lg:justify-start">O Melhor buffet de Pizzas em domicílio de SP</div>
-        <div className="eyebrow mb-6 justify-center lg:justify-start">Uma experiência exclusiva para você</div>
-        <h1 className="serif text-5xl md:text-7xl lg:text-6xl xl:text-7xl leading-[1.05] mb-6">
-          Seu evento merece<br />
-          mais que uma <em className="serif gold-gradient-text italic">pizza</em>.<br />
-          <span className="text-cream-light">Merece uma <em className="serif gold-gradient-text italic">memória</em>.</span>
-        </h1>
-        <p className="max-w-2xl mx-auto lg:mx-0 text-cream/70 text-lg md:text-xl font-light mb-3">
-          Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo
-        </p>
-        <p className="max-w-2xl mx-auto lg:mx-0 text-cream/50 text-sm md:text-base font-light mb-10 tracking-wide">
-          Mais de 25 sabores · Sem limite de consumo · Jornada sensorial em 4 tempos
-        </p>
-        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-          <a href="#contato" className="btn-gold btn-gold-hover">Solicitar Orçamento</a>
-          <a href="#diferencial" className="btn-ghost-gold hover:bg-gold hover:text-black-rich">Nossa experiência</a>
-        </div>
-        <div className="mt-16 grid grid-cols-3 max-w-2xl mx-auto lg:mx-0 gap-4">
-          {[
-            { n: "10+", l: "Anos de tradição" },
-            { n: "8.000+", l: "Eventos realizados" },
-            { n: <span className="inline-flex items-center gap-1">4.9 <StarHalf className="w-5 h-5 fill-current" /></span>, l: "No Google · Centenas de reviews" },
-          ].map((s) => (
-            <div key={s.l} className="text-center">
-              <div className="serif gold-gradient-text text-3xl md:text-4xl">{s.n}</div>
-              <div className="text-[0.6rem] tracking-[0.2em] uppercase text-cream/40 mt-1">{s.l}</div>
-            </div>
-          ))}
+      <div className="relative z-30 w-full max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-12 items-center text-center lg:text-left">
+        <div>
+          <div className="flex justify-center lg:justify-start mb-8"><Logo size={120} /></div>
+          <div className="eyebrow mb-6 justify-center lg:justify-start">O Melhor buffet de Pizzas em domicílio de SP</div>
+          <div className="eyebrow mb-6 justify-center lg:justify-start">Uma experiência exclusiva para você</div>
+          <h1 className="serif text-5xl md:text-7xl lg:text-6xl xl:text-7xl leading-[1.05] mb-6">
+            Seu evento merece<br />
+            mais que uma <em className="serif gold-gradient-text italic">pizza</em>.<br />
+            <span className="text-cream-light">Merece uma <em className="serif gold-gradient-text italic">memória</em>.</span>
+          </h1>
+          <p className="max-w-2xl mx-auto lg:mx-0 text-cream/70 text-lg md:text-xl font-light mb-3">
+            Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo
+          </p>
+          <p className="max-w-2xl mx-auto lg:mx-0 text-cream/50 text-sm md:text-base font-light mb-10 tracking-wide">
+            Mais de 25 sabores · Sem limite de consumo · Jornada sensorial em 4 tempos
+          </p>
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+            <a href="#contato" className="btn-gold btn-gold-hover">Solicitar Orçamento</a>
+            <a href="#diferencial" className="btn-ghost-gold hover:bg-gold hover:text-black-rich">Nossa experiência</a>
+          </div>
+          <div className="mt-16 grid grid-cols-3 max-w-2xl mx-auto lg:mx-0 gap-4">
+            {[
+              { n: "10+", l: "Anos de tradição" },
+              { n: "8.000+", l: "Eventos realizados" },
+              { n: <span className="inline-flex items-center gap-1">4.9 <StarHalf className="w-5 h-5 fill-current" /></span>, l: "No Google · Centenas de reviews" },
+            ].map((s) => (
+              <div key={s.l} className="text-center">
+                <div className="serif gold-gradient-text text-3xl md:text-4xl">{s.n}</div>
+                <div className="text-[0.6rem] tracking-[0.2em] uppercase text-cream/40 mt-1">{s.l}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Chef image — visible only on mobile, below text */}
-        <div className="lg:hidden mt-12 flex justify-center">
+        <div className="flex justify-center lg:justify-end items-end">
           <img
             src={chefThiago.url}
             alt="Chef Pizzaiolo Thiago Ferreira Lima"
-            className="w-auto h-[360px] object-contain object-bottom pointer-events-none select-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.7)]"
+            className="w-auto h-[360px] lg:h-[78vh] max-h-[780px] object-contain object-bottom pointer-events-none select-none drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)]"
           />
         </div>
       </div>
