@@ -127,7 +127,7 @@ function Hero() {
       <img
         src={chefThiago.url}
         alt="Chef Pizzaiolo Thiago Ferreira Lima"
-        className="hidden lg:block absolute bottom-0 right-0 xl:right-[2vw] h-[110vh] max-h-[1200px] w-auto object-contain object-bottom pointer-events-none select-none z-10 drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)]"
+        className="hidden lg:block absolute bottom-0 right-0 xl:right-[2vw] top-24 h-auto max-h-[calc(100vh-6rem)] w-auto object-contain object-bottom pointer-events-none select-none z-10 drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)]"
       />
       <div className="absolute bottom-0 left-0 right-0 h-[45%] z-20 pointer-events-none bg-gradient-to-t from-black via-black/85 to-transparent" />
 
