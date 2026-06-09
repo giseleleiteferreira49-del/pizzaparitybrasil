@@ -352,7 +352,7 @@ function Pacotes() {
           ))}
         </div>
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
-          {[pacotePrata, pacoteOuro, pacoteExperience, pacoteTabua].map((img, i) => (
+          {[pacotePrata, pacoteOuro, pacoteTabua, pacoteExperience].map((img, i) => (
             <div key={i} className="flex items-center justify-center h-40">
               <img src={img.url} alt="" loading="lazy" className="max-h-full max-w-full object-contain" />
             </div>
