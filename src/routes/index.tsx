@@ -40,8 +40,8 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: heroPizza },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: heroPizza },
-      ],
     ],
+
     links: [{ rel: "canonical", href: "https://pizzapartybrasil.lovable.app/" }],
     scripts: [
       {
