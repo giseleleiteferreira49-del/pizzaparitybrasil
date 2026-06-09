@@ -275,19 +275,20 @@ function Diferencial() {
 
 function Processo() {
   const steps = [
-    { img: doughImg.url, n: "01", t: "Massa", d: "Tudo começa pelas mãos. Feita com Blend das melhores farinhas italianas tipo 00, o tempo é o nosso ingrediente secreto." },
-    { img: ovenImg.url, n: "02", t: "Forno", d: "Assadas com perfeição a 450°C, liberando os sabores e aromas em segundos. O controle excelente entre agilidade e cozimento que só o forno napoletano entrega." },
-    { img: servicoImg.url, n: "03", t: "Serviço", d: "O Chef Pizzaiolo cria a obra e, com precisão, servimos seus convidados, para que absorvam, fatia a fatia, a melhor experiência da noite." },
+    { img: servicoImg.url, n: "01", t: "Planejamento à prova de falhas", d: "Com a experiência de mercado que a nossa empresa possui aprendemos a bolar planejamentos completamente à prova de falhas. Todas as nossas estratégias possuem estruturas de segurança que não permitirão jamais que o seu evento deixe de acontecer. Estatisticamente falando a Pizza Party Brasil jamais deixou de realizar um evento em toda a sua história." },
+    { img: doughImg.url, n: "02", t: "A melhor pizza que você comerá na sua vida!", d: "Nossa pizza possui uma massa fina e artesanal preparada com o objetivo de ser o mais leve e fácil de digerir possível sem prejudicar o sabor. A combinação dessa massa exclusiva com os melhores ingredientes do mercado, como por exemplo o tomate italiano e o catupiry autêntico, resultou na aprovação de cerca de 95% dos clientes e provavelmente será a melhor pizza que você vai experimentar em toda a sua vida!" },
+    { img: celebracaoImg.url, n: "03", t: "Equipe 100% treinada em todos os aspectos", d: "Com a Pizza Party Brasil você será bem atendido desde o primeiro contato até o pós venda. Nossa equipe realiza treinamentos constantes e está sempre buscando a perfeição no atendimento. Nós estaremos de prontidão para atender você e seus convidados sempre que necessário, da melhor forma possível." },
+    { img: ovenImg.url, n: "04", t: "Estrutura versátil e de qualidade", d: "Nossa estrutura é completamente versátil e compacta, possibilitando todos os tipos de atendimento, desde locais menores para eventos de pequeno porte, até grandes eventos, que possuem uma estrutura mais robusta. Você poderá escolher como deseja que seus convidados sejam servidos, em suportes descartáveis ou pratos de porcelana." },
   ];
   return (
     <section id="processo" className="py-32 bg-black">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16 max-w-2xl mx-auto">
-          <div className="eyebrow mb-4">Processo</div>
-          <h2 className="serif text-4xl md:text-5xl mb-6">Do <em className="serif gold-gradient-text text-5xl md:text-6xl italic">Calor</em> à Mesa</h2>
-          <p className="text-cream/65 text-lg">Três atos de uma mesma celebração: a paciência da massa, a intensidade do forno e o exelência de servir.</p>
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="eyebrow mb-4 justify-center">Por que escolher</div>
+          <h2 className="serif text-4xl md:text-5xl mb-6">Por que a <em className="serif gold-gradient-text italic">Pizza Party Brasil</em> é o melhor buffet da capital?</h2>
+          <p className="text-cream/65 text-lg">Servimos mais de 25 sabores de pizzas quentinhas durante quatro horas de evento.</p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((s) => (
             <div key={s.n} className="group">
               <div className="relative overflow-hidden mb-5 aspect-[4/5]">
@@ -295,7 +296,7 @@ function Processo() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
                 <div className="absolute bottom-4 left-5 serif text-gold text-3xl">{s.n}</div>
               </div>
-              <h3 className="serif text-2xl mb-2">{s.t}</h3>
+              <h3 className="serif text-xl mb-2 text-cream-light">{s.t}</h3>
               <p className="text-cream/55 text-sm leading-relaxed">{s.d}</p>
             </div>
           ))}
@@ -304,6 +305,7 @@ function Processo() {
     </section>
   );
 }
+
 
 
 function Pacotes() {
