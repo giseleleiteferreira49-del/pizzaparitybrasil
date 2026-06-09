@@ -318,7 +318,7 @@ function Pacotes() {
     { tier: "Pacote 02", nome: "Ouro", featured: true, img: pacoteOuro.url, tag: "A escolha mais popular, combina a jornada sensorial completa com entradinhas sofisticadas, bebidas e serviço de mesa elegante.", inc: [
       "25 sabores em 4 tempos sensoriais", "Corniccione com antepasto de entrada", "Garçom dedicado para servir", "Massa artesanal tradicional", "Copos de vidro, pratos com talheres", "Refrigerante, suco e água", "Guardanapos inclusos",
     ]},
-    { tier: "Pacote 03", nome: "Experience", img: pacoteExperience.url, tag: "A experiência gastronômica completa. Massa de longa fermentação, tábua de frios premium e encerramento com estação de café gourmet.", inc: [
+    { tier: "Pacote 03", nome: "Experience", img: pacoteExperience.url, tag: "A experiência gastronômica completa. Massa de longa fermentação, bruschettas premium e encerramento com estação de café gourmet.", inc: [
       "Sabores premium em 4 tempos", "Bruschettas sofisticadas de entrada", "Massa napolitana, longa fermentação", "Garçom dedicado para servir", "Copos de vidro, pratos com talheres", "Bebidas não alcoólicas inclusas", "Estação de café gourmet de encerramento",
     ]},
   ];
