@@ -348,9 +348,6 @@ function Pacotes() {
                 </ul>
                 <a href="#contato" className={p.featured ? "btn-gold btn-gold-hover text-center" : "btn-ghost-gold hover:bg-gold hover:text-black-rich text-center"}>Quero o {p.nome}</a>
               </div>
-              <div className="mt-8 flex items-center justify-center h-48">
-                <img src={p.img} alt={`Pacote ${p.nome}`} loading="lazy" className="max-h-full max-w-full object-contain" />
-              </div>
             </div>
           ))}
         </div>
