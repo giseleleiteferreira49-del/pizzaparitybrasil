@@ -124,10 +124,15 @@ function Hero() {
       />
       <img src={heroPizza} alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover opacity-45" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/60" />
-      <div className="absolute bottom-0 left-0 right-0 h-[40%] z-20 pointer-events-none bg-gradient-to-t from-black via-black/85 to-transparent" />
+      <img
+        src={chefThiago.url}
+        alt="Chef Pizzaiolo Thiago Ferreira Lima"
+        className="hidden lg:block absolute bottom-0 right-0 xl:right-[2vw] h-[110vh] max-h-[1200px] w-auto object-contain object-bottom pointer-events-none select-none z-10 drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)]"
+      />
+      <div className="absolute bottom-0 left-0 right-0 h-[45%] z-20 pointer-events-none bg-gradient-to-t from-black via-black/85 to-transparent" />
 
-      <div className="relative z-30 w-full max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-12 items-center text-center lg:text-left">
-        <div>
+      <div className="relative z-30 w-full max-w-7xl mx-auto px-6 md:px-12 text-center lg:text-left">
+        <div className="lg:max-w-[55%]">
           <div className="flex justify-center lg:justify-start mb-8"><Logo size={120} /></div>
           <div className="eyebrow mb-6 justify-center lg:justify-start">O Melhor buffet de Pizzas em domicílio de SP</div>
           <div className="eyebrow mb-6 justify-center lg:justify-start">Uma experiência exclusiva para você</div>
@@ -160,11 +165,12 @@ function Hero() {
           </div>
         </div>
 
-        <div className="flex justify-center lg:justify-end items-end lg:-mr-12 xl:-mr-20 lg:-mb-8">
+        {/* Chef image — mobile only, below text */}
+        <div className="lg:hidden mt-12 flex justify-center">
           <img
             src={chefThiago.url}
             alt="Chef Pizzaiolo Thiago Ferreira Lima"
-            className="w-auto h-[420px] lg:h-[105vh] max-h-[1100px] object-contain object-bottom pointer-events-none select-none drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)] scale-110 lg:scale-125 origin-bottom"
+            className="w-auto h-[420px] object-contain object-bottom pointer-events-none select-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.7)]"
           />
         </div>
       </div>
