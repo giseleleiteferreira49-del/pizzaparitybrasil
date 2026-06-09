@@ -315,7 +315,7 @@ function Pacotes() {
       "25 sabores em 4 tempos sensoriais", "Corniccione com antepasto de entrada", "Garçom dedicado para servir", "Massa artesanal tradicional", "Copos de vidro, pratos com talheres", "Refrigerante, suco e água", "Guardanapos inclusos",
     ]},
     { tier: "Pacote 03", nome: "Experience", img: pacoteExperience.url, tag: "A experiência gastronômica completa. Massa de longa fermentação, tábua de frios premium e encerramento com estação de café gourmet.", inc: [
-      "27 sabores premium em 4 tempos", "Tábua de frios sofisticada de entrada", "Massa napolitana, longa fermentação", "Garçom dedicado para servir", "Copos de vidro, pratos com talheres", "Bebidas não alcoólicas inclusas", "Estação de café gourmet de encerramento",
+      "27 sabores premium em 4 tempos", "Brusquetas sofisticadas de entrada", "Massa napolitana, longa fermentação", "Garçom dedicado para servir", "Copos de vidro, pratos com talheres", "Bebidas não alcoólicas inclusas", "Estação de café gourmet de encerramento",
     ]},
   ];
   return (
