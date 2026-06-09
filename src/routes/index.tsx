@@ -27,7 +27,7 @@ import car7 from "@/assets/carrossel/c7.jpg.asset.json";
 import car8 from "@/assets/carrossel/c8.jpg.asset.json";
 import car9 from "@/assets/carrossel/c9.jpg.asset.json";
 import car10 from "@/assets/carrossel/c10.png.asset.json";
-import chefThiago from "@/assets/chef-thiago.png.asset.json";
+
 import upgradesBanner from "@/assets/upgrades-banner.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -121,11 +121,6 @@ function Hero() {
       />
       <img src={heroPizza.url} alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover opacity-45" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/60" />
-      <img
-        src={chefThiago.url}
-        alt="Chef Pizzaiolo Thiago Ferreira Lima"
-        className="hidden lg:block absolute bottom-0 right-0 h-[88%] w-auto object-contain object-bottom pointer-events-none select-none z-10 drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)]"
-      />
       <div className="absolute bottom-0 left-0 right-0 h-[40%] z-20 pointer-events-none bg-gradient-to-t from-black via-black/85 to-transparent" />
 
       <div className="relative z-30 max-w-5xl mx-auto px-6 text-center lg:max-w-[640px] lg:mx-0 lg:ml-[5%] lg:text-left">
@@ -158,14 +153,6 @@ function Hero() {
           ))}
         </div>
 
-        {/* Chef image — visible only on mobile, below text */}
-        <div className="lg:hidden mt-12 flex justify-center">
-          <img
-            src={chefThiago.url}
-            alt="Chef Pizzaiolo Thiago Ferreira Lima"
-            className="w-auto h-[360px] object-contain object-bottom pointer-events-none select-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.7)]"
-          />
-        </div>
       </div>
     </section>
   );
