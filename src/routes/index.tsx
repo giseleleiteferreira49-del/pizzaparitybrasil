@@ -275,7 +275,7 @@ function Diferencial() {
 
 function Processo() {
   const steps = [
-    { img: doughImg.url, n: "01", t: "Massa", d: "Tudo começa pelas mãos. Fermentação lenta de 72h com Blend das melhores farinhas italianas tipo 00, o tempo é o nosso ingrediente secreto." },
+    { img: doughImg.url, n: "01", t: "Massa", d: "Tudo começa pelas mãos. Feita com Blend das melhores farinhas italianas tipo 00, o tempo é o nosso ingrediente secreto." },
     { img: ovenImg.url, n: "02", t: "Forno", d: "Assadas com perfeição a 450°C, liberando os sabores e aromas em segundos. O controle excelente entre agilidade e cozimento que só o forno napoletano entrega." },
     { img: servicoImg.url, n: "03", t: "Serviço", d: "O Chef Pizzaiolo cria a obra e, com precisão, servimos seus convidados, para que absorvam, fatia a fatia, a melhor experiência da noite." },
   ];
@@ -285,7 +285,7 @@ function Processo() {
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <div className="eyebrow mb-4">Processo</div>
           <h2 className="serif text-4xl md:text-5xl mb-6">Do <em className="serif gold-gradient-text text-5xl md:text-6xl italic">Calor</em> à Mesa</h2>
-          <p className="text-cream/65 text-lg">Três atos de uma mesma celebração: a paciência da massa, a intensidade do forno e o ritual de servir.</p>
+          <p className="text-cream/65 text-lg">Três atos de uma mesma celebração: a paciência da massa, a intensidade do forno e o exelência de servir.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((s) => (
