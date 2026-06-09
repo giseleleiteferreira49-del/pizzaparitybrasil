@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { UtensilsCrossed, Coffee, Wine, Star, StarHalf, Check } from "lucide-react";
+import { UtensilsCrossed, Coffee, Wine, Star, StarHalf, Check, Pizza } from "lucide-react";
 import { createFileRoute } from "@tanstack/react-router";
 import logoAsset from "@/assets/pizza-party-logo.asset.json";
 import heroPizza from "@/assets/hero-pizza.jpg";
@@ -347,6 +347,9 @@ function Pacotes() {
                   ))}
                 </ul>
                 <a href="#contato" className={p.featured ? "btn-gold btn-gold-hover text-center" : "btn-ghost-gold hover:bg-gold hover:text-black-rich text-center"}>Quero o {p.nome}</a>
+              </div>
+              <div className="mt-8 flex items-center justify-center h-48 border border-gold/15 bg-black-warm/40">
+                <Pizza className="w-16 h-16 text-gold/30" strokeWidth={1} />
               </div>
             </div>
           ))}
