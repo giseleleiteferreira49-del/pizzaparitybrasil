@@ -37,15 +37,22 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Pizza Party Brasil — Buffet Premium de Pizzas para Eventos" },
-      { name: "description", content: "Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo. Mais de 8.000 eventos realizados desde 2013." },
+      {
+        name: "description",
+        content:
+          "Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo. Mais de 8.000 eventos realizados desde 2013.",
+      },
       { property: "og:title", content: "Pizza Party Brasil — Buffet Premium de Pizzas para Eventos" },
-      { property: "og:description", content: "Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo." },
+      {
+        property: "og:description",
+        content: "Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo.",
+      },
       { property: "og:image", content: heroPizza },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: heroPizza },
     ],
 
-    links: [{ rel: "canonical", href: "https://pizzapartybrasil.lovable.app/" }],
+    links: [{ rel: "canonical", href: "https://pizzapartybrasil.comcbr/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -59,7 +66,12 @@ export const Route = createFileRoute("/")({
           email: "contato@pizzapartybrasil.com",
           servesCuisine: ["Pizza", "Italiana", "Napoletana"],
           areaServed: { "@type": "City", name: "São Paulo" },
-          address: { "@type": "PostalAddress", addressLocality: "São Paulo", addressRegion: "SP", addressCountry: "BR" },
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "São Paulo",
+            addressRegion: "SP",
+            addressCountry: "BR",
+          },
           aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "500" },
           foundingDate: "2013",
         }),
@@ -102,20 +114,28 @@ function Nav() {
       <ul className="hidden md:flex gap-8 list-none">
         {links.map((l) => (
           <li key={l.href}>
-            <a href={l.href} className="text-[0.7rem] tracking-[0.2em] uppercase text-cream/55 hover:text-gold transition-colors">
+            <a
+              href={l.href}
+              className="text-[0.7rem] tracking-[0.2em] uppercase text-cream/55 hover:text-gold transition-colors"
+            >
               {l.label}
             </a>
           </li>
         ))}
       </ul>
-      <a href="#contato" className="btn-gold btn-gold-hover text-[0.7rem] !py-3 !px-6">Orçamento</a>
+      <a href="#contato" className="btn-gold btn-gold-hover text-[0.7rem] !py-3 !px-6">
+        Orçamento
+      </a>
     </nav>
   );
 }
 
 function Hero() {
   return (
-    <section id="top" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-black-warm">
+    <section
+      id="top"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-black-warm"
+    >
       <div
         className="absolute inset-0 opacity-50"
         style={{
@@ -133,13 +153,20 @@ function Hero() {
 
       <div className="relative z-30 w-full max-w-7xl mx-auto px-6 md:px-12 text-center lg:text-left">
         <div className="lg:max-w-[55%]">
-          <div className="flex justify-center lg:justify-start mb-8"><Logo size={120} /></div>
-          <div className="eyebrow mb-6 justify-center lg:justify-start">O Melhor buffet de Pizzas em domicílio de SP</div>
-          
+          <div className="flex justify-center lg:justify-start mb-8">
+            <Logo size={120} />
+          </div>
+          <div className="eyebrow mb-6 justify-center lg:justify-start">
+            O Melhor buffet de Pizzas em domicílio de SP
+          </div>
+
           <h1 className="serif text-5xl md:text-7xl lg:text-6xl xl:text-7xl leading-[1.05] mb-6">
-            Seu evento merece<br />
+            Seu evento merece
+            <br />
             mais que uma <em className="serif gold-gradient-text italic">pizza</em>.<br />
-            <span className="text-cream-light">Merece uma <em className="serif gold-gradient-text italic">memória</em>.</span>
+            <span className="text-cream-light">
+              Merece uma <em className="serif gold-gradient-text italic">memória</em>.
+            </span>
           </h1>
           <p className="max-w-2xl mx-auto lg:mx-0 text-cream/70 text-lg md:text-xl font-light mb-3">
             Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo
@@ -148,14 +175,25 @@ function Hero() {
             Mais de 25 sabores · Sem limite de consumo · Jornada sensorial em 4 tempos
           </p>
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-            <a href="#contato" className="btn-gold btn-gold-hover">Solicitar Orçamento</a>
-            <a href="#diferencial" className="btn-ghost-gold hover:bg-gold hover:text-black-rich">Nossa experiência</a>
+            <a href="#contato" className="btn-gold btn-gold-hover">
+              Solicitar Orçamento
+            </a>
+            <a href="#diferencial" className="btn-ghost-gold hover:bg-gold hover:text-black-rich">
+              Nossa experiência
+            </a>
           </div>
           <div className="mt-16 grid grid-cols-3 max-w-2xl mx-auto lg:mx-0 gap-4">
             {[
               { n: "10+", l: "Anos de tradição" },
               { n: "8.000+", l: "Eventos realizados" },
-              { n: <span className="inline-flex items-center gap-1">4.9 <StarHalf className="w-5 h-5 fill-current" /></span>, l: "No Google · Centenas de reviews" },
+              {
+                n: (
+                  <span className="inline-flex items-center gap-1">
+                    4.9 <StarHalf className="w-5 h-5 fill-current" />
+                  </span>
+                ),
+                l: "No Google · Centenas de reviews",
+              },
             ].map((s) => (
               <div key={s.l} className="text-center">
                 <div className="serif gold-gradient-text text-3xl md:text-4xl">{s.n}</div>
@@ -180,10 +218,26 @@ function Hero() {
 
 function Hook() {
   const hooks = [
-    { img: hookDecepcao.url, t: "O buffet decepcionou seus convidados", d: "Pizza fria, massa borrachuda, sabores genéricos. A comida deveria ser o ponto alto, virou o ponto de conversa errado. Isso nunca mais vai acontecer no seu evento." },
-    { img: hookEstressado.url, t: "O serviço foi desorganizado e estressante", d: "Equipe despreparada, atrasos, falta de atenção. Você deveria estar curtindo a festa, não resolvendo problema de fornecedor. Nossa equipe cuida de tudo para você." },
-    { img: hookEsquecivel.url, t: "A comida foi esquecível", d: "Semanas depois do evento, ninguém falava sobre a comida. A experiência não criou memória. Nossos clientes recebem mensagens dos convidados pedindo o contato da pizza." },
-    { img: hookPagouCaro.url, t: "Pagou caro por algo ordinário", d: "Preço premium, entrega mediana. Qualidade inconsistente que não justificou o investimento. Com a Pizza Party Brasil, cada real investido se traduz em experiência visível e memorável." },
+    {
+      img: hookDecepcao.url,
+      t: "O buffet decepcionou seus convidados",
+      d: "Pizza fria, massa borrachuda, sabores genéricos. A comida deveria ser o ponto alto, virou o ponto de conversa errado. Isso nunca mais vai acontecer no seu evento.",
+    },
+    {
+      img: hookEstressado.url,
+      t: "O serviço foi desorganizado e estressante",
+      d: "Equipe despreparada, atrasos, falta de atenção. Você deveria estar curtindo a festa, não resolvendo problema de fornecedor. Nossa equipe cuida de tudo para você.",
+    },
+    {
+      img: hookEsquecivel.url,
+      t: "A comida foi esquecível",
+      d: "Semanas depois do evento, ninguém falava sobre a comida. A experiência não criou memória. Nossos clientes recebem mensagens dos convidados pedindo o contato da pizza.",
+    },
+    {
+      img: hookPagouCaro.url,
+      t: "Pagou caro por algo ordinário",
+      d: "Preço premium, entrega mediana. Qualidade inconsistente que não justificou o investimento. Com a Pizza Party Brasil, cada real investido se traduz em experiência visível e memorável.",
+    },
   ];
   return (
     <section className="py-32 bg-black">
@@ -193,12 +247,19 @@ function Hook() {
           <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
             Você já viveu alguma dessas <em className="serif gold-gradient-text italic">situações?</em>
           </h2>
-          <p className="text-cream/65 text-lg">Esses são os momentos que nos motivam a existir, e que nos fazem trabalhar com obsessão por cada detalhe.</p>
+          <p className="text-cream/65 text-lg">
+            Esses são os momentos que nos motivam a existir, e que nos fazem trabalhar com obsessão por cada detalhe.
+          </p>
         </div>
         <div className="grid md:grid-cols-2 gap-px bg-gold/15">
           {hooks.map((h) => (
             <div key={h.t} className="bg-black p-10 hover:bg-black-card transition-colors flex gap-6 items-start">
-              <img src={h.img} alt={h.t} loading="lazy" className="w-32 h-32 md:w-36 md:h-36 object-contain shrink-0 -mt-2" />
+              <img
+                src={h.img}
+                alt={h.t}
+                loading="lazy"
+                className="w-32 h-32 md:w-36 md:h-36 object-contain shrink-0 -mt-2"
+              />
               <div>
                 <h3 className="serif text-xl mb-3 text-cream-light">{h.t}</h3>
                 <p className="text-cream/55 text-sm leading-relaxed">{h.d}</p>
@@ -213,9 +274,21 @@ function Hook() {
 
 function Servico() {
   const pillars = [
-    { n: "01", t: "Chef Pizzaiolo no Evento", d: "Garantimos a consistência e a qualidade das Pizzas em todo o processo. Uma atenção genuína elaborada com amor e respeito ao seu paladar." },
-    { n: "02", t: "Tecnologia na Preparação", d: "Nossas Pizzas são assadas em temperatura controlada que atinge 450°C. Cada pizza assa em 90 segundos, com borda alveolada mantendo o Aroma Característico e Delicioso." },
-    { n: "03", t: "Massa Artesanal", d: "Fermentação natural de 72 horas com Blend de farinhas italianas selecionadas. Azeite de Oliva que proporciona leveza, digestibilidade e sabor incomparáveis." },
+    {
+      n: "01",
+      t: "Chef Pizzaiolo no Evento",
+      d: "Garantimos a consistência e a qualidade das Pizzas em todo o processo. Uma atenção genuína elaborada com amor e respeito ao seu paladar.",
+    },
+    {
+      n: "02",
+      t: "Tecnologia na Preparação",
+      d: "Nossas Pizzas são assadas em temperatura controlada que atinge 450°C. Cada pizza assa em 90 segundos, com borda alveolada mantendo o Aroma Característico e Delicioso.",
+    },
+    {
+      n: "03",
+      t: "Massa Artesanal",
+      d: "Fermentação natural de 72 horas com Blend de farinhas italianas selecionadas. Azeite de Oliva que proporciona leveza, digestibilidade e sabor incomparáveis.",
+    },
   ];
   return (
     <section id="servico" className="py-32 bg-black-warm relative">
@@ -223,10 +296,12 @@ function Servico() {
         <div className="max-w-2xl mb-20">
           <div className="eyebrow mb-4">O Serviço</div>
           <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
-            Mais que um buffet, uma <em className="serif gold-gradient-text text-5xl md:text-6xl italic">experiência gastronômica</em>.
+            Mais que um buffet, uma{" "}
+            <em className="serif gold-gradient-text text-5xl md:text-6xl italic">experiência gastronômica</em>.
           </h2>
           <p className="text-cream/65 text-lg">
-            Conduzimos você e seus convidados por uma aventura de aromas, paladares e sensações que nunca sentiram ao degustar uma pizza. Algo único, inovador e memorável.
+            Conduzimos você e seus convidados por uma aventura de aromas, paladares e sensações que nunca sentiram ao
+            degustar uma pizza. Algo único, inovador e memorável.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-px bg-gold/15">
@@ -245,10 +320,34 @@ function Servico() {
 
 function Diferencial() {
   const tempos = [
-    { n: "01", badge: "Despertar", nome: "Abertura com Frescor", desc: "Pizzas leves, aromáticas e herbáceas que despertam as papilas sem causar fadiga sensorial. O início perfeito para preparar o paladar para o que vem a seguir.", sci: "Sabores suaves e herbáceos estimulam as papilas degustativas sem causar sobrecarga sensorial, preparando o convidado para absorver toda a experiência que virá." },
-    { n: "02", badge: "Clássico", nome: "Conforto e Familiaridade", desc: "Sabores tradicionais e queridinhos que evocam os melhores fins de semana em família. O momento em que seus convidados relaxam completamente e se sentem em casa.", sci: "Sabores familiares ativam memórias afetivas e proporcionam uma sensação profunda de satisfação e conforto, o gatilho emocional mais poderoso da experiência." },
-    { n: "03", badge: "Ápice", nome: "Combinações Ousadas", desc: "Pizzas premium com ingredientes nobres e combinações inesperadas. O pico da experiência, o momento que gera conversas, surpresas e que será lembrado por muito tempo.", sci: "O contraste com sabores mais intensos cria o pico de experiência sensorial. É neste momento que memórias gastronômicas duradouras são formadas no cérebro." },
-    { n: "04", badge: "Celebração Doce", nome: "Finalização Memorável", desc: "Pizzas doces gourmet que encerram a jornada com doçura e leveza. A última impressão, e a mais poderosa, que seus convidados levarão para sempre.", sci: "Sabores doces estimulam a liberação de dopamina e serotonina, gerando uma sensação genuína de satisfação. A última impressão define como o evento inteiro será lembrado." },
+    {
+      n: "01",
+      badge: "Despertar",
+      nome: "Abertura com Frescor",
+      desc: "Pizzas leves, aromáticas e herbáceas que despertam as papilas sem causar fadiga sensorial. O início perfeito para preparar o paladar para o que vem a seguir.",
+      sci: "Sabores suaves e herbáceos estimulam as papilas degustativas sem causar sobrecarga sensorial, preparando o convidado para absorver toda a experiência que virá.",
+    },
+    {
+      n: "02",
+      badge: "Clássico",
+      nome: "Conforto e Familiaridade",
+      desc: "Sabores tradicionais e queridinhos que evocam os melhores fins de semana em família. O momento em que seus convidados relaxam completamente e se sentem em casa.",
+      sci: "Sabores familiares ativam memórias afetivas e proporcionam uma sensação profunda de satisfação e conforto, o gatilho emocional mais poderoso da experiência.",
+    },
+    {
+      n: "03",
+      badge: "Ápice",
+      nome: "Combinações Ousadas",
+      desc: "Pizzas premium com ingredientes nobres e combinações inesperadas. O pico da experiência, o momento que gera conversas, surpresas e que será lembrado por muito tempo.",
+      sci: "O contraste com sabores mais intensos cria o pico de experiência sensorial. É neste momento que memórias gastronômicas duradouras são formadas no cérebro.",
+    },
+    {
+      n: "04",
+      badge: "Celebração Doce",
+      nome: "Finalização Memorável",
+      desc: "Pizzas doces gourmet que encerram a jornada com doçura e leveza. A última impressão, e a mais poderosa, que seus convidados levarão para sempre.",
+      sci: "Sabores doces estimulam a liberação de dopamina e serotonina, gerando uma sensação genuína de satisfação. A última impressão define como o evento inteiro será lembrado.",
+    },
   ];
   return (
     <section id="diferencial" className="py-32 bg-black-warm">
@@ -256,16 +355,24 @@ function Diferencial() {
         <div className="max-w-2xl mb-16">
           <div className="eyebrow mb-4">Nosso diferencial</div>
           <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
-            Não é um rodízio. <br/>É uma <em className="serif gold-gradient-text italic">jornada sensorial</em>.
+            Não é um rodízio. <br />É uma <em className="serif gold-gradient-text italic">jornada sensorial</em>.
           </h2>
-          <p className="text-cream/65 text-lg">Cada evento é dividido em 4 momentos cuidadosamente orquestrados — uma sequência de sabores planejada para surpreender seus convidados do início ao fim.</p>
+          <p className="text-cream/65 text-lg">
+            Cada evento é dividido em 4 momentos cuidadosamente orquestrados — uma sequência de sabores planejada para
+            surpreender seus convidados do início ao fim.
+          </p>
         </div>
         <div className="space-y-px bg-gold/15">
           {tempos.map((t) => (
-            <div key={t.n} className="bg-black-warm grid md:grid-cols-12 gap-8 p-8 md:p-10 hover:bg-black-card transition-colors">
+            <div
+              key={t.n}
+              className="bg-black-warm grid md:grid-cols-12 gap-8 p-8 md:p-10 hover:bg-black-card transition-colors"
+            >
               <div className="md:col-span-1 serif text-gold/50 text-5xl">{t.n}</div>
               <div className="md:col-span-6">
-                <span className="inline-block text-[0.6rem] tracking-[0.22em] uppercase text-gold border border-gold/40 px-3 py-1 mb-3">{t.badge}</span>
+                <span className="inline-block text-[0.6rem] tracking-[0.22em] uppercase text-gold border border-gold/40 px-3 py-1 mb-3">
+                  {t.badge}
+                </span>
                 <h3 className="serif text-2xl text-cream-light mb-2">{t.nome}</h3>
                 <p className="text-cream/60 text-sm leading-relaxed">{t.desc}</p>
               </div>
@@ -282,24 +389,56 @@ function Diferencial() {
 
 function Processo() {
   const steps = [
-    { img: servicoImg.url, n: "01", t: "Planejamento à prova de falhas", d: "Com a experiência de mercado que a nossa empresa possui aprendemos a bolar planejamentos completamente à prova de falhas. Todas as nossas estratégias possuem estruturas de segurança que não permitirão jamais que o seu evento deixe de acontecer. Estatisticamente falando a Pizza Party Brasil jamais deixou de realizar um evento em toda a sua história." },
-    { img: ovenImg.url, n: "02", t: "A melhor pizza que você comerá na sua vida!", d: "Nossa pizza possui uma massa fina e artesanal preparada com o objetivo de ser o mais leve e fácil de digerir possível sem prejudicar o sabor. A combinação dessa massa exclusiva com os melhores ingredientes do mercado, como por exemplo o tomate italiano e o catupiry autêntico, resultou na aprovação de cerca de 95% dos clientes e provavelmente será a melhor pizza que você vai experimentar em toda a sua vida!" },
-    { img: celebracaoImg.url, n: "03", t: "Equipe 100% treinada em todos os aspectos", d: "Com a Pizza Party Brasil você será bem atendido desde o primeiro contato até o pós venda. Nossa equipe realiza treinamentos constantes e está sempre buscando a perfeição no atendimento. Nós estaremos de prontidão para atender você e seus convidados sempre que necessário, da melhor forma possível." },
-    { img: doughImg.url, n: "04", t: "Estrutura versátil e de qualidade", d: "Nossa estrutura é completamente versátil e compacta, possibilitando todos os tipos de atendimento, desde locais menores para eventos de pequeno porte, até grandes eventos, que possuem uma estrutura mais robusta. Você poderá escolher como deseja que seus convidados sejam servidos, em suportes descartáveis ou pratos de porcelana." },
+    {
+      img: servicoImg.url,
+      n: "01",
+      t: "Planejamento à prova de falhas",
+      d: "Com a experiência de mercado que a nossa empresa possui aprendemos a bolar planejamentos completamente à prova de falhas. Todas as nossas estratégias possuem estruturas de segurança que não permitirão jamais que o seu evento deixe de acontecer. Estatisticamente falando a Pizza Party Brasil jamais deixou de realizar um evento em toda a sua história.",
+    },
+    {
+      img: ovenImg.url,
+      n: "02",
+      t: "A melhor pizza que você comerá na sua vida!",
+      d: "Nossa pizza possui uma massa fina e artesanal preparada com o objetivo de ser o mais leve e fácil de digerir possível sem prejudicar o sabor. A combinação dessa massa exclusiva com os melhores ingredientes do mercado, como por exemplo o tomate italiano e o catupiry autêntico, resultou na aprovação de cerca de 95% dos clientes e provavelmente será a melhor pizza que você vai experimentar em toda a sua vida!",
+    },
+    {
+      img: celebracaoImg.url,
+      n: "03",
+      t: "Equipe 100% treinada em todos os aspectos",
+      d: "Com a Pizza Party Brasil você será bem atendido desde o primeiro contato até o pós venda. Nossa equipe realiza treinamentos constantes e está sempre buscando a perfeição no atendimento. Nós estaremos de prontidão para atender você e seus convidados sempre que necessário, da melhor forma possível.",
+    },
+    {
+      img: doughImg.url,
+      n: "04",
+      t: "Estrutura versátil e de qualidade",
+      d: "Nossa estrutura é completamente versátil e compacta, possibilitando todos os tipos de atendimento, desde locais menores para eventos de pequeno porte, até grandes eventos, que possuem uma estrutura mais robusta. Você poderá escolher como deseja que seus convidados sejam servidos, em suportes descartáveis ou pratos de porcelana.",
+    },
   ];
   return (
     <section id="processo" className="py-32 bg-black">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <div className="eyebrow mb-4 justify-center">Por que escolher</div>
-          <h2 className="serif text-4xl md:text-5xl mb-6">Por que a <em className="serif gold-gradient-text italic">Pizza Party Brasil</em> é o melhor buffet da capital?</h2>
-          <p className="text-cream/65 text-lg">Servimos mais de 25 sabores de pizzas quentinhas durante quatro horas de evento.</p>
+          <h2 className="serif text-4xl md:text-5xl mb-6">
+            Por que a <em className="serif gold-gradient-text italic">Pizza Party Brasil</em> é o melhor buffet da
+            capital?
+          </h2>
+          <p className="text-cream/65 text-lg">
+            Servimos mais de 25 sabores de pizzas quentinhas durante quatro horas de evento.
+          </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((s) => (
             <div key={s.n} className="group">
               <div className="relative overflow-hidden mb-5 aspect-[4/5]">
-                <img src={s.img} alt={s.t} width={1024} height={1280} loading="lazy" className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+                <img
+                  src={s.img}
+                  alt={s.t}
+                  width={1024}
+                  height={1280}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
                 <div className="absolute bottom-4 left-5 serif text-gold text-3xl">{s.n}</div>
               </div>
@@ -313,45 +452,103 @@ function Processo() {
   );
 }
 
-
-
 function Pacotes() {
   const pacotes = [
-    { tier: "Pacote 01", nome: "Prata", img: pacotePrata.url, tag: "A experiência completa em 4 tempos com foco no essencial: pizza artesanal impecável, serviço profissional e sabores que surpreendem.", inc: [
-      "16 sabores em 4 tempos sensoriais", "Garçom dedicado para servir", "Massa artesanal tradicional", "Suporte de apresentação", "Guardanapos inclusos",
-    ]},
-    { tier: "Pacote 02", nome: "Ouro", featured: true, img: pacoteOuro.url, tag: "A escolha mais popular, combina a jornada sensorial completa com entradinhas sofisticadas, bebidas e serviço de mesa elegante.", inc: [
-      "25 sabores em 4 tempos sensoriais", "Corniccione com antepasto de entrada", "Garçom dedicado para servir", "Massa artesanal tradicional", "Copos de vidro, pratos com talheres", "Refrigerante, suco e água", "Guardanapos inclusos",
-    ]},
-    { tier: "Pacote 03", nome: "Experience", img: pacoteExperience.url, tag: "A experiência gastronômica completa. Massa de longa fermentação, bruschettas premium e encerramento com estação de café gourmet.", inc: [
-      "Sabores premium em 4 tempos", "Bruschettas sofisticadas de entrada", "Massa napolitana, longa fermentação", "Garçom dedicado para servir", "Copos de vidro, pratos com talheres", "Bebidas não alcoólicas inclusas", "Estação de café gourmet de encerramento",
-    ]},
+    {
+      tier: "Pacote 01",
+      nome: "Prata",
+      img: pacotePrata.url,
+      tag: "A experiência completa em 4 tempos com foco no essencial: pizza artesanal impecável, serviço profissional e sabores que surpreendem.",
+      inc: [
+        "16 sabores em 4 tempos sensoriais",
+        "Garçom dedicado para servir",
+        "Massa artesanal tradicional",
+        "Suporte de apresentação",
+        "Guardanapos inclusos",
+      ],
+    },
+    {
+      tier: "Pacote 02",
+      nome: "Ouro",
+      featured: true,
+      img: pacoteOuro.url,
+      tag: "A escolha mais popular, combina a jornada sensorial completa com entradinhas sofisticadas, bebidas e serviço de mesa elegante.",
+      inc: [
+        "25 sabores em 4 tempos sensoriais",
+        "Corniccione com antepasto de entrada",
+        "Garçom dedicado para servir",
+        "Massa artesanal tradicional",
+        "Copos de vidro, pratos com talheres",
+        "Refrigerante, suco e água",
+        "Guardanapos inclusos",
+      ],
+    },
+    {
+      tier: "Pacote 03",
+      nome: "Experience",
+      img: pacoteExperience.url,
+      tag: "A experiência gastronômica completa. Massa de longa fermentação, bruschettas premium e encerramento com estação de café gourmet.",
+      inc: [
+        "Sabores premium em 4 tempos",
+        "Bruschettas sofisticadas de entrada",
+        "Massa napolitana, longa fermentação",
+        "Garçom dedicado para servir",
+        "Copos de vidro, pratos com talheres",
+        "Bebidas não alcoólicas inclusas",
+        "Estação de café gourmet de encerramento",
+      ],
+    },
   ];
   return (
     <section id="pacotes" className="py-32 bg-black">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <div className="eyebrow mb-4 justify-center">Escolha seu pacote</div>
-          <h2 className="serif text-4xl md:text-5xl mb-6">Três experiências. <em className="serif gold-gradient-text italic">Um padrão de excelência.</em></h2>
-          <p className="text-cream/65 text-lg">Todos os pacotes incluem a nossa assinatura: a jornada sensorial em 4 tempos, ingredientes premium e equipe treinada. O que varia é a profundidade da experiência.</p>
+          <h2 className="serif text-4xl md:text-5xl mb-6">
+            Três experiências. <em className="serif gold-gradient-text italic">Um padrão de excelência.</em>
+          </h2>
+          <p className="text-cream/65 text-lg">
+            Todos os pacotes incluem a nossa assinatura: a jornada sensorial em 4 tempos, ingredientes premium e equipe
+            treinada. O que varia é a profundidade da experiência.
+          </p>
         </div>
         <div className="grid md:grid-cols-3 gap-6 items-stretch">
           {pacotes.map((p) => (
             <div key={p.nome} className="flex flex-col h-full">
-              <div className={`relative border p-8 flex flex-col flex-1 ${p.featured ? "border-gold bg-black-card" : "border-gold/20 bg-black-warm"}`}>
+              <div
+                className={`relative border p-8 flex flex-col flex-1 ${p.featured ? "border-gold bg-black-card" : "border-gold/20 bg-black-warm"}`}
+              >
                 {p.featured && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-black-rich text-[0.6rem] tracking-[0.2em] uppercase px-4 py-1 font-semibold inline-flex items-center gap-1"><Star className="w-3 h-3 fill-current" /> Mais escolhido</div>
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-black-rich text-[0.6rem] tracking-[0.2em] uppercase px-4 py-1 font-semibold inline-flex items-center gap-1">
+                    <Star className="w-3 h-3 fill-current" /> Mais escolhido
+                  </div>
                 )}
                 <div className="text-[0.6rem] tracking-[0.25em] uppercase text-cream/40 mb-2">{p.tier}</div>
                 <h3 className={`serif text-3xl mb-4 ${p.featured ? "text-gold" : "text-cream-light"}`}>{p.nome}</h3>
                 <p className="text-cream/60 text-sm leading-relaxed mb-6">{p.tag}</p>
-                <div className="text-[0.6rem] tracking-[0.22em] uppercase text-gold/70 mb-3 mt-auto">O que está incluso</div>
+                <div className="text-[0.6rem] tracking-[0.22em] uppercase text-gold/70 mb-3 mt-auto">
+                  O que está incluso
+                </div>
                 <ul className="space-y-2 mb-6">
                   {p.inc.map((i) => (
-                    <li key={i} className="text-cream/65 text-sm flex gap-2"><span className="text-gold mt-0.5"><Check className="w-3.5 h-3.5" /></span><span>{i}</span></li>
+                    <li key={i} className="text-cream/65 text-sm flex gap-2">
+                      <span className="text-gold mt-0.5">
+                        <Check className="w-3.5 h-3.5" />
+                      </span>
+                      <span>{i}</span>
+                    </li>
                   ))}
                 </ul>
-                <a href="#contato" className={p.featured ? "btn-gold btn-gold-hover text-center" : "btn-ghost-gold hover:bg-gold hover:text-black-rich text-center"}>Quero o {p.nome}</a>
+                <a
+                  href="#contato"
+                  className={
+                    p.featured
+                      ? "btn-gold btn-gold-hover text-center"
+                      : "btn-ghost-gold hover:bg-gold hover:text-black-rich text-center"
+                  }
+                >
+                  Quero o {p.nome}
+                </a>
               </div>
             </div>
           ))}
@@ -370,9 +567,44 @@ function Pacotes() {
 
 function Upgrades() {
   const ups = [
-    { icon: <UtensilsCrossed className="w-16 h-16 text-gold/80" strokeWidth={1.5} />, n: "Tábua de Frios", d: "Uma entrada que por si só já é um evento. Queijos finos, embutidos selecionados, frutas e acompanhamentos artesanais montados em tábua rústica.", items: ["4 tipos de queijos finos", "3 tipos de patês", "Salame e copa selecionados", "Frutas da estação", "Crostinis, castanhas e torradinhas premium", "Pão italiano artesanal e geleias"] },
-    { icon: <Coffee className="w-16 h-16 text-gold/80" strokeWidth={1.5} />, n: "Café Gourmet", d: "O encerramento perfeito. Na última hora do evento, nosso barista monta uma estação de café especial que se torna o assunto final da noite.", items: ["Café expresso artesanal", "Cappuccino tradicional", "Cappuccino Nutella", "Chocolate quente e cremoso", "Biscoitos finos"] },
-    { icon: <Wine className="w-16 h-16 text-gold/80" strokeWidth={1.5} />, n: "Locação de Utensílios", d: "Eleve a apresentação do serviço com utensílios de qualidade. Disponíveis para locação mediante contratação de garçom adicional.", items: ["Taças de vinho", "Taças de espumante", "Jogo de pratos e talheres", "Toalha cobre-mancha xadrez", "Copos de vidro", "Garçom adicional"] },
+    {
+      icon: <UtensilsCrossed className="w-16 h-16 text-gold/80" strokeWidth={1.5} />,
+      n: "Tábua de Frios",
+      d: "Uma entrada que por si só já é um evento. Queijos finos, embutidos selecionados, frutas e acompanhamentos artesanais montados em tábua rústica.",
+      items: [
+        "4 tipos de queijos finos",
+        "3 tipos de patês",
+        "Salame e copa selecionados",
+        "Frutas da estação",
+        "Crostinis, castanhas e torradinhas premium",
+        "Pão italiano artesanal e geleias",
+      ],
+    },
+    {
+      icon: <Coffee className="w-16 h-16 text-gold/80" strokeWidth={1.5} />,
+      n: "Café Gourmet",
+      d: "O encerramento perfeito. Na última hora do evento, nosso barista monta uma estação de café especial que se torna o assunto final da noite.",
+      items: [
+        "Café expresso artesanal",
+        "Cappuccino tradicional",
+        "Cappuccino Nutella",
+        "Chocolate quente e cremoso",
+        "Biscoitos finos",
+      ],
+    },
+    {
+      icon: <Wine className="w-16 h-16 text-gold/80" strokeWidth={1.5} />,
+      n: "Locação de Utensílios",
+      d: "Eleve a apresentação do serviço com utensílios de qualidade. Disponíveis para locação mediante contratação de garçom adicional.",
+      items: [
+        "Taças de vinho",
+        "Taças de espumante",
+        "Jogo de pratos e talheres",
+        "Toalha cobre-mancha xadrez",
+        "Copos de vidro",
+        "Garçom adicional",
+      ],
+    },
   ];
   return (
     <section id="cardapio" className="py-32 bg-black-warm">
@@ -382,7 +614,9 @@ function Upgrades() {
           <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
             Upgrades que <em className="serif gold-gradient-text italic">transformam</em> o ordinário em extraordinário
           </h2>
-          <p className="text-cream/65 text-lg">Cada upgrade foi criado para adicionar uma camada extra de sofisticação e memória afetiva ao seu evento.</p>
+          <p className="text-cream/65 text-lg">
+            Cada upgrade foi criado para adicionar uma camada extra de sofisticação e memória afetiva ao seu evento.
+          </p>
         </div>
         <div className="grid md:grid-cols-3 gap-px bg-gold/15">
           {ups.map((u) => (
@@ -392,14 +626,22 @@ function Upgrades() {
               <p className="text-cream/60 text-sm mb-5 leading-relaxed">{u.d}</p>
               <ul className="space-y-1.5">
                 {u.items.map((it) => (
-                  <li key={it} className="text-cream/55 text-sm flex gap-2"><span className="text-gold/60">·</span><span>{it}</span></li>
+                  <li key={it} className="text-cream/55 text-sm flex gap-2">
+                    <span className="text-gold/60">·</span>
+                    <span>{it}</span>
+                  </li>
                 ))}
               </ul>
             </div>
           ))}
         </div>
         <div className="mt-16 overflow-hidden rounded-sm">
-          <img src={upgradesBanner.url} alt="Estação de café gourmet artesanal" loading="lazy" className="w-full h-auto object-cover" />
+          <img
+            src={upgradesBanner.url}
+            alt="Estação de café gourmet artesanal"
+            loading="lazy"
+            className="w-full h-auto object-cover"
+          />
         </div>
       </div>
     </section>
@@ -408,9 +650,21 @@ function Upgrades() {
 
 function Inclusao() {
   const opts = [
-    { img: incVegana.url, n: "Cardápio Vegano", d: "Mussarela vegana em todas as pizzas. Sabores: Marguerita Vegan, Brócolis Vegan, Abobrinha Vegan e Doce de Leite com Coco Ralado." },
-    { img: incSemGluten.url, n: "Massa Sem Glúten", d: "Para convidados com intolerância ao glúten. Mesmos sabores do pacote escolhido, com massa especialmente preparada e segura." },
-    { img: incSemLactose.url, n: "Sem Lactose", d: "Mussarela sem lactose para convidados com intolerância. Sabor completo e textura idêntica, sem abrir mão da experiência." },
+    {
+      img: incVegana.url,
+      n: "Cardápio Vegano",
+      d: "Mussarela vegana em todas as pizzas. Sabores: Marguerita Vegan, Brócolis Vegan, Abobrinha Vegan e Doce de Leite com Coco Ralado.",
+    },
+    {
+      img: incSemGluten.url,
+      n: "Massa Sem Glúten",
+      d: "Para convidados com intolerância ao glúten. Mesmos sabores do pacote escolhido, com massa especialmente preparada e segura.",
+    },
+    {
+      img: incSemLactose.url,
+      n: "Sem Lactose",
+      d: "Mussarela sem lactose para convidados com intolerância. Sabor completo e textura idêntica, sem abrir mão da experiência.",
+    },
   ];
   return (
     <section className="py-32 bg-black">
@@ -420,7 +674,10 @@ function Inclusao() {
           <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
             Ninguém fica <em className="serif gold-gradient-text italic">de fora</em>
           </h2>
-          <p className="text-cream/65 text-lg">Oferecemos cardápios especiais para que todos os convidados, independente de restrições alimentares, vivam a mesma experiência.</p>
+          <p className="text-cream/65 text-lg">
+            Oferecemos cardápios especiais para que todos os convidados, independente de restrições alimentares, vivam a
+            mesma experiência.
+          </p>
         </div>
         <div className="grid md:grid-cols-3 gap-px bg-gold/15">
           {opts.map((o) => (
@@ -438,9 +695,21 @@ function Inclusao() {
 
 function ProvaSocial() {
   const reviews = [
-    { t: "Experiência maravilhosa, eles são perfeitos em todos os sentidos tanto de atendimento de venda como durante a festa , meus convidados amaram ; indico de olhos fechados", a: "Simone T.", e: "\n" },
-    { t: "Excelente! simplesmente a melhor, amei demais essa pizza, trabalho impecável. indico super pra quem tá com aquela vontade de um doce maravilhoso!!", a: "\n\nIsabelly P.", e: "\n" },
-    { t: "A equipe da Pizza Party Brazil superou todas as nossas expectativas. As pizzas fizeram o maior sucesso, e as pizzas sem glúten estavam deliciosas! O serviço foi excelente e nossos convidados ficaram muito satisfeitos. Recomendo-os sinceramente.", a: "Gemma C.", e: "\n" },
+    {
+      t: "Experiência maravilhosa, eles são perfeitos em todos os sentidos tanto de atendimento de venda como durante a festa , meus convidados amaram ; indico de olhos fechados",
+      a: "Simone T.",
+      e: "\n",
+    },
+    {
+      t: "Excelente! simplesmente a melhor, amei demais essa pizza, trabalho impecável. indico super pra quem tá com aquela vontade de um doce maravilhoso!!",
+      a: "\n\nIsabelly P.",
+      e: "\n",
+    },
+    {
+      t: "A equipe da Pizza Party Brazil superou todas as nossas expectativas. As pizzas fizeram o maior sucesso, e as pizzas sem glúten estavam deliciosas! O serviço foi excelente e nossos convidados ficaram muito satisfeitos. Recomendo-os sinceramente.",
+      a: "Gemma C.",
+      e: "\n",
+    },
   ];
   return (
     <section className="py-32 bg-black-warm">
@@ -448,14 +717,26 @@ function ProvaSocial() {
         <div className="max-w-2xl mb-12">
           <div className="eyebrow mb-4">Prova social</div>
           <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
-            8.000 eventos. <br/>Uma só <em className="serif gold-gradient-text italic">reputação</em>.
+            8.000 eventos. <br />
+            Uma só <em className="serif gold-gradient-text italic">reputação</em>.
           </h2>
-          <p className="text-cream/65 text-lg mb-6">Em mais de uma década, construímos algo que nenhum marketing compra: a confiança genuína de quem viveu a experiência.</p>
+          <p className="text-cream/65 text-lg mb-6">
+            Em mais de uma década, construímos algo que nenhum marketing compra: a confiança genuína de quem viveu a
+            experiência.
+          </p>
           <div className="inline-flex items-center gap-4 border border-gold/30 px-5 py-3">
             <div className="serif text-gold text-2xl">G</div>
             <div>
-              <div className="text-gold tracking-wider inline-flex gap-1"><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /><Star className="w-4 h-4 fill-current" /><StarHalf className="w-4 h-4 fill-current" /></div>
-              <div className="text-[0.65rem] tracking-[0.2em] uppercase text-cream/50">4.9 no Google · Centenas de reviews</div>
+              <div className="text-gold tracking-wider inline-flex gap-1">
+                <Star className="w-4 h-4 fill-current" />
+                <Star className="w-4 h-4 fill-current" />
+                <Star className="w-4 h-4 fill-current" />
+                <Star className="w-4 h-4 fill-current" />
+                <StarHalf className="w-4 h-4 fill-current" />
+              </div>
+              <div className="text-[0.65rem] tracking-[0.2em] uppercase text-cream/50">
+                4.9 no Google · Centenas de reviews
+              </div>
             </div>
           </div>
         </div>
@@ -463,7 +744,13 @@ function ProvaSocial() {
           {reviews.map((r) => (
             <div key={r.a} className="border border-gold/15 bg-black p-8">
               <div className="serif text-gold text-6xl leading-none mb-2">"</div>
-              <div className="text-gold tracking-wider mb-3 inline-flex gap-1"><Star className="w-3.5 h-3.5 fill-current" /><Star className="w-3.5 h-3.5 fill-current" /><Star className="w-3.5 h-3.5 fill-current" /><Star className="w-3.5 h-3.5 fill-current" /><Star className="w-3.5 h-3.5 fill-current" /></div>
+              <div className="text-gold tracking-wider mb-3 inline-flex gap-1">
+                <Star className="w-3.5 h-3.5 fill-current" />
+                <Star className="w-3.5 h-3.5 fill-current" />
+                <Star className="w-3.5 h-3.5 fill-current" />
+                <Star className="w-3.5 h-3.5 fill-current" />
+                <Star className="w-3.5 h-3.5 fill-current" />
+              </div>
               <p className="text-cream/70 text-sm italic leading-relaxed mb-5">{r.t}</p>
               <div className="serif text-cream-light">{r.a}</div>
               <div className="text-[0.65rem] tracking-[0.18em] uppercase text-cream/40 mt-1">{r.e}</div>
@@ -477,10 +764,26 @@ function ProvaSocial() {
 
 function Como() {
   const steps = [
-    { n: "1", t: "Consulta Personalizada", d: "Você nos conta sobre o seu evento, data, número de convidados, estilo da festa. Nós apresentamos a melhor solução para a sua celebração." },
-    { n: "2", t: "Proposta e Reserva", d: "Enviamos a proposta customizada. Com a confirmação, sua data está reservada e garantida na nossa agenda." },
-    { n: "3", t: "Chegamos Prontos", d: "No dia do evento, nossa equipe chega com antecedência, monta toda a estrutura e prepara tudo com nossa obsessão habitual por detalhe." },
-    { n: "4", t: "Você Aproveita", d: "Enquanto a jornada sensorial acontece, você curte cada momento com seus convidados. Nós cuidamos de tudo, do início ao encerramento." },
+    {
+      n: "1",
+      t: "Consulta Personalizada",
+      d: "Você nos conta sobre o seu evento, data, número de convidados, estilo da festa. Nós apresentamos a melhor solução para a sua celebração.",
+    },
+    {
+      n: "2",
+      t: "Proposta e Reserva",
+      d: "Enviamos a proposta customizada. Com a confirmação, sua data está reservada e garantida na nossa agenda.",
+    },
+    {
+      n: "3",
+      t: "Chegamos Prontos",
+      d: "No dia do evento, nossa equipe chega com antecedência, monta toda a estrutura e prepara tudo com nossa obsessão habitual por detalhe.",
+    },
+    {
+      n: "4",
+      t: "Você Aproveita",
+      d: "Enquanto a jornada sensorial acontece, você curte cada momento com seus convidados. Nós cuidamos de tudo, do início ao encerramento.",
+    },
   ];
   return (
     <section className="py-32 bg-black">
@@ -490,7 +793,10 @@ function Como() {
           <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
             Como garantimos a <em className="serif gold-gradient-text italic">perfeição</em> no seu evento
           </h2>
-          <p className="text-cream/65 text-lg">Da conversa inicial até o último café, cuidamos de cada detalhe para que você aproveite cada momento sem preocupação.</p>
+          <p className="text-cream/65 text-lg">
+            Da conversa inicial até o último café, cuidamos de cada detalhe para que você aproveite cada momento sem
+            preocupação.
+          </p>
         </div>
         <div className="grid md:grid-cols-4 gap-6">
           {steps.map((s) => (
@@ -511,7 +817,14 @@ function Celebracao() {
     <section className="py-32 relative bg-black-warm overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div className="relative">
-          <img src={baristaCelebracao.url} alt="Convidado saboreando pizza em celebração" width={1463} height={974} loading="lazy" className="w-full aspect-[4/3] object-cover" />
+          <img
+            src={baristaCelebracao.url}
+            alt="Convidado saboreando pizza em celebração"
+            width={1463}
+            height={974}
+            loading="lazy"
+            className="w-full aspect-[4/3] object-cover"
+          />
           <div className="absolute -bottom-6 -right-6 hidden md:block bg-black-rich border border-gold/40 p-6 max-w-xs">
             <div className="serif gold-gradient-text text-5xl">8.000+</div>
             <div className="text-xs text-cream/60 tracking-[0.15em] uppercase mt-1">celebrações realizadas</div>
@@ -523,7 +836,8 @@ function Celebracao() {
             Momentos que ficam na <em className="serif gold-gradient-text text-5xl md:text-6xl italic">memória</em>.
           </h2>
           <p className="text-cream/65 text-lg mb-6">
-            Cada celebração é única. Personalizamos o cardápio, o ritmo do serviço e a experiência para que seus convidados vivam algo verdadeiramente memorável.
+            Cada celebração é única. Personalizamos o cardápio, o ritmo do serviço e a experiência para que seus
+            convidados vivam algo verdadeiramente memorável.
           </p>
           <p className="text-cream/55">
             Mais de 8.000 eventos conduzidos pelo nosso Chef Pizzaiolo, com a qualidade artesanal da Pizza Party Brasil.
@@ -536,16 +850,22 @@ function Celebracao() {
 
 function Condicoes() {
   const blocks = [
-    { t: "Estrutura e Equipamentos", items: [
-      "Levamos forno a gás com pedra refratária. Se o local não permitir entrada de gás, solicitamos com antecedência um forno elétrico, é necessária tomada 220V com disjuntor de 30A (cabo 4mm).",
-      "Mesmo que o local tenha forno próprio, utilizamos nosso equipamento para garantir o padrão consistente que nossos clientes esperam.",
-      "As massas chegam pré-assadas e são finalizadas no local do evento, garantindo frescor e crocância em cada pizza servida.",
-    ]},
-    { t: "Flexibilidade e Garantias", items: [
-      "Conseguimos suprir até 10% a mais de convidados além do contratado, mantendo o mesmo padrão de qualidade. O excedente é servido ao final do evento.",
-      "Se o número de convidados for menor que o contratado, o valor é mantido, pois os ingredientes e a equipe já foram dimensionados para o contrato.",
-      "Prorrogação de horário disponível mediante solicitação prévia.",
-    ]},
+    {
+      t: "Estrutura e Equipamentos",
+      items: [
+        "Levamos forno a gás com pedra refratária. Se o local não permitir entrada de gás, solicitamos com antecedência um forno elétrico, é necessária tomada 220V com disjuntor de 30A (cabo 4mm).",
+        "Mesmo que o local tenha forno próprio, utilizamos nosso equipamento para garantir o padrão consistente que nossos clientes esperam.",
+        "As massas chegam pré-assadas e são finalizadas no local do evento, garantindo frescor e crocância em cada pizza servida.",
+      ],
+    },
+    {
+      t: "Flexibilidade e Garantias",
+      items: [
+        "Conseguimos suprir até 10% a mais de convidados além do contratado, mantendo o mesmo padrão de qualidade. O excedente é servido ao final do evento.",
+        "Se o número de convidados for menor que o contratado, o valor é mantido, pois os ingredientes e a equipe já foram dimensionados para o contrato.",
+        "Prorrogação de horário disponível mediante solicitação prévia.",
+      ],
+    },
   ];
   return (
     <section className="py-32 bg-black-warm">
@@ -555,7 +875,9 @@ function Condicoes() {
           <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
             Tudo que você precisa <em className="serif gold-gradient-text italic">saber</em>
           </h2>
-          <p className="text-cream/65 text-lg">Acreditamos que uma boa parceria começa com transparência. Sem letras miúdas, sem surpresas.</p>
+          <p className="text-cream/65 text-lg">
+            Acreditamos que uma boa parceria começa com transparência. Sem letras miúdas, sem surpresas.
+          </p>
         </div>
         <div className="grid md:grid-cols-2 gap-px bg-gold/15">
           {blocks.map((b) => (
@@ -563,7 +885,10 @@ function Condicoes() {
               <h3 className="serif text-2xl text-cream-light mb-5">{b.t}</h3>
               <ul className="space-y-4">
                 {b.items.map((it) => (
-                  <li key={it} className="text-cream/60 text-sm leading-relaxed flex gap-3"><span className="text-gold mt-1">◆</span><span>{it}</span></li>
+                  <li key={it} className="text-cream/60 text-sm leading-relaxed flex gap-3">
+                    <span className="text-gold mt-1">◆</span>
+                    <span>{it}</span>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -584,7 +909,8 @@ function ContatoForm() {
     window.open(`https://wa.me/5511974418038?text=${msg}`, "_blank");
     setSent(true);
   };
-  const inputCls = "w-full bg-black-rich border border-gold/20 px-4 py-3 text-cream-light placeholder:text-cream/30 focus:outline-none focus:border-gold transition-colors text-sm";
+  const inputCls =
+    "w-full bg-black-rich border border-gold/20 px-4 py-3 text-cream-light placeholder:text-cream/30 focus:outline-none focus:border-gold transition-colors text-sm";
   if (sent) {
     return (
       <div className="max-w-2xl mx-auto border border-gold/40 bg-black-rich p-10 text-center">
@@ -592,46 +918,114 @@ function ContatoForm() {
           <Check className="w-7 h-7 text-gold" />
         </div>
         <h3 className="serif text-2xl text-cream-light mb-3">Mensagem enviada!</h3>
-        <p className="text-cream/65 text-sm mb-6">Abrimos o WhatsApp em uma nova janela com seus dados. Caso não tenha aberto, clique abaixo para falar conosco diretamente.</p>
-        <a href="https://wa.me/5511974418038" target="_blank" rel="noreferrer" className="btn-gold btn-gold-hover inline-block">Abrir WhatsApp</a>
-        <button type="button" onClick={() => setSent(false)} className="block mx-auto mt-5 text-[0.65rem] tracking-[0.2em] uppercase text-cream/40 hover:text-gold transition-colors">Enviar outra solicitação</button>
+        <p className="text-cream/65 text-sm mb-6">
+          Abrimos o WhatsApp em uma nova janela com seus dados. Caso não tenha aberto, clique abaixo para falar conosco
+          diretamente.
+        </p>
+        <a
+          href="https://wa.me/5511974418038"
+          target="_blank"
+          rel="noreferrer"
+          className="btn-gold btn-gold-hover inline-block"
+        >
+          Abrir WhatsApp
+        </a>
+        <button
+          type="button"
+          onClick={() => setSent(false)}
+          className="block mx-auto mt-5 text-[0.65rem] tracking-[0.2em] uppercase text-cream/40 hover:text-gold transition-colors"
+        >
+          Enviar outra solicitação
+        </button>
       </div>
     );
   }
   return (
     <form onSubmit={onSubmit} className="grid sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
-      <input required name="nome" value={form.nome} onChange={onChange} placeholder="Nome" className={`${inputCls} sm:col-span-2`} />
-      <input required name="telefone" value={form.telefone} onChange={onChange} placeholder="Telefone" className={inputCls} />
-      <input required type="email" name="email" value={form.email} onChange={onChange} placeholder="E-mail" className={inputCls} />
-      <input required type="number" min={1} name="convidados" value={form.convidados} onChange={onChange} placeholder="Número de convidados" className={inputCls} />
-      <input required type="date" name="data" value={form.data} onChange={onChange} placeholder="Data da festa" className={inputCls} />
-      <input required name="cep" value={form.cep} onChange={onChange} placeholder="CEP do local da festa" className={`${inputCls} sm:col-span-2`} />
-      <button type="submit" className="btn-gold btn-gold-hover sm:col-span-2 mt-2">Enviar</button>
+      <input
+        required
+        name="nome"
+        value={form.nome}
+        onChange={onChange}
+        placeholder="Nome"
+        className={`${inputCls} sm:col-span-2`}
+      />
+      <input
+        required
+        name="telefone"
+        value={form.telefone}
+        onChange={onChange}
+        placeholder="Telefone"
+        className={inputCls}
+      />
+      <input
+        required
+        type="email"
+        name="email"
+        value={form.email}
+        onChange={onChange}
+        placeholder="E-mail"
+        className={inputCls}
+      />
+      <input
+        required
+        type="number"
+        min={1}
+        name="convidados"
+        value={form.convidados}
+        onChange={onChange}
+        placeholder="Número de convidados"
+        className={inputCls}
+      />
+      <input
+        required
+        type="date"
+        name="data"
+        value={form.data}
+        onChange={onChange}
+        placeholder="Data da festa"
+        className={inputCls}
+      />
+      <input
+        required
+        name="cep"
+        value={form.cep}
+        onChange={onChange}
+        placeholder="CEP do local da festa"
+        className={`${inputCls} sm:col-span-2`}
+      />
+      <button type="submit" className="btn-gold btn-gold-hover sm:col-span-2 mt-2">
+        Enviar
+      </button>
     </form>
   );
 }
-
 
 function Contato() {
   return (
     <section id="contato" className="py-32 bg-black relative overflow-hidden">
       <div
         className="absolute inset-0 opacity-40"
-        style={{ backgroundImage: `radial-gradient(ellipse 60% 40% at 50% 50%, rgba(201,168,76,0.2), transparent 70%)` }}
+        style={{
+          backgroundImage: `radial-gradient(ellipse 60% 40% at 50% 50%, rgba(201,168,76,0.2), transparent 70%)`,
+        }}
       />
       <div className="relative max-w-3xl mx-auto px-6 text-center">
         <div className="eyebrow mb-4 justify-center">Vamos conversar</div>
         <h2 className="serif text-4xl md:text-6xl mb-6 leading-tight">
           Vamos criar uma <em className="serif gold-gradient-text italic">memória inesquecível</em> juntos?
         </h2>
-        <p className="text-cream/65 text-lg mb-10 max-w-xl mx-auto">
-          Preencha o formulário que entraremos em contato.
-        </p>
+        <p className="text-cream/65 text-lg mb-10 max-w-xl mx-auto">Preencha o formulário que entraremos em contato.</p>
         <ContatoForm />
         <div className="grid sm:grid-cols-3 gap-8 text-center pt-12 mt-12 border-t border-gold/15">
           <div>
             <div className="eyebrow mb-2 !text-cream/40">Telefone</div>
-            <a href="https://wa.me/5511974418038" className="serif text-gold-light text-lg hover:text-gold transition-colors">+55 11 97441-8038</a>
+            <a
+              href="https://wa.me/5511974418038"
+              className="serif text-gold-light text-lg hover:text-gold transition-colors"
+            >
+              +55 11 97441-8038
+            </a>
           </div>
           <div>
             <div className="eyebrow mb-2 !text-cream/40">E-mail</div>
@@ -655,10 +1049,14 @@ function Footer() {
           <Logo size={40} />
           <div className="leading-tight">
             <div className="serif text-gold text-sm tracking-[0.18em] uppercase">Pizza Party Brasil</div>
-            <div className="text-[0.55rem] tracking-[0.28em] uppercase text-cream/35">Desde 2013 · Mais de 8.000 eventos</div>
+            <div className="text-[0.55rem] tracking-[0.28em] uppercase text-cream/35">
+              Desde 2013 · Mais de 8.000 eventos
+            </div>
           </div>
         </div>
-        <p className="text-[0.65rem] tracking-[0.2em] uppercase text-cream/30">© 2026 · Feito com fogo, farinha e fermento.</p>
+        <p className="text-[0.65rem] tracking-[0.2em] uppercase text-cream/30">
+          © 2026 · Feito com fogo, farinha e fermento.
+        </p>
       </div>
     </footer>
   );
@@ -698,17 +1096,28 @@ function Linhas() {
           <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
             Escolha a experiência <em className="serif gold-gradient-text italic">certa</em> para o seu evento
           </h2>
-          <p className="text-cream/65 text-lg">Duas formas de viver a Pizza Party Brasil — a tradição que escalamos em mais de uma década, e a sofisticação napoletana para quem busca o ápice gastronômico.</p>
+          <p className="text-cream/65 text-lg">
+            Duas formas de viver a Pizza Party Brasil — a tradição que escalamos em mais de uma década, e a sofisticação
+            napoletana para quem busca o ápice gastronômico.
+          </p>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           {linhas.map((l) => (
-            <div key={l.nome} className={`relative border p-10 ${l.featured ? "border-gold bg-black-card" : "border-gold/20 bg-black"}`}>
+            <div
+              key={l.nome}
+              className={`relative border p-10 ${l.featured ? "border-gold bg-black-card" : "border-gold/20 bg-black"}`}
+            >
               <div className="text-[0.6rem] tracking-[0.25em] uppercase text-cream/40 mb-2">{l.tag}</div>
               <h3 className={`serif text-3xl mb-4 ${l.featured ? "text-gold" : "text-cream-light"}`}>{l.nome}</h3>
               <p className="text-cream/60 text-sm leading-relaxed mb-6">{l.desc}</p>
               <ul className="space-y-2">
                 {l.pontos.map((p) => (
-                  <li key={p} className="text-cream/70 text-sm flex gap-2"><span className="text-gold mt-0.5"><Check className="w-3.5 h-3.5" /></span><span>{p}</span></li>
+                  <li key={p} className="text-cream/70 text-sm flex gap-2">
+                    <span className="text-gold mt-0.5">
+                      <Check className="w-3.5 h-3.5" />
+                    </span>
+                    <span>{p}</span>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -738,12 +1147,17 @@ function PorQue() {
           <h2 className="serif text-4xl md:text-5xl leading-tight mb-6">
             Mais de uma década <em className="serif gold-gradient-text italic">construindo memórias</em>
           </h2>
-          <p className="text-cream/65 text-lg">Não é promessa. É histórico. Cada item abaixo é uma decisão que tomamos todos os dias para entregar a melhor experiência de pizza para eventos em São Paulo.</p>
+          <p className="text-cream/65 text-lg">
+            Não é promessa. É histórico. Cada item abaixo é uma decisão que tomamos todos os dias para entregar a melhor
+            experiência de pizza para eventos em São Paulo.
+          </p>
         </div>
         <div className="grid md:grid-cols-2 gap-px bg-gold/15">
           {reasons.map((r) => (
             <div key={r} className="bg-black p-6 flex gap-4 items-start hover:bg-black-card transition-colors">
-              <span className="text-gold mt-1"><Check className="w-5 h-5" /></span>
+              <span className="text-gold mt-1">
+                <Check className="w-5 h-5" />
+              </span>
               <span className="text-cream-light text-base">{r}</span>
             </div>
           ))}
@@ -760,14 +1174,24 @@ function Carrossel() {
     <section className="py-24 bg-black overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 text-center mb-12">
         <div className="eyebrow mb-4 justify-center">Momentos reais</div>
-        <h2 className="serif text-4xl md:text-5xl">A experiência <em className="serif gold-gradient-text italic">Pizza Party</em> em cada evento.</h2>
+        <h2 className="serif text-4xl md:text-5xl">
+          A experiência <em className="serif gold-gradient-text italic">Pizza Party</em> em cada evento.
+        </h2>
       </div>
       <div className="relative">
         <div className="relative overflow-hidden">
           <div className="flex gap-6 animate-carrossel w-max">
             {loop.map((im, i) => (
-              <div key={i} className="relative w-[320px] md:w-[420px] h-[260px] md:h-[320px] flex-shrink-0 overflow-hidden border border-gold/15">
-                <img src={im.url} alt={`Evento Pizza Party ${(i % imgs.length) + 1}`} loading="lazy" className="w-full h-full object-cover" />
+              <div
+                key={i}
+                className="relative w-[320px] md:w-[420px] h-[260px] md:h-[320px] flex-shrink-0 overflow-hidden border border-gold/15"
+              >
+                <img
+                  src={im.url}
+                  alt={`Evento Pizza Party ${(i % imgs.length) + 1}`}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
               </div>
             ))}
           </div>
