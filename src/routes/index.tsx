@@ -52,7 +52,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:image", content: heroPizza },
     ],
 
-    links: [{ rel: "canonical", href: "https://pizzapartybrasil.comcbr/" }],
+    links: [{ rel: "canonical", href: "https://pizzapartybrasil.com.br/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -61,7 +61,7 @@ export const Route = createFileRoute("/")({
           "@type": "FoodEstablishment",
           name: "Pizza Party Brasil",
           description: "Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo.",
-          url: "https://pizzapartybrasil.lovable.app/",
+          url: "https://pizzapartybrasil.com.br/",
           telephone: "+55 11 97441-8038",
           email: "contato@pizzapartybrasil.com",
           servesCuisine: ["Pizza", "Italiana", "Napoletana"],
