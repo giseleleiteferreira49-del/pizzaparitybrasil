@@ -111,7 +111,7 @@ function Nav() {
           <div className="text-[0.55rem] tracking-[0.28em] uppercase text-cream/40">Buffet Premium de Pizzas</div>
         </div>
       </a>
-      <ul className="hidden md:flex gap-8 list-none items-center">
+      <ul className="hidden md:flex gap-8 list-none">
         {links.map((l) => (
           <li key={l.href}>
             <a
@@ -122,14 +122,6 @@ function Nav() {
             </a>
           </li>
         ))}
-        <li>
-          <a
-            href="/proposta"
-            className="text-[0.7rem] tracking-[0.2em] uppercase text-gold border border-gold/40 px-4 py-2 hover:bg-gold hover:text-black-rich transition-colors"
-          >
-            Proposta
-          </a>
-        </li>
       </ul>
       <a href="#contato" className="btn-gold btn-gold-hover text-[0.7rem] !py-3 !px-6">
         Orçamento
