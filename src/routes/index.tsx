@@ -114,24 +114,15 @@ function Nav() {
       </a>
       <ul className="hidden md:flex gap-8 list-none">
         {links.map((l) => (
-          <li key={l.href || l.to}>
-            {"to" in l ? (
-              <Link
-                to={l.to}
-                className="text-[0.7rem] tracking-[0.2em] uppercase text-cream/55 hover:text-gold transition-colors"
-              >
-                {l.label}
-              </Link>
-            ) : (
-              <a
-                href={l.href}
-                target={l.external ? "_blank" : undefined}
-                rel={l.external ? "noopener noreferrer" : undefined}
-                className="text-[0.7rem] tracking-[0.2em] uppercase text-cream/55 hover:text-gold transition-colors"
-              >
-                {l.label}
-              </a>
-            )}
+          <li key={l.href}>
+            <a
+              href={l.href}
+              target={l.external ? "_blank" : undefined}
+              rel={l.external ? "noopener noreferrer" : undefined}
+              className="text-[0.7rem] tracking-[0.2em] uppercase text-cream/55 hover:text-gold transition-colors"
+            >
+              {l.label}
+            </a>
           </li>
         ))}
       </ul>
