@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { UtensilsCrossed, Coffee, Wine, Star, StarHalf, Check } from "lucide-react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import logoAsset from "@/assets/pizza-party-logo.asset.json";
 import heroPizza from "@/assets/hero-pizza.jpg";
 import doughImg from "@/assets/processo-massa.jpg.asset.json";
@@ -101,6 +101,7 @@ function Nav() {
     { href: "#cardapio", label: "Cardápio" },
     { href: "#pacotes", label: "Pacotes" },
     { href: "#contato", label: "Contato" },
+    { to: "/proposta", label: "Proposta" },
   ];
   return (
     <nav className="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-6 md:px-12 backdrop-blur-xl bg-black-rich/90 border-b border-gold/15">
@@ -113,13 +114,22 @@ function Nav() {
       </a>
       <ul className="hidden md:flex gap-8 list-none">
         {links.map((l) => (
-          <li key={l.href}>
-            <a
-              href={l.href}
-              className="text-[0.7rem] tracking-[0.2em] uppercase text-cream/55 hover:text-gold transition-colors"
-            >
-              {l.label}
-            </a>
+          <li key={l.href || l.to}>
+            {"to" in l ? (
+              <Link
+                to={l.to}
+                className="text-[0.7rem] tracking-[0.2em] uppercase text-cream/55 hover:text-gold transition-colors"
+              >
+                {l.label}
+              </Link>
+            ) : (
+              <a
+                href={l.href}
+                className="text-[0.7rem] tracking-[0.2em] uppercase text-cream/55 hover:text-gold transition-colors"
+              >
+                {l.label}
+              </a>
+            )}
           </li>
         ))}
       </ul>
