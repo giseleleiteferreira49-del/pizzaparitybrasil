@@ -101,6 +101,7 @@ function Nav() {
     { href: "#cardapio", label: "Cardápio" },
     { href: "#pacotes", label: "Pacotes" },
     { href: "#contato", label: "Contato" },
+    { to: "/proposta", label: "Proposta" },
   ];
   return (
     <nav className="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-6 md:px-12 backdrop-blur-xl bg-black-rich/90 border-b border-gold/15">
