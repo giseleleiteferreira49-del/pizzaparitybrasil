@@ -1011,7 +1011,7 @@ function Contato() {
         }}
       />
       <div className="relative max-w-3xl mx-auto px-6 text-center">
-        <div className="eyebrow mb-4 justify-center">Vamos conversar</div>
+        <div className="eyebrow mb-4 justify-center">SEU ORÇAMENTO EM MINUTOS</div>
         <h2 className="serif text-4xl md:text-6xl mb-6 leading-tight">
           Vamos criar uma <em className="serif gold-gradient-text italic">memória inesquecível</em> juntos?
         </h2>
