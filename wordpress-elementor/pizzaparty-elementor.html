@@ -19,546 +19,616 @@
 <!-- ==========================================================
      ESTILOS GLOBAIS — cole UMA VEZ (CSS adicional ou 1º widget)
      ========================================================== -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Dancing+Script:wght@500&display=swap"
+  rel="stylesheet"
+/>
 
 <style>
-:root{
-  --pp-black:#0A0A08;
-  --pp-black-warm:#111009;
-  --pp-black-card:#161410;
-  --pp-gold:#C9A84C;
-  --pp-gold-light:#E8C97A;
-  --pp-gold-dark:#9A7A2E;
-  --pp-cream:#F5EDD6;
-  --pp-cream-light:#FAF6EC;
-  --pp-burgundy:#7B1F2E;
-  --pp-gray:#8A8070;
-  --pp-border:rgba(201,168,76,.18);
-  --pp-serif:'Cormorant Garamond',serif;
-  --pp-sans:'DM Sans',sans-serif;
-  --pp-script:'Dancing Script',cursive;
-  --pp-pad-section:8rem 1.5rem;
-}
+  :root{
+    --pp-black:#0A0A08;
+    --pp-black-warm:#111009;
+    --pp-black-card:#161410;
+    --pp-gold:#C9A84C;
+    --pp-gold-light:#E8C97A;
+    --pp-gold-dark:#9A7A2E;
+    --pp-cream:#F5EDD6;
+    --pp-cream-light:#FAF6EC;
+    --pp-burgundy:#7B1F2E;
+    --pp-gray:#8A8070;
+    --pp-border:rgba(201,168,76,.18);
+    --pp-serif:'Cormorant Garamond',serif;
+    --pp-sans:'DM Sans',sans-serif;
+    --pp-script:'Dancing Script',cursive;
+    --pp-pad-section:8rem 1.5rem;
+  }
 
-.pp *,.pp *::before,.pp *::after{box-sizing:border-box}
-.pp{
-  font-family:var(--pp-sans);
-  font-weight:300;
-  line-height:1.7;
-  color:var(--pp-cream-light);
-  background:var(--pp-black);
-  -webkit-font-smoothing:antialiased;
-}
-.pp img{max-width:100%;height:auto;display:block}
-.pp a{color:inherit;text-decoration:none}
-.pp h1,.pp h2,.pp h3,.pp h4{font-family:var(--pp-serif);font-weight:500;letter-spacing:-.01em;margin:0}
-.pp p{margin:0}
-.pp ul{list-style:none;margin:0;padding:0}
-.pp em.italic-gold{
-  font-family:var(--pp-serif);font-style:italic;
-  background:linear-gradient(135deg,var(--pp-gold-light),var(--pp-gold),var(--pp-gold-dark));
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-}
-.pp .container{max-width:72rem;margin:0 auto;padding:0 1.5rem}
-.pp .eyebrow{
-  font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;
-  color:var(--pp-gold);font-weight:500;margin-bottom:1rem;display:block;
-}
-.pp .btn-gold{
-  display:inline-flex;align-items:center;gap:10px;
-  background:linear-gradient(135deg,var(--pp-gold-dark),var(--pp-gold));
-  color:var(--pp-black);padding:14px 32px;
-  font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
-  transition:transform .3s,box-shadow .3s;
-  box-shadow:0 10px 30px -10px rgba(201,168,76,.5);
-  border:none;cursor:pointer;
-}
-.pp .btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 40px -10px rgba(201,168,76,.6)}
-.pp .btn-ghost{
-  display:inline-flex;align-items:center;gap:10px;
-  border:1px solid var(--pp-gold);color:var(--pp-gold);
-  padding:13px 31px;font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
-  transition:all .3s;background:transparent;
-}
-.pp .btn-ghost:hover{background:var(--pp-gold);color:var(--pp-black)}
-.pp .section{padding:var(--pp-pad-section);background:var(--pp-black)}
-.pp .section--warm{background:var(--pp-black-warm)}
-.pp .section__head{max-width:42rem;margin:0 0 4rem}
-.pp .section__head--center{margin-left:auto;margin-right:auto;text-align:center}
-.pp .section__head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin-bottom:1.5rem}
-.pp .section__head p{color:rgba(245,237,214,.65);font-size:1.125rem}
-.pp .grid{display:grid;gap:2rem}
-.pp .grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.pp .grid-4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-.pp .grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-.pp .divided{gap:1px;background:rgba(201,168,76,.15)}
-.pp .divided > *{background:var(--pp-black)}
-.pp .divided.on-warm > *{background:var(--pp-black-warm)}
-.pp .card-pad{padding:2.5rem}
-.pp .num{font-family:var(--pp-serif);color:rgba(201,168,76,.5);font-size:3rem;line-height:1;margin-bottom:1.25rem}
-.pp .card-title{font-size:1.5rem;color:var(--pp-cream-light);margin-bottom:.75rem}
-.pp .muted{color:rgba(245,237,214,.6);font-size:.9rem;line-height:1.7}
+  .pp *,.pp *::before,.pp *::after{box-sizing:border-box}
+  .pp{
+    font-family:var(--pp-sans);
+    font-weight:300;
+    line-height:1.7;
+    color:var(--pp-cream-light);
+    background:var(--pp-black);
+    -webkit-font-smoothing:antialiased;
+  }
+  .pp img{max-width:100%;height:auto;display:block}
+  .pp a{color:inherit;text-decoration:none}
+  .pp h1,.pp h2,.pp h3,.pp h4{font-family:var(--pp-serif);font-weight:500;letter-spacing:-.01em;margin:0}
+  .pp p{margin:0}
+  .pp ul{list-style:none;margin:0;padding:0}
+  .pp em.italic-gold{
+    font-family:var(--pp-serif);font-style:italic;
+    background:linear-gradient(135deg,var(--pp-gold-light),var(--pp-gold),var(--pp-gold-dark));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .pp .container{max-width:72rem;margin:0 auto;padding:0 1.5rem}
+  .pp .eyebrow{
+    font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--pp-gold);font-weight:500;margin-bottom:1rem;display:block;
+  }
+  .pp .btn-gold{
+    display:inline-flex;align-items:center;gap:10px;
+    background:linear-gradient(135deg,var(--pp-gold-dark),var(--pp-gold));
+    color:var(--pp-black);padding:14px 32px;
+    font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+    transition:transform .3s,box-shadow .3s;
+    box-shadow:0 10px 30px -10px rgba(201,168,76,.5);
+    border:none;cursor:pointer;
+  }
+  .pp .btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 40px -10px rgba(201,168,76,.6)}
+  .pp .btn-ghost{
+    display:inline-flex;align-items:center;gap:10px;
+    border:1px solid var(--pp-gold);color:var(--pp-gold);
+    padding:13px 31px;font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+    transition:all .3s;background:transparent;
+  }
+  .pp .btn-ghost:hover{background:var(--pp-gold);color:var(--pp-black)}
+  .pp .section{padding:var(--pp-pad-section);background:var(--pp-black)}
+  .pp .section--warm{background:var(--pp-black-warm)}
+  .pp .section__head{max-width:42rem;margin:0 0 4rem}
+  .pp .section__head--center{margin-left:auto;margin-right:auto;text-align:center}
+  .pp .section__head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin-bottom:1.5rem}
+  .pp .section__head p{color:rgba(245,237,214,.65);font-size:1.125rem}
+  .pp .grid{display:grid;gap:2rem}
+  .pp .grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .pp .grid-4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .pp .grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .pp .divided{gap:1px;background:rgba(201,168,76,.15)}
+  .pp .divided > *{background:var(--pp-black)}
+  .pp .divided.on-warm > *{background:var(--pp-black-warm)}
+  .pp .card-pad{padding:2.5rem}
+  .pp .num{font-family:var(--pp-serif);color:rgba(201,168,76,.5);font-size:3rem;line-height:1;margin-bottom:1.25rem}
+  .pp .card-title{font-size:1.5rem;color:var(--pp-cream-light);margin-bottom:.75rem}
+  .pp .muted{color:rgba(245,237,214,.6);font-size:.9rem;line-height:1.7}
 
-/* HEADER */
-.pp-header{
-  position:sticky;top:0;z-index:50;height:64px;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 2rem;background:rgba(10,10,8,.9);
-  backdrop-filter:blur(12px);border-bottom:1px solid var(--pp-border);
-}
-.pp-header__brand{display:flex;align-items:center;gap:.75rem}
-.pp-header__brand strong{font-family:var(--pp-serif);color:var(--pp-gold);font-size:.95rem;letter-spacing:.18em;text-transform:uppercase}
-.pp-header__brand small{display:block;font-size:.55rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(245,237,214,.4)}
-.pp-header nav ul{display:flex;gap:2rem}
-.pp-header nav a{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,237,214,.55);transition:color .2s}
-.pp-header nav a:hover{color:var(--pp-gold)}
-@media(max-width:768px){.pp-header nav{display:none}}
+  /* HEADER */
+  .pp-header{
+    position:sticky;top:0;z-index:50;height:64px;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 2rem;background:rgba(10,10,8,.9);
+    backdrop-filter:blur(12px);border-bottom:1px solid var(--pp-border);
+  }
+  .pp-header__brand{display:flex;align-items:center;gap:.75rem}
+  .pp-header__brand strong{font-family:var(--pp-serif);color:var(--pp-gold);font-size:.95rem;letter-spacing:.18em;text-transform:uppercase}
+  .pp-header__brand small{display:block;font-size:.55rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(245,237,214,.4)}
+  .pp-header nav ul{display:flex;gap:2rem}
+  .pp-header nav a{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,237,214,.55);transition:color .2s}
+  .pp-header nav a:hover{color:var(--pp-gold)}
+  @media(max-width:768px){.pp-header nav{display:none}}
 
-/* HERO */
-.pp-hero{
-  position:relative;min-height:90vh;display:flex;align-items:center;
-  background:linear-gradient(135deg,var(--pp-black-warm),var(--pp-black));
-  padding:6rem 1.5rem 4rem;overflow:hidden;
-}
-.pp-hero::before{
-  content:"";position:absolute;inset:0;
-  background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(201,168,76,.18) 0%,transparent 60%),
-             radial-gradient(ellipse 60% 40% at 50% 110%,rgba(123,31,46,.25) 0%,transparent 60%);
-  pointer-events:none;
-}
-.pp-hero__content{position:relative;z-index:2;max-width:72rem;margin:0 auto;width:100%}
-.pp-hero h1{font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.05;margin-bottom:1.5rem}
-.pp-hero p.lead{max-width:36rem;color:rgba(245,237,214,.7);font-size:1.15rem;margin-bottom:.75rem}
-.pp-hero p.sub{max-width:36rem;color:rgba(245,237,214,.5);font-size:.9rem;letter-spacing:.04em;margin-bottom:2.5rem}
-.pp-hero__stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:36rem;margin-top:3rem}
-.pp-hero__stats .n{
-  font-family:var(--pp-serif);font-size:2.2rem;
-  background:linear-gradient(135deg,var(--pp-gold-light),var(--pp-gold),var(--pp-gold-dark));
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-}
-.pp-hero__stats .l{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,237,214,.4);margin-top:.25rem}
-.pp-hero__cta{display:flex;flex-wrap:wrap;gap:1rem}
+  /* HERO */
+  .pp-hero{
+    position:relative;min-height:90vh;display:flex;align-items:center;
+    background:linear-gradient(135deg,var(--pp-black-warm),var(--pp-black));
+    padding:6rem 1.5rem 4rem;overflow:hidden;
+  }
+  .pp-hero::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(201,168,76,.18) 0%,transparent 60%),
+               radial-gradient(ellipse 60% 40% at 50% 110%,rgba(123,31,46,.25) 0%,transparent 60%);
+    pointer-events:none;
+  }
+  .pp-hero__content{position:relative;z-index:2;max-width:72rem;margin:0 auto;width:100%}
+  .pp-hero h1{font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.05;margin-bottom:1.5rem}
+  .pp-hero p.lead{max-width:36rem;color:rgba(245,237,214,.7);font-size:1.15rem;margin-bottom:.75rem}
+  .pp-hero p.sub{max-width:36rem;color:rgba(245,237,214,.5);font-size:.9rem;letter-spacing:.04em;margin-bottom:2.5rem}
+  .pp-hero__stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:36rem;margin-top:3rem}
+  .pp-hero__stats .n{
+    font-family:var(--pp-serif);font-size:2.2rem;
+    background:linear-gradient(135deg,var(--pp-gold-light),var(--pp-gold),var(--pp-gold-dark));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .pp-hero__stats .l{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,237,214,.4);margin-top:.25rem}
+  .pp-hero__cta{display:flex;flex-wrap:wrap;gap:1rem}
 
-/* FOOTER */
-.pp-footer{background:var(--pp-black);color:rgba(245,237,214,.7);padding:4rem 1.5rem 2rem;border-top:1px solid var(--pp-border)}
-.pp-footer .grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-bottom:2rem}
-.pp-footer h4{font-family:var(--pp-serif);color:var(--pp-gold);font-size:1.25rem;margin-bottom:1rem}
-.pp-footer .bottom{border-top:1px solid var(--pp-border);padding-top:1.5rem;text-align:center;opacity:.6;font-size:.85rem}
+  /* FOOTER */
+  .pp-footer{background:var(--pp-black);color:rgba(245,237,214,.7);padding:4rem 1.5rem 2rem;border-top:1px solid var(--pp-border)}
+  .pp-footer .grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-bottom:2rem}
+  .pp-footer h4{font-family:var(--pp-serif);color:var(--pp-gold);font-size:1.25rem;margin-bottom:1rem}
+  .pp-footer .bottom{border-top:1px solid var(--pp-border);padding-top:1.5rem;text-align:center;opacity:.6;font-size:.85rem}
 
-/* WHATSAPP FLOAT */
-.pp-whatsapp{
-  position:fixed;bottom:24px;right:24px;z-index:100;
-  width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 6px 20px rgba(37,211,102,.5);transition:transform .2s;
-}
-.pp-whatsapp:hover{transform:scale(1.1)}
+  /* WHATSAPP FLOAT */
+  .pp-whatsapp{
+    position:fixed;bottom:24px;right:24px;z-index:100;
+    width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 20px rgba(37,211,102,.5);transition:transform .2s;
+  }
+  .pp-whatsapp:hover{transform:scale(1.1)}
 
-/* RESPONSIVE */
-@media(max-width:768px){
-  .pp .section{padding:4rem 1.5rem}
-  .pp-hero__stats{grid-template-columns:1fr;text-align:center}
-}
+  /* RESPONSIVE */
+  @media(max-width:768px){
+    .pp .section{padding:4rem 1.5rem}
+    .pp-hero__stats{grid-template-columns:1fr;text-align:center}
+  }
 </style>
-
 
 <!-- ==========================================================
      === SEÇÃO: HEADER ===
      ========================================================== -->
 <div class="pp">
-<header class="pp-header">
-  <a class="pp-header__brand" href="#top">
-    <div>
-      <strong>Pizza Party Brasil</strong>
-      <small>Buffet Premium de Pizzas</small>
-    </div>
-  </a>
-  <nav>
-    <ul>
-      <li><a href="#diferencial">Experiência</a></li>
-      <li><a href="#cardapio">Cardápio</a></li>
-      <li><a href="#pacotes">Pacotes</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
-  <a href="#contato" class="btn-gold" style="padding:10px 20px">Orçamento</a>
-</header>
+  <header class="pp-header">
+    <a class="pp-header__brand" href="#top">
+      <div>
+        <strong>Pizza Party Brasil</strong>
+        <small>Buffet Premium de Pizzas</small>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#diferencial">Experiência</a></li>
+        <li><a href="#cardapio">Cardápio</a></li>
+        <li><a href="#pacotes">Pacotes</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <a href="#contato" class="btn-gold" style="padding:10px 20px">Orçamento</a>
+  </header>
 </div>
-
 
 <!-- ==========================================================
      === SEÇÃO: HERO ===
      ========================================================== -->
 <div class="pp">
-<section id="top" class="pp-hero">
-  <div class="pp-hero__content">
-    <span class="eyebrow">O Melhor buffet de Pizzas em domicílio de SP</span>
-    <h1>
-      Seu evento merece<br>
-      mais que uma <em class="italic-gold">pizza</em>.<br>
-      Merece uma <em class="italic-gold">memória</em>.
-    </h1>
-    <p class="lead">Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo</p>
-    <p class="sub">Mais de 25 sabores · Sem limite de consumo · Jornada sensorial em 4 tempos</p>
-    <div class="pp-hero__cta">
-      <a href="#contato" class="btn-gold">Solicitar Orçamento</a>
-      <a href="#diferencial" class="btn-ghost">Nossa experiência</a>
+  <section id="top" class="pp-hero">
+    <div class="pp-hero__content">
+      <span class="eyebrow">O Melhor buffet de Pizzas em domicílio de SP</span>
+      <h1>
+        Seu evento merece<br />
+        mais que uma <em class="italic-gold">pizza</em>.<br />
+        Merece uma <em class="italic-gold">memória</em>.
+      </h1>
+      <p class="lead">Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo</p>
+      <p class="sub">Mais de 25 sabores · Sem limite de consumo · Jornada sensorial em 4 tempos</p>
+      <div class="pp-hero__cta">
+        <a href="#contato" class="btn-gold">Solicitar Orçamento</a>
+        <a href="#diferencial" class="btn-ghost">Nossa experiência</a>
+      </div>
+      <div class="pp-hero__stats">
+        <div>
+          <div class="n">10+</div>
+          <div class="l">Anos de tradição</div>
+        </div>
+        <div>
+          <div class="n">8.000+</div>
+          <div class="l">Eventos realizados</div>
+        </div>
+        <div>
+          <div class="n">4.9 ★</div>
+          <div class="l">No Google</div>
+        </div>
+      </div>
     </div>
-    <div class="pp-hero__stats">
-      <div><div class="n">10+</div><div class="l">Anos de tradição</div></div>
-      <div><div class="n">8.000+</div><div class="l">Eventos realizados</div></div>
-      <div><div class="n">4.9 ★</div><div class="l">No Google</div></div>
-    </div>
-  </div>
-</section>
+  </section>
 </div>
-
 
 <!-- ==========================================================
      === SEÇÃO: PROBLEMAS / HOOK ===
      ========================================================== -->
 <div class="pp">
-<section class="section">
-  <div class="container">
-    <div class="section__head">
-      <span class="eyebrow">O problema que resolvemos</span>
-      <h2>Você já viveu alguma dessas <em class="italic-gold">situações?</em></h2>
-      <p>Esses são os momentos que nos motivam a existir, e que nos fazem trabalhar com obsessão por cada detalhe.</p>
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">O problema que resolvemos</span>
+        <h2>Você já viveu alguma dessas <em class="italic-gold">situações?</em></h2>
+        <p>Esses são os momentos que nos motivam a existir, e que nos fazem trabalhar com obsessão por cada detalhe.</p>
+      </div>
+      <div class="grid grid-2 divided">
+        <div class="card-pad">
+          <h3 class="card-title">O buffet decepcionou seus convidados</h3>
+          <p class="muted">
+            Pizza fria, massa borrachuda, sabores genéricos. Isso nunca mais vai acontecer no seu evento.
+          </p>
+        </div>
+        <div class="card-pad">
+          <h3 class="card-title">O serviço foi desorganizado e estressante</h3>
+          <p class="muted">Equipe despreparada, atrasos, falta de atenção. Nossa equipe cuida de tudo para você.</p>
+        </div>
+        <div class="card-pad">
+          <h3 class="card-title">A comida foi esquecível</h3>
+          <p class="muted">
+            Semanas depois, ninguém falava sobre a comida. Nossos clientes recebem mensagens dos convidados pedindo o
+            contato.
+          </p>
+        </div>
+        <div class="card-pad">
+          <h3 class="card-title">Pagou caro por algo ordinário</h3>
+          <p class="muted">
+            Com a Pizza Party Brasil, cada real investido se traduz em experiência visível e memorável.
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="grid grid-2 divided">
-      <div class="card-pad">
-        <h3 class="card-title">O buffet decepcionou seus convidados</h3>
-        <p class="muted">Pizza fria, massa borrachuda, sabores genéricos. Isso nunca mais vai acontecer no seu evento.</p>
-      </div>
-      <div class="card-pad">
-        <h3 class="card-title">O serviço foi desorganizado e estressante</h3>
-        <p class="muted">Equipe despreparada, atrasos, falta de atenção. Nossa equipe cuida de tudo para você.</p>
-      </div>
-      <div class="card-pad">
-        <h3 class="card-title">A comida foi esquecível</h3>
-        <p class="muted">Semanas depois, ninguém falava sobre a comida. Nossos clientes recebem mensagens dos convidados pedindo o contato.</p>
-      </div>
-      <div class="card-pad">
-        <h3 class="card-title">Pagou caro por algo ordinário</h3>
-        <p class="muted">Com a Pizza Party Brasil, cada real investido se traduz em experiência visível e memorável.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 </div>
-
 
 <!-- ==========================================================
      === SEÇÃO: SERVIÇO (3 pilares) ===
      ========================================================== -->
 <div class="pp">
-<section id="servico" class="section section--warm">
-  <div class="container">
-    <div class="section__head">
-      <span class="eyebrow">O Serviço</span>
-      <h2>Mais que um buffet, uma <em class="italic-gold">experiência gastronômica</em>.</h2>
-      <p>Conduzimos você e seus convidados por uma aventura de aromas, paladares e sensações.</p>
+  <section id="servico" class="section section--warm">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">O Serviço</span>
+        <h2>Mais que um buffet, uma <em class="italic-gold">experiência gastronômica</em>.</h2>
+        <p>Conduzimos você e seus convidados por uma aventura de aromas, paladares e sensações.</p>
+      </div>
+      <div class="grid grid-3 divided on-warm">
+        <div class="card-pad">
+          <div class="num">01</div>
+          <h3 class="card-title">Chef Pizzaiolo no Evento</h3>
+          <p class="muted">
+            Garantimos a consistência e qualidade das pizzas em todo o processo, com atenção genuína ao seu paladar.
+          </p>
+        </div>
+        <div class="card-pad">
+          <div class="num">02</div>
+          <h3 class="card-title">Tecnologia na Preparação</h3>
+          <p class="muted">
+            Pizzas assadas a 450°C em 90 segundos, com borda alveolada mantendo o aroma característico.
+          </p>
+        </div>
+        <div class="card-pad">
+          <div class="num">03</div>
+          <h3 class="card-title">Massa Artesanal</h3>
+          <p class="muted">Fermentação natural de 72h com blend de farinhas italianas e azeite de oliva selecionado.</p>
+        </div>
+      </div>
     </div>
-    <div class="grid grid-3 divided on-warm">
-      <div class="card-pad">
-        <div class="num">01</div>
-        <h3 class="card-title">Chef Pizzaiolo no Evento</h3>
-        <p class="muted">Garantimos a consistência e qualidade das pizzas em todo o processo, com atenção genuína ao seu paladar.</p>
-      </div>
-      <div class="card-pad">
-        <div class="num">02</div>
-        <h3 class="card-title">Tecnologia na Preparação</h3>
-        <p class="muted">Pizzas assadas a 450°C em 90 segundos, com borda alveolada mantendo o aroma característico.</p>
-      </div>
-      <div class="card-pad">
-        <div class="num">03</div>
-        <h3 class="card-title">Massa Artesanal</h3>
-        <p class="muted">Fermentação natural de 72h com blend de farinhas italianas e azeite de oliva selecionado.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 </div>
-
 
 <!-- ==========================================================
      === SEÇÃO: DIFERENCIAL (Jornada Sensorial) ===
      ========================================================== -->
 <div class="pp">
-<section id="diferencial" class="section section--warm">
-  <div class="container">
-    <div class="section__head">
-      <span class="eyebrow">Nosso diferencial</span>
-      <h2>Não é um rodízio.<br>É uma <em class="italic-gold">jornada sensorial</em>.</h2>
-      <p>Cada evento é dividido em 4 momentos cuidadosamente orquestrados para surpreender seus convidados do início ao fim.</p>
+  <section id="diferencial" class="section section--warm">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Nosso diferencial</span>
+        <h2>Não é um rodízio.<br />É uma <em class="italic-gold">jornada sensorial</em>.</h2>
+        <p>
+          Cada evento é dividido em 4 momentos cuidadosamente orquestrados para surpreender seus convidados do início ao
+          fim.
+        </p>
+      </div>
+      <div class="grid divided on-warm" style="gap:1px">
+        <div class="card-pad">
+          <div class="num">01</div>
+          <h3 class="card-title">Despertar — Abertura com Frescor</h3>
+          <p class="muted">
+            Pizzas leves, aromáticas e herbáceas que despertam as papilas sem causar fadiga sensorial.
+          </p>
+        </div>
+        <div class="card-pad">
+          <div class="num">02</div>
+          <h3 class="card-title">Clássico — Conforto e Familiaridade</h3>
+          <p class="muted">
+            Sabores tradicionais que evocam memórias afetivas e fazem seus convidados se sentirem em casa.
+          </p>
+        </div>
+        <div class="card-pad">
+          <div class="num">03</div>
+          <h3 class="card-title">Ápice — Combinações Ousadas</h3>
+          <p class="muted">
+            Pizzas premium com ingredientes nobres. O pico da experiência, o momento que será lembrado.
+          </p>
+        </div>
+        <div class="card-pad">
+          <div class="num">04</div>
+          <h3 class="card-title">Celebração Doce — Finalização Memorável</h3>
+          <p class="muted">Pizzas doces gourmet que encerram a jornada com doçura e leveza.</p>
+        </div>
+      </div>
     </div>
-    <div class="grid divided on-warm" style="gap:1px">
-      <div class="card-pad">
-        <div class="num">01</div>
-        <h3 class="card-title">Despertar — Abertura com Frescor</h3>
-        <p class="muted">Pizzas leves, aromáticas e herbáceas que despertam as papilas sem causar fadiga sensorial.</p>
-      </div>
-      <div class="card-pad">
-        <div class="num">02</div>
-        <h3 class="card-title">Clássico — Conforto e Familiaridade</h3>
-        <p class="muted">Sabores tradicionais que evocam memórias afetivas e fazem seus convidados se sentirem em casa.</p>
-      </div>
-      <div class="card-pad">
-        <div class="num">03</div>
-        <h3 class="card-title">Ápice — Combinações Ousadas</h3>
-        <p class="muted">Pizzas premium com ingredientes nobres. O pico da experiência, o momento que será lembrado.</p>
-      </div>
-      <div class="card-pad">
-        <div class="num">04</div>
-        <h3 class="card-title">Celebração Doce — Finalização Memorável</h3>
-        <p class="muted">Pizzas doces gourmet que encerram a jornada com doçura e leveza.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 </div>
-
 
 <!-- ==========================================================
      === SEÇÃO: PACOTES ===
      ========================================================== -->
 <div class="pp">
-<section id="pacotes" class="section">
-  <div class="container">
-    <div class="section__head section__head--center">
-      <span class="eyebrow">Escolha seu pacote</span>
-      <h2>Três experiências. <em class="italic-gold">Um padrão de excelência.</em></h2>
-      <p>Todos os pacotes incluem nossa assinatura: a jornada sensorial em 4 tempos, ingredientes premium e equipe treinada.</p>
-    </div>
-    <div class="grid grid-3">
-      <article style="border:1px solid var(--pp-border);background:var(--pp-black-warm);padding:2rem;display:flex;flex-direction:column">
-        <small style="font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(245,237,214,.4)">Pacote 01</small>
-        <h3 class="card-title" style="font-size:2rem;color:var(--pp-cream-light)">Prata</h3>
-        <p class="muted" style="margin-bottom:1.5rem">Experiência completa em 4 tempos com foco no essencial.</p>
-        <ul class="muted" style="margin-bottom:2rem">
-          <li>✓ 16 sabores em 4 tempos sensoriais</li>
-          <li>✓ Garçom dedicado</li>
-          <li>✓ Massa artesanal tradicional</li>
-          <li>✓ Suporte de apresentação</li>
-        </ul>
-        <a href="#contato" class="btn-ghost" style="margin-top:auto;justify-content:center">Quero o Prata</a>
-      </article>
+  <section id="pacotes" class="section">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <span class="eyebrow">Escolha seu pacote</span>
+        <h2>Três experiências. <em class="italic-gold">Um padrão de excelência.</em></h2>
+        <p>
+          Todos os pacotes incluem nossa assinatura: a jornada sensorial em 4 tempos, ingredientes premium e equipe
+          treinada.
+        </p>
+      </div>
+      <div class="grid grid-3">
+        <article
+          style="border:1px solid var(--pp-border);background:var(--pp-black-warm);padding:2rem;display:flex;flex-direction:column"
+        >
+          <small style="font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(245,237,214,.4)"
+            >Pacote 01</small
+          >
+          <h3 class="card-title" style="font-size:2rem;color:var(--pp-cream-light)">Prata</h3>
+          <p class="muted" style="margin-bottom:1.5rem">Experiência completa em 4 tempos com foco no essencial.</p>
+          <ul class="muted" style="margin-bottom:2rem">
+            <li>✓ 16 sabores em 4 tempos sensoriais</li>
+            <li>✓ Garçom dedicado</li>
+            <li>✓ Massa artesanal tradicional</li>
+            <li>✓ Suporte de apresentação</li>
+          </ul>
+          <a href="#contato" class="btn-ghost" style="margin-top:auto;justify-content:center">Quero o Prata</a>
+        </article>
 
-      <article style="border:1px solid var(--pp-gold);background:var(--pp-black-card);padding:2rem;display:flex;flex-direction:column;position:relative">
-        <span style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--pp-gold);color:var(--pp-black);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;padding:4px 16px;font-weight:600">★ Mais escolhido</span>
-        <small style="font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(245,237,214,.4)">Pacote 02</small>
-        <h3 class="card-title" style="font-size:2rem;color:var(--pp-gold)">Ouro</h3>
-        <p class="muted" style="margin-bottom:1.5rem">A escolha mais popular: jornada sensorial completa com entradinhas e bebidas.</p>
-        <ul class="muted" style="margin-bottom:2rem">
-          <li>✓ 25 sabores em 4 tempos</li>
-          <li>✓ Cornicione com antepasto</li>
-          <li>✓ Garçom dedicado</li>
-          <li>✓ Pratos, talheres, copos de vidro</li>
-          <li>✓ Refrigerante, suco e água</li>
-        </ul>
-        <a href="#contato" class="btn-gold" style="margin-top:auto;justify-content:center">Quero o Ouro</a>
-      </article>
+        <article
+          style="border:1px solid var(--pp-gold);background:var(--pp-black-card);padding:2rem;display:flex;flex-direction:column;position:relative"
+        >
+          <span
+            style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--pp-gold);color:var(--pp-black);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;padding:4px 16px;font-weight:600"
+            >★ Mais escolhido</span
+          >
+          <small style="font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(245,237,214,.4)"
+            >Pacote 02</small
+          >
+          <h3 class="card-title" style="font-size:2rem;color:var(--pp-gold)">Ouro</h3>
+          <p class="muted" style="margin-bottom:1.5rem">
+            A escolha mais popular: jornada sensorial completa com entradinhas e bebidas.
+          </p>
+          <ul class="muted" style="margin-bottom:2rem">
+            <li>✓ 25 sabores em 4 tempos</li>
+            <li>✓ Cornicione com antepasto</li>
+            <li>✓ Garçom dedicado</li>
+            <li>✓ Pratos, talheres, copos de vidro</li>
+            <li>✓ Refrigerante, suco e água</li>
+          </ul>
+          <a href="#contato" class="btn-gold" style="margin-top:auto;justify-content:center">Quero o Ouro</a>
+        </article>
 
-      <article style="border:1px solid var(--pp-border);background:var(--pp-black-warm);padding:2rem;display:flex;flex-direction:column">
-        <small style="font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(245,237,214,.4)">Pacote 03</small>
-        <h3 class="card-title" style="font-size:2rem;color:var(--pp-cream-light)">Experience</h3>
-        <p class="muted" style="margin-bottom:1.5rem">Experiência gastronômica completa, com bruschettas premium e estação de café gourmet.</p>
-        <ul class="muted" style="margin-bottom:2rem">
-          <li>✓ Sabores premium em 4 tempos</li>
-          <li>✓ Bruschettas sofisticadas</li>
-          <li>✓ Massa napolitana, longa fermentação</li>
-          <li>✓ Bebidas não alcoólicas inclusas</li>
-          <li>✓ Estação de café gourmet</li>
-        </ul>
-        <a href="#contato" class="btn-ghost" style="margin-top:auto;justify-content:center">Quero o Experience</a>
-      </article>
+        <article
+          style="border:1px solid var(--pp-border);background:var(--pp-black-warm);padding:2rem;display:flex;flex-direction:column"
+        >
+          <small style="font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(245,237,214,.4)"
+            >Pacote 03</small
+          >
+          <h3 class="card-title" style="font-size:2rem;color:var(--pp-cream-light)">Experience</h3>
+          <p class="muted" style="margin-bottom:1.5rem">
+            Experiência gastronômica completa, com bruschettas premium e estação de café gourmet.
+          </p>
+          <ul class="muted" style="margin-bottom:2rem">
+            <li>✓ Sabores premium em 4 tempos</li>
+            <li>✓ Bruschettas sofisticadas</li>
+            <li>✓ Massa napolitana, longa fermentação</li>
+            <li>✓ Bebidas não alcoólicas inclusas</li>
+            <li>✓ Estação de café gourmet</li>
+          </ul>
+          <a href="#contato" class="btn-ghost" style="margin-top:auto;justify-content:center">Quero o Experience</a>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 </div>
-
 
 <!-- ==========================================================
      === SEÇÃO: UPGRADES / CARDÁPIO ===
      ========================================================== -->
 <div class="pp">
-<section id="cardapio" class="section section--warm">
-  <div class="container">
-    <div class="section__head">
-      <span class="eyebrow">Eleve ainda mais</span>
-      <h2>Upgrades que <em class="italic-gold">transformam</em> o ordinário em extraordinário</h2>
-      <p>Cada upgrade foi criado para adicionar uma camada extra de sofisticação e memória afetiva ao seu evento.</p>
+  <section id="cardapio" class="section section--warm">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Eleve ainda mais</span>
+        <h2>Upgrades que <em class="italic-gold">transformam</em> o ordinário em extraordinário</h2>
+        <p>Cada upgrade foi criado para adicionar uma camada extra de sofisticação e memória afetiva ao seu evento.</p>
+      </div>
+      <div class="grid grid-3 divided on-warm">
+        <div class="card-pad">
+          <h3 class="card-title">Tábua de Frios</h3>
+          <p class="muted">
+            Queijos finos, embutidos selecionados, frutas e acompanhamentos artesanais em tábua rústica.
+          </p>
+        </div>
+        <div class="card-pad">
+          <h3 class="card-title">Café Gourmet</h3>
+          <p class="muted">
+            Estação de café especial com expresso, cappuccino tradicional, cappuccino Nutella e biscoitos finos.
+          </p>
+        </div>
+        <div class="card-pad">
+          <h3 class="card-title">Locação de Utensílios</h3>
+          <p class="muted">
+            Taças de vinho e espumante, pratos, talheres, toalha xadrez, copos de vidro e garçom adicional.
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="grid grid-3 divided on-warm">
-      <div class="card-pad">
-        <h3 class="card-title">Tábua de Frios</h3>
-        <p class="muted">Queijos finos, embutidos selecionados, frutas e acompanhamentos artesanais em tábua rústica.</p>
-      </div>
-      <div class="card-pad">
-        <h3 class="card-title">Café Gourmet</h3>
-        <p class="muted">Estação de café especial com expresso, cappuccino tradicional, cappuccino Nutella e biscoitos finos.</p>
-      </div>
-      <div class="card-pad">
-        <h3 class="card-title">Locação de Utensílios</h3>
-        <p class="muted">Taças de vinho e espumante, pratos, talheres, toalha xadrez, copos de vidro e garçom adicional.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 </div>
-
 
 <!-- ==========================================================
      === SEÇÃO: INCLUSÃO ===
      ========================================================== -->
 <div class="pp">
-<section class="section">
-  <div class="container">
-    <div class="section__head">
-      <span class="eyebrow">Inclusão e diversidade</span>
-      <h2>Ninguém fica <em class="italic-gold">de fora</em></h2>
-      <p>Cardápios especiais para que todos os convidados, independente de restrições, vivam a mesma experiência.</p>
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Inclusão e diversidade</span>
+        <h2>Ninguém fica <em class="italic-gold">de fora</em></h2>
+        <p>Cardápios especiais para que todos os convidados, independente de restrições, vivam a mesma experiência.</p>
+      </div>
+      <div class="grid grid-3 divided">
+        <div class="card-pad" style="text-align:center">
+          <h3 class="card-title">Cardápio Vegano</h3>
+          <p class="muted">
+            Mussarela vegana em todas as pizzas. Marguerita, Brócolis, Abobrinha e Doce de Leite com Coco.
+          </p>
+        </div>
+        <div class="card-pad" style="text-align:center">
+          <h3 class="card-title">Massa Sem Glúten</h3>
+          <p class="muted">Para convidados com intolerância, com a mesma qualidade do pacote escolhido.</p>
+        </div>
+        <div class="card-pad" style="text-align:center">
+          <h3 class="card-title">Sem Lactose</h3>
+          <p class="muted">Mussarela sem lactose com sabor completo e textura idêntica.</p>
+        </div>
+      </div>
     </div>
-    <div class="grid grid-3 divided">
-      <div class="card-pad" style="text-align:center">
-        <h3 class="card-title">Cardápio Vegano</h3>
-        <p class="muted">Mussarela vegana em todas as pizzas. Marguerita, Brócolis, Abobrinha e Doce de Leite com Coco.</p>
-      </div>
-      <div class="card-pad" style="text-align:center">
-        <h3 class="card-title">Massa Sem Glúten</h3>
-        <p class="muted">Para convidados com intolerância, com a mesma qualidade do pacote escolhido.</p>
-      </div>
-      <div class="card-pad" style="text-align:center">
-        <h3 class="card-title">Sem Lactose</h3>
-        <p class="muted">Mussarela sem lactose com sabor completo e textura idêntica.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 </div>
-
 
 <!-- ==========================================================
      === SEÇÃO: PROVA SOCIAL ===
      ========================================================== -->
 <div class="pp">
-<section class="section section--warm">
-  <div class="container">
-    <div class="section__head">
-      <span class="eyebrow">Prova social</span>
-      <h2>8.000 eventos.<br>Uma só <em class="italic-gold">reputação</em>.</h2>
-      <p>Em mais de uma década, construímos a confiança genuína de quem viveu a experiência. 4.9 ★ no Google.</p>
+  <section class="section section--warm">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Prova social</span>
+        <h2>8.000 eventos.<br />Uma só <em class="italic-gold">reputação</em>.</h2>
+        <p>Em mais de uma década, construímos a confiança genuína de quem viveu a experiência. 4.9 ★ no Google.</p>
+      </div>
+      <div class="grid grid-3">
+        <blockquote style="border:1px solid var(--pp-border);background:var(--pp-black);padding:2rem">
+          <div style="font-family:var(--pp-serif);color:var(--pp-gold);font-size:3rem;line-height:1">"</div>
+          <p class="muted" style="font-style:italic;margin-bottom:1rem">
+            Experiência maravilhosa, perfeitos em todos os sentidos. Indico de olhos fechados.
+          </p>
+          <cite style="font-family:var(--pp-serif);color:var(--pp-cream-light);font-style:normal">— Simone T.</cite>
+        </blockquote>
+        <blockquote style="border:1px solid var(--pp-border);background:var(--pp-black);padding:2rem">
+          <div style="font-family:var(--pp-serif);color:var(--pp-gold);font-size:3rem;line-height:1">"</div>
+          <p class="muted" style="font-style:italic;margin-bottom:1rem">
+            Simplesmente a melhor, amei demais essa pizza, trabalho impecável.
+          </p>
+          <cite style="font-family:var(--pp-serif);color:var(--pp-cream-light);font-style:normal">— Isabelly P.</cite>
+        </blockquote>
+        <blockquote style="border:1px solid var(--pp-border);background:var(--pp-black);padding:2rem">
+          <div style="font-family:var(--pp-serif);color:var(--pp-gold);font-size:3rem;line-height:1">"</div>
+          <p class="muted" style="font-style:italic;margin-bottom:1rem">
+            Superaram todas as expectativas. As pizzas sem glúten estavam deliciosas. Recomendo sinceramente.
+          </p>
+          <cite style="font-family:var(--pp-serif);color:var(--pp-cream-light);font-style:normal">— Gemma C.</cite>
+        </blockquote>
+      </div>
     </div>
-    <div class="grid grid-3">
-      <blockquote style="border:1px solid var(--pp-border);background:var(--pp-black);padding:2rem">
-        <div style="font-family:var(--pp-serif);color:var(--pp-gold);font-size:3rem;line-height:1">"</div>
-        <p class="muted" style="font-style:italic;margin-bottom:1rem">Experiência maravilhosa, perfeitos em todos os sentidos. Indico de olhos fechados.</p>
-        <cite style="font-family:var(--pp-serif);color:var(--pp-cream-light);font-style:normal">— Simone T.</cite>
-      </blockquote>
-      <blockquote style="border:1px solid var(--pp-border);background:var(--pp-black);padding:2rem">
-        <div style="font-family:var(--pp-serif);color:var(--pp-gold);font-size:3rem;line-height:1">"</div>
-        <p class="muted" style="font-style:italic;margin-bottom:1rem">Simplesmente a melhor, amei demais essa pizza, trabalho impecável.</p>
-        <cite style="font-family:var(--pp-serif);color:var(--pp-cream-light);font-style:normal">— Isabelly P.</cite>
-      </blockquote>
-      <blockquote style="border:1px solid var(--pp-border);background:var(--pp-black);padding:2rem">
-        <div style="font-family:var(--pp-serif);color:var(--pp-gold);font-size:3rem;line-height:1">"</div>
-        <p class="muted" style="font-style:italic;margin-bottom:1rem">Superaram todas as expectativas. As pizzas sem glúten estavam deliciosas. Recomendo sinceramente.</p>
-        <cite style="font-family:var(--pp-serif);color:var(--pp-cream-light);font-style:normal">— Gemma C.</cite>
-      </blockquote>
-    </div>
-  </div>
-</section>
+  </section>
 </div>
-
 
 <!-- ==========================================================
      === SEÇÃO: COMO FUNCIONA ===
      ========================================================== -->
 <div class="pp">
-<section class="section">
-  <div class="container">
-    <div class="section__head">
-      <span class="eyebrow">Sem complicação</span>
-      <h2>Como garantimos a <em class="italic-gold">perfeição</em> no seu evento</h2>
-      <p>Da conversa inicial ao último café, cuidamos de cada detalhe para que você aproveite cada momento.</p>
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Sem complicação</span>
+        <h2>Como garantimos a <em class="italic-gold">perfeição</em> no seu evento</h2>
+        <p>Da conversa inicial ao último café, cuidamos de cada detalhe para que você aproveite cada momento.</p>
+      </div>
+      <div class="grid grid-4">
+        <div style="border-top:1px solid var(--pp-gold);padding-top:1.5rem">
+          <div class="num">1</div>
+          <h3 class="card-title">Consulta Personalizada</h3>
+          <p class="muted">Você nos conta sobre o evento, nós apresentamos a melhor solução.</p>
+        </div>
+        <div style="border-top:1px solid var(--pp-gold);padding-top:1.5rem">
+          <div class="num">2</div>
+          <h3 class="card-title">Proposta e Reserva</h3>
+          <p class="muted">Enviamos a proposta customizada e reservamos sua data.</p>
+        </div>
+        <div style="border-top:1px solid var(--pp-gold);padding-top:1.5rem">
+          <div class="num">3</div>
+          <h3 class="card-title">Chegamos Prontos</h3>
+          <p class="muted">Equipe chega antes, monta tudo com obsessão por detalhe.</p>
+        </div>
+        <div style="border-top:1px solid var(--pp-gold);padding-top:1.5rem">
+          <div class="num">4</div>
+          <h3 class="card-title">Você Aproveita</h3>
+          <p class="muted">Você curte cada momento. Nós cuidamos de tudo.</p>
+        </div>
+      </div>
     </div>
-    <div class="grid grid-4">
-      <div style="border-top:1px solid var(--pp-gold);padding-top:1.5rem">
-        <div class="num">1</div>
-        <h3 class="card-title">Consulta Personalizada</h3>
-        <p class="muted">Você nos conta sobre o evento, nós apresentamos a melhor solução.</p>
-      </div>
-      <div style="border-top:1px solid var(--pp-gold);padding-top:1.5rem">
-        <div class="num">2</div>
-        <h3 class="card-title">Proposta e Reserva</h3>
-        <p class="muted">Enviamos a proposta customizada e reservamos sua data.</p>
-      </div>
-      <div style="border-top:1px solid var(--pp-gold);padding-top:1.5rem">
-        <div class="num">3</div>
-        <h3 class="card-title">Chegamos Prontos</h3>
-        <p class="muted">Equipe chega antes, monta tudo com obsessão por detalhe.</p>
-      </div>
-      <div style="border-top:1px solid var(--pp-gold);padding-top:1.5rem">
-        <div class="num">4</div>
-        <h3 class="card-title">Você Aproveita</h3>
-        <p class="muted">Você curte cada momento. Nós cuidamos de tudo.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 </div>
-
 
 <!-- ==========================================================
      === SEÇÃO: CTA CONTATO ===
      ========================================================== -->
 <div class="pp">
-<section id="contato" class="section section--warm" style="text-align:center">
-  <div class="container">
-    <span class="eyebrow">Vamos conversar</span>
-    <h2 style="font-size:clamp(2rem,5vw,3.5rem);margin-bottom:1.5rem">
-      Seu evento começa com uma <em class="italic-gold">conversa</em>
-    </h2>
-    <p class="muted" style="max-width:36rem;margin:0 auto 2.5rem;font-size:1.1rem">
-      Responda em menos de 5 minutos pelo WhatsApp e receba sua proposta personalizada.
-    </p>
-    <a href="https://wa.me/5511974418038" target="_blank" rel="noopener" class="btn-gold">
-      Falar no WhatsApp agora
-    </a>
-  </div>
-</section>
+  <section id="contato" class="section section--warm" style="text-align:center">
+    <div class="container">
+      <span class="eyebrow">Seu orçamento em minutos</span>
+      <h2 style="font-size:clamp(2rem,5vw,3.5rem);margin-bottom:1.5rem">
+        Seu evento começa com uma <em class="italic-gold">conversa</em>
+      </h2>
+      <p class="muted" style="max-width:36rem;margin:0 auto 2.5rem;font-size:1.1rem">
+        Responda em menos de 5 minutos pelo WhatsApp e receba sua proposta personalizada.
+      </p>
+      <a href="https://wa.me/5511974418038" target="_blank" rel="noopener" class="btn-gold">
+        Falar no WhatsApp agora
+      </a>
+    </div>
+  </section>
 </div>
-
 
 <!-- ==========================================================
      === SEÇÃO: FOOTER ===
      ========================================================== -->
 <div class="pp">
-<footer class="pp-footer">
-  <div class="container">
-    <div class="grid">
-      <div>
-        <h4>Pizza Party Brasil</h4>
-        <p class="muted">Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo.</p>
+  <footer class="pp-footer">
+    <div class="container">
+      <div class="grid">
+        <div>
+          <h4>Pizza Party Brasil</h4>
+          <p class="muted">
+            Buffet Premium de Pizzas para Celebrações, Aniversários e Eventos Corporativos em São Paulo.
+          </p>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <p class="muted">
+            WhatsApp: <a href="https://wa.me/5511974418038" style="color:var(--pp-gold)">(11) 97441-8038</a>
+          </p>
+          <p class="muted">contato@pizzapartybrasil.com</p>
+        </div>
+        <div>
+          <h4>Atendimento</h4>
+          <p class="muted">São Paulo e Grande SP</p>
+          <p class="muted">Eventos sob agendamento</p>
+        </div>
       </div>
-      <div>
-        <h4>Contato</h4>
-        <p class="muted">WhatsApp: <a href="https://wa.me/5511974418038" style="color:var(--pp-gold)">(11) 97441-8038</a></p>
-        <p class="muted">contato@pizzapartybrasil.com</p>
-      </div>
-      <div>
-        <h4>Atendimento</h4>
-        <p class="muted">São Paulo e Grande SP</p>
-        <p class="muted">Eventos sob agendamento</p>
-      </div>
+      <div class="bottom">© 2026 Pizza Party Brasil. Todos os direitos reservados.</div>
     </div>
-    <div class="bottom">© 2026 Pizza Party Brasil. Todos os direitos reservados.</div>
-  </div>
-</footer>
+  </footer>
 
-<a href="https://wa.me/5511974418038" target="_blank" rel="noopener" class="pp-whatsapp" aria-label="Falar no WhatsApp">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-</a>
+  <a
+    href="https://wa.me/5511974418038"
+    target="_blank"
+    rel="noopener"
+    class="pp-whatsapp"
+    aria-label="Falar no WhatsApp"
+  >
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+      />
+    </svg>
+  </a>
 </div>
