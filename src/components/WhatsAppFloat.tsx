@@ -24,16 +24,9 @@ export function WhatsAppFloat() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"
-      className="group fixed bottom-6 right-6 z-[60] flex items-center h-14 rounded-full bg-gradient-to-br from-gold-light to-gold-dark text-black-rich shadow-gold transition-all duration-300 hover:shadow-[0_16px_40px_-10px_rgba(201,168,76,0.6)] focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-black"
+      className="fixed bottom-6 right-6 z-[60] inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-gold-light to-gold-dark text-black-rich shadow-gold transition-transform duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-black"
     >
-      <span className="flex items-center justify-center w-14 h-14 shrink-0">
-        <WhatsAppIcon className="w-7 h-7" />
-      </span>
-      <span className="max-w-0 overflow-hidden opacity-0 whitespace-nowrap text-sm font-semibold tracking-wide transition-all duration-300 group-hover:max-w-[220px] group-hover:opacity-100 group-hover:pr-5">
-        Falar no WhatsApp
-      </span>
+      <WhatsAppIcon className="w-7 h-7" />
     </a>
   );
 }
-
-
